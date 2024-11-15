@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <path fill="#ffffff" d="M20,50 L180,50 M100,20 L100,80" stroke="#ffffff" stroke-width="2"/>
+  <!-- Basic SVG representation of the logo -->
+</svg>

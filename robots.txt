@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://legendary-longma-12de88.netlify.app/sitemap.xml
