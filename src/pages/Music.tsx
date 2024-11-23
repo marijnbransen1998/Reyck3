@@ -132,10 +132,10 @@ const MusicPage: React.FC = () => {
               {songs.map((song, index) => (
                 <div 
                   key={index} 
-                  className={relative transform transition-all duration-1000} ${
+                  className={`relative transform transition-all duration-1000 ${
                     hasAnimated ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }}
-                  style={{ transitionDelay: ${index * 100}ms }}
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
@@ -148,7 +148,7 @@ const MusicPage: React.FC = () => {
                       <div className="relative">
                         <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
                         <iframe
-                          src={${song.link}?utm_source=generator}
+                          src={`${song.link}?utm_source=generator`}
                           width="100%"
                           height="152"
                           frameBorder="0"
