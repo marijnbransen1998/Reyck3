@@ -52,7 +52,7 @@ const Home: React.FC = () => {
             style={{ transitionDelay: '1500ms' }}
           >
             <a 
-              href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
+              href="https://reyckband.nl/muziek"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-secondary hover:bg-accent text-white font-bold py-3 px-6 rounded-full text-xl
