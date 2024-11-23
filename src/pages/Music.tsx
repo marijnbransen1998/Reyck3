@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Music as MusicIcon } from 'lucide-react';
+import { Music as MusicIcon, Ticket } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const MusicPage: React.FC = () => {
@@ -76,13 +76,66 @@ const MusicPage: React.FC = () => {
 
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent mt-16">Recente Releases</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="relative transform transition-all duration-1000">
+                <div className="absolute inset-0 bg-white/5 transform -rotate-2"></div>
+                <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-2 hover:rotate-0 transition-all duration-500">
+                  <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+                  <div className="relative">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Middenweg</h3>
+                      <MusicIcon className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-0 border-2 border-white/10 transform -rotate-1"></div>
+                      <iframe
+                        src="https://open.spotify.com/embed/track/38hADo4nBKqV2vphQ0zowA?utm_source=generator"
+                        width="100%"
+                        height="380"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        className="relative z-10"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative transform transition-all duration-1000">
+                <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
+                <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
+                  <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+                  <div className="relative">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Buitenaards</h3>
+                      <MusicIcon className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
+                      <iframe
+                        src="https://open.spotify.com/embed/track/3wuI7uacc65M4Q1oRBrGji?utm_source=generator"
+                        width="100%"
+                        height="380"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        className="relative z-10"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-4xl font-bold mb-8 text-center text-white font-accent">Andere Populaire Nummers</h3>
+            <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {songs.map((song, index) => (
                 <div 
                   key={index} 
-                  className={`relative transform transition-all duration-1000 ${
+                  className={relative transform transition-all duration-1000 ${
                     hasAnimated ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  }}
+                  style={{ transitionDelay: ${index * 100}ms }}
                 >
                   <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
@@ -93,8 +146,9 @@ const MusicPage: React.FC = () => {
                         <MusicIcon className="w-8 h-8 text-secondary" />
                       </div>
                       <div className="relative">
+                        <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
                         <iframe
-                          src={`${song.link}?utm_source=generator`}
+                          src={${song.link}?utm_source=generator}
                           width="100%"
                           height="152"
                           frameBorder="0"
@@ -110,21 +164,6 @@ const MusicPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Button: Beluister al onze muziek */}
-          <div className="text-center mb-16">
-            <a
-              href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
-            >
-              <span className="flex items-center justify-center">
-                Beluister al onze muziek
-              </span>
-            </a>
-          </div>
-
-          {/* Muziekvideo's Section */}
           <section>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Muziekvideo's</h2>
             <div className="bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:-translate-y-1 transition-all duration-300">
