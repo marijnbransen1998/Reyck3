@@ -163,6 +163,20 @@ const MusicPage: React.FC = () => {
               ))}
             </div>
           </section>
+          
+          {/* Button: Beluister al onze muziek */}
+          <div className="text-center mb-16">
+            <a
+              href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            >
+              <span className="flex items-center justify-center">
+                Beluister al onze muziek
+              </span>
+            </a>
+          </div>
 
           <section>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Muziekvideo's</h2>
