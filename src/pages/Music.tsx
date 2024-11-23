@@ -132,7 +132,7 @@ const MusicPage: React.FC = () => {
               {songs.map((song, index) => (
                 <div 
                   key={index} 
-                  className={relative transform transition-all duration-1000 ${
+                  className={relative transform transition-all duration-1000} ${
                     hasAnimated ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                   }}
                   style={{ transitionDelay: ${index * 100}ms }}
