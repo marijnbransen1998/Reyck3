@@ -25,15 +25,15 @@ const Home: React.FC = () => {
         <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
       </Helmet>
 
-      {/* Hero Section */}
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+     {/* Hero Section */}
+<section className="relative h-screen flex items-center justify-center overflow-hidden">
   <div className="absolute inset-0 z-0">
     <video 
       autoPlay 
       muted 
       loop 
       playsInline
-      className="absolute top-0 left-0 w-full h-full object-cover"
+      className="w-full h-full object-cover"
     >
       <source src="/promo vid cinetol.mp4" type="video/mp4" />
     </video>
