@@ -35,7 +35,7 @@ const Home: React.FC = () => {
       playsInline
       className="w-full h-full object-cover"
     >
-      <source src="/promo vid cinetol.mp4" type="video/mp4" />
+      <source src="/promo vid cinetol1.mp4" type="video/mp4" />
     </video>
     <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
   </div>
