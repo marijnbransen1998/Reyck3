@@ -53,15 +53,15 @@ const LivePerformances: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
               {[
-                { title: "Release Op De Vlucht (single)", date: "08 november 2024", location: "" },
-                { title: "DBs", date: "14 november 2024", location: "Utrecht" },
-                { title: "Sound of Haarlem", date: "21 november 2024", location: "Radio" },
+                { title: "Stathe", date: "15 Februari 2025", location: "Utrecht" },
+                { title: "TO BE ANNOUNCED", date: "", location: "" },
+                { title: "TO BE ANNOUNCED", date: "", location: "" },
                 { 
-                  title: "Cinetol", 
-                  date: "13 december 2024", 
-                  location: "Amsterdam", 
-                  link: "https://cinetol.nl/events/reyck-support-sakaram/",
-                  hasTickets: true
+                  title: "TO BE ANNOUNCED", 
+                  date: "", 
+                  location: "", 
+                  link: "",
+                  hasTickets: false
                 }
               ].map((gig, index) => (
                 <div 
