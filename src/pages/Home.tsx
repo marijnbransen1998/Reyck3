@@ -89,7 +89,7 @@ const Home: React.FC = () => {
               {[
                 { title: "Stathe", date: "15 Februari 2025", location: "Utrecht" },
                 { title: "TO BE ANNOUNCED", date: "", location: "" },
-                { title: "TO BE ANNOUNCED, date: "", location: "" },
+                { title: "TO BE ANNOUNCED", date: "", location: "" },
                 { 
                   title: "TO BE ANNOUNCED", 
                   date: "", 
