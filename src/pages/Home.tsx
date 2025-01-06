@@ -26,19 +26,19 @@ const Home: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-  >
-          <source src="/promo vid cinetol.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
-    </div>
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+  <div className="absolute inset-0 z-0">
+    <video 
+      autoPlay 
+      muted 
+      loop 
+      playsInline
+      className="absolute top-0 left-0 w-full h-full object-cover"
+    >
+      <source src="/promo vid cinetol.mp4" type="video/mp4" />
+    </video>
+    <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
+  </div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <div className="mb-8">
             <DynamicSplitLogo animate={animate} />
