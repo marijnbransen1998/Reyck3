@@ -28,13 +28,17 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-            alt="Band Performance" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
-        </div>
+          <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover"
+  >
+          <source src="/promo vid cinetol.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
+    </div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <div className="mb-8">
             <DynamicSplitLogo animate={animate} />
