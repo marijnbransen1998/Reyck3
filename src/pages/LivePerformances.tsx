@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Calendar, Ticket, Music } from 'lucide-react';
+import { Calendar, Ticket, Music, ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const LivePerformances: React.FC = () => {
@@ -8,6 +8,7 @@ const LivePerformances: React.FC = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Hero sectie */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
@@ -16,34 +17,16 @@ const LivePerformances: React.FC = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
-          
-          {/* Decorative overlay */}
-          <div className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 255, 255, 0.1) 10px,
-                rgba(255, 255, 255, 0.1) 20px
-              )`
-            }}
-          ></div>
         </div>
         <div className="relative z-10 text-center">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-accent glitch-effect">Optredens</h1>
         </div>
       </section>
 
+      {/* Optredens lijst */}
       <div className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
           <section ref={sectionRef} className="relative">
-            {/* Geometric background elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-0 left-0 w-40 h-40 bg-secondary/10 transform rotate-45 -translate-x-20 -translate-y-20"></div>
-              <div className="absolute bottom-0 right-0 w-60 h-60 bg-accent/10 transform -rotate-12 translate-x-20 translate-y-20"></div>
-            </div>
-
             <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">
               <span className="relative inline-block">
                 <span className="absolute -inset-1 bg-secondary/20 transform -skew-x-12"></span>
@@ -51,18 +34,19 @@ const LivePerformances: React.FC = () => {
               </span>
             </h2>
 
+            {/* Optredens Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
               {[
-                { title: "Plugged Festival", date: "05 June 2025", location: "Eindhoven" },
+                { 
+                  title: "Plugged Festival", 
+                  date: "05 June 2025", 
+                  location: "Eindhoven",
+                  link: "https://pluggedfestival.nl",  
+                  hasTickets: true                    
+                },
                 { title: "SPOEL Festival", date: "07 September", location: "Culemborg" },
                 { title: "TO BE ANNOUNCED", date: "", location: "" },
-                { 
-                  title: "TO BE ANNOUNCED", 
-                  date: "", 
-                  location: "", 
-                  link: "",
-                  hasTickets: false
-                }
+                { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
               ].map((gig, index) => (
                 <div 
                   key={index}
@@ -71,12 +55,13 @@ const LivePerformances: React.FC = () => {
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  {/* Tilted background with poster effect */}
+                  {/* Visueel Effect */}
                   <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-                    {/* Noise texture */}
-                    <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
                     
+                    {/* Noise Effect */}
+                    <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+
                     {/* Content */}
                     <div className="relative">
                       <div className="flex justify-between items-start mb-4">
@@ -95,29 +80,28 @@ const LivePerformances: React.FC = () => {
                         )}
                       </div>
 
-                      {/* Decorative line */}
+                      {/* Scheidingslijn */}
                       <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
 
-                      {gig.hasTickets && (
-                        <div className="relative">
-                          {/* Button with geometric accent */}
-                          <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
-                          <a
-                            href={gig.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 text-center transform hover:-rotate-1 transition-all duration-300 hover:scale-105 hover:shadow-glow"
+                      {/* Extra CTA-knop voor Plugged Festival */}
+                      {gig.link && gig.title === "Plugged Festival" && (
+                        <div className="mt-6">
+                          <a 
+                            href={gig.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
                           >
                             <span className="flex items-center justify-center">
-                              <Ticket className="w-5 h-5 mr-2" />
-                              Koop tickets
+                              Bekijk festivalwebsite
+                              <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
                             </span>
                           </a>
                         </div>
                       )}
                     </div>
 
-                    {/* Torn paper effect */}
+                    {/* Torn Paper Effect */}
                     <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-white/10 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-white/10 to-transparent"></div>
                   </div>
