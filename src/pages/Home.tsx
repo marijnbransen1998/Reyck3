@@ -91,69 +91,80 @@ const Home: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { title: "Plugged Festival", date: "05 June 2025", location: "Eindhoven" },
-                { title: "SPOEL Festival", date: "07 September 2025", location: "Culemborg" },
-                { title: "TO BE ANNOUNCED", date: "", location: "" },
-                { 
-                  title: "TO BE ANNOUNCED", 
-                  date: "", 
-                  location: "", 
-                  link: "",
-                  hasTickets: false
-                }
-              ].map((gig, index) => (
-                <div 
-                  key={index}
-                  className={`relative transform transition-all duration-1000 ${
-                    isUpcomingShowsInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 300}ms` }}
-                >
-                  <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-                    <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
-                    <div className="relative">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center">
-                          <Calendar className="w-12 h-12 text-secondary" />
-                          <div className="ml-4">
-                            <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
-                            <p className="text-white/80">{gig.date}{gig.location && ` - ${gig.location}`}</p>
-                          </div>
-                        </div>
-                        {gig.hasTickets && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-sm text-xs font-medium bg-secondary/80 text-white transform rotate-2">
-                            <Ticket className="w-4 h-4 mr-1" />
-                            Tickets beschikbaar
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
-
-                      {gig.hasTickets && (
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
-                          <a
-                            href={gig.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 text-center transform hover:-rotate-1 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
-                          >
-                            <span className="flex items-center justify-center">
-                              <Ticket className="w-5 h-5 mr-2" />
-                              Koop tickets
-                              <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
+  { 
+    title: "Plugged Festival", 
+    date: "05 June 2025", 
+    location: "Eindhoven", 
+    link: "https://pluggedfestival.nl/",
+    hasTickets: true 
+  },
+  { title: "SPOEL Festival", date: "07 September 2025", location: "Culemborg" },
+  { title: "TO BE ANNOUNCED", date: "", location: "" },
+  { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
+].map((gig, index) => (
+  <div 
+    key={index}
+    className={`relative transform transition-all duration-1000 ${
+      isUpcomingShowsInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+    }`}
+    style={{ transitionDelay: `${index * 300}ms` }}
+  >
+    <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
+    <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
+      <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+      <div className="relative">
+        <div className="flex justify-between items-start mb-4">
+          <div className="flex items-center">
+            <Calendar className="w-12 h-12 text-secondary" />
+            <div className="ml-4">
+              <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
+              <p className="text-white/80">{gig.date}{gig.location && ` - ${gig.location}`}</p>
             </div>
+          </div>
+        </div>
 
+        <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
+
+        {/* Button voor tickets als beschikbaar */}
+        {gig.hasTickets && (
+          <div className="relative">
+            <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
+            <a
+              href={gig.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            >
+              <span className="flex items-center justify-center">
+                Bekijk tickets
+                <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </a>
+          </div>
+        )}
+
+        {/* Extra CTA voor Plugged Festival */}
+        {gig.title === "Plugged Festival" && (
+          <div className="mt-4">
+            <a
+              href="https://pluggedfestival.nl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            >
+              <span className="flex items-center justify-center">
+                Bekijk festivalwebsite
+                <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </a>
+          </div>
+        )}
+
+      </div>
+    </div>
+  </div>
+))}
+</div>
             <div className="mt-8 text-center relative">
               <div className="absolute left-1/2 -translate-x-1/2 w-32 h-1 bg-secondary/30 transform -rotate-12 -translate-y-6"></div>
               <div className="absolute left-1/2 -translate-x-1/2 w-32 h-1 bg-secondary/30 transform rotate-12 -translate-y-6"></div>
