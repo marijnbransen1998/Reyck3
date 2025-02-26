@@ -95,12 +95,11 @@ const Home: React.FC = () => {
     title: "Plugged Festival", 
     date: "05 June 2025", 
     location: "Eindhoven", 
-    link: "https://pluggedfestival.nl/",
-    hasTickets: true 
+    link: "https://pluggedfestival.nl/"
   },
   { title: "SPOEL Festival", date: "07 September 2025", location: "Culemborg" },
   { title: "TO BE ANNOUNCED", date: "", location: "" },
-  { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
+  { title: "TO BE ANNOUNCED", date: "", location: "", link: "" }
 ].map((gig, index) => (
   <div 
     key={index}
@@ -124,24 +123,6 @@ const Home: React.FC = () => {
         </div>
 
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
-
-        {/* Button voor tickets als beschikbaar */}
-        {gig.hasTickets && (
-          <div className="relative">
-            <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
-            <a
-              href={gig.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
-            >
-              <span className="flex items-center justify-center">
-                Bekijk tickets
-                <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
-            </a>
-          </div>
-        )}
 
         {/* Extra CTA voor Plugged Festival */}
         {gig.title === "Plugged Festival" && (
