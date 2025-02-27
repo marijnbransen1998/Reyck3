@@ -91,12 +91,6 @@ const Home: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-  { 
-    title: "Plugged Festival", 
-    date: "05 June 2025", 
-    location: "Eindhoven", 
-    link: "https://pluggedfestival.nl/"
-  },
   { title: "SPOEL Festival", date: "07 September 2025", location: "Culemborg" },
   { title: "TO BE ANNOUNCED", date: "", location: "" },
   { title: "TO BE ANNOUNCED", date: "", location: "", link: "" }
