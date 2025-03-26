@@ -91,8 +91,8 @@ const Home: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
+  { title: "Berlijn Café", date: "26 April, 13:00 uur", location: "Tilburg" },
   { title: "SPOEL Festival", date: "07 September 2025", location: "Culemborg" },
-  { title: "TO BE ANNOUNCED", date: "", location: "" },
   { title: "TO BE ANNOUNCED", date: "", location: "", link: "" }
 ].map((gig, index) => (
   <div 
