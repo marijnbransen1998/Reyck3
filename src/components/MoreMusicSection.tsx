@@ -25,7 +25,7 @@ const MoreMusicSection: React.FC = () => {
       </div>
 
       <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">
-        Meer van onze muziek
+        Onze muziek
       </h2>
 
       <div className="relative max-w-6xl mx-auto">
