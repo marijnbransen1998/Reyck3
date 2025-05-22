@@ -57,7 +57,7 @@ const AboutSection: React.FC = () => {
               {/* Text content */}
               <div className="relative p-6 transform rotate-2">
                 <p className="text-white text-lg mb-8 leading-relaxed font-heading">
-                  Reyck is een onversneden Nederrock band.
+                  Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck zorgt ervoor dat je er middenin staat...
                 </p>
                 
                 {/* CTA Button with geometric accent */}
