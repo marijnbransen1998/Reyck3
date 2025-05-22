@@ -48,7 +48,7 @@ const Home: React.FC = () => {
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: '1000ms' }}
           >
-            Nederrock
+            Onversneden Nederrock
           </p>
           <div 
             className={`relative transition-all duration-1000 transform
