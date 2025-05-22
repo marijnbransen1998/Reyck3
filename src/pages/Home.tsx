@@ -20,8 +20,8 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Reyck - Officiële Website | Nederlandse Pop-Rock Band</title>
-        <meta name="description" content="Ontdek Reyck, de opkomende Nederlandse pop-rock band bekend om hun energieke optredens en nostalgische jaren '80 invloeden. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+        <title>Reyck - Officiële Website | Nederrock Band</title>
+        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
         <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
       </Helmet>
 
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: '1000ms' }}
           >
-            Nederlandstalige pop-rock
+            Nederrock
           </p>
           <div 
             className={`relative transition-all duration-1000 transform
