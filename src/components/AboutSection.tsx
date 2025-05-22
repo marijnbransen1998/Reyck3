@@ -57,7 +57,7 @@ const AboutSection: React.FC = () => {
               {/* Text content */}
               <div className="relative p-6 transform rotate-2">
                 <p className="text-white text-lg mb-8 leading-relaxed font-heading">
-                  Reyck is een opkomende Nederlandse pop-rock band die bekend staat om hun energieke optredens en nostalgische muzikale invloeden uit de jaren '80.
+                  Reyck is een onversneden Nederrock band.
                 </p>
                 
                 {/* CTA Button with geometric accent */}
@@ -68,7 +68,7 @@ const AboutSection: React.FC = () => {
                     className="relative block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 text-center transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
                   >
                     <span className="flex items-center justify-center">
-                      Lees meer over ons
+                      Lees meer
                       <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                   </Link>
