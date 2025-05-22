@@ -57,10 +57,10 @@ const Biography: React.FC = () => {
                     <Star className="text-secondary w-8 h-8 mb-4" />
                     <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                       <p>
-                        Reyck is de dynamische Nederpop viermansbob uit Utrecht en Amsterdam. De band bestaat uit zanger en gitarist Twan de Kock, gitarist Wessel van Rooijen, bassist Elmo Wanders en drummer Max Balvers.
+                        Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck zorgt ervoor dat je er middenin staat.
                       </p>
                       <p>
-                        De muziek van Reyck is fris en energiek, maar brengt ook nostalgische gevoelens bij luisteraars naar boven door sounds uit de jaren 80 in een nieuw jasje te steken. Wie denkt dat Nederpop volks of zoetsappige is, heeft het mis. Reyck is niet bang voor enge fills, harde gitaarsounds en smerige basloopjes.
+                       Hun liveshow is als een oude leren jas: veel te warm, ruikend naar rook en de drank van gisteravond, maar hij zit als gegoten. Of je nu in een zweterige kelder bent of onder de festivaltent, Reyck grijpt je met muziek die je niet meer loslaat. En net als die jas, ooit Brits van snit maar gevormd door gure Nederlandse nachten.
                       </p>
                     </div>
                   </div>
@@ -75,7 +75,7 @@ const Biography: React.FC = () => {
                     <Music className="text-secondary w-8 h-8 mb-4" />
                     <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                       <p>
-                        Reyck begon in 2016 met de jeugdvrienden Twan de Kock (zang/gitaar) en Wessel van Rooijen (gitaar). Na Engelstalig begonnen te zijn, switchte de band in 2020 naar schrijven in de moedertaal. Bassist Elmo Wanders sloot aan en Reyck's eerste album 'Bijschijnen', met onder andere de tracks 'Doktersvoorschrift (XTC)' en 'Toni' kwam in 2021 uit.
+                        Reyck ademt onversneden Nederrock. Hun nummers raken precies daar waar het schuurt: aan de scherpe rand van verlangen, in de pijn die bij verliezen hoort, en in de plek waar liefde en verdriet elkaar stil omarmen. Reyck is zowel een vluchtige flirt, als een pleidooi voor hopeloze romantiek. Een sprong in het diepe, zonder vangnet.
                       </p>
                     </div>
                   </div>
@@ -90,10 +90,10 @@ const Biography: React.FC = () => {
                 <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
                   <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                     <p>
-                      Na dit album werd vanaf dag één keihard gewerkt aan een nieuw EP 'Los'. Deze verscheen in 2024 en bevat onder andere de singles 'Buitenaards', 'Vanavond Gaat Ze Dansen' en 'Middenweg'. De EP werd door Reyck gepresenteerd in een bomvol Bitterzoet.
+                      Reyck laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken. In hun recentere werk hoor je de rauwe rand van Radiohead verweven met het gepolijste van Nothing But Thieves. Het resultaat: stevige, eerlijke en euforische Nederlandstalige rock.
                     </p>
                     <p>
-                      Na het succes van 'Los' sloot drummer Max Balvers aan in het najaar van 2024. Met de release van de nieuwe single 'Op De Vlucht' is Reyck meerdere malen op de radio te horen (3FM, Yoursafe Radio). Op 13 december brengen ze de single live te gehore tijdens hun release party in Cinetol, Amsterdam. Ondertussen is de band al weer druk bezig met meer materiaal voor een aankomend EP/album.
+                    Begin 2024 presenteerde Reyck hun EP ‘Los’ in een uitverkochte Bitterzoet. Nog geen maand later zaten ze alweer midden in het schrijfproces. Eind 2024 verscheen de single ‘Op De Vlucht’, opgepikt door 3FM en te horen in ‘Debuut in een Minuut’. Op dit moment werkt de band aan hun volgende album, dat eind 2026 het daglicht zal zien.
                     </p>
                   </div>
                 </div>
