@@ -46,8 +46,8 @@ const ContactButtons: React.FC = () => {
           filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))',
         }}
       >
-        <p className="font-semibold mb-1">Interesse in een boeking?</p>
-        <p className="text-sm">Neem contact met ons op voor beschikbaarheid</p>
+        <p className="font-semibold mb-1">Reyck boeken?</p>
+        <p className="text-sm">Neem contact op!</p>
         <div className="absolute -bottom-2 right-4 w-4 h-4 bg-secondary transform rotate-45"></div>
       </div>
       <div className="flex flex-col space-y-4">
