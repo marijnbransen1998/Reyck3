@@ -37,8 +37,8 @@ const LivePerformances: React.FC = () => {
             {/* Optredens Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
               {[
-                { title: "Berlijn Café", date: "26 April, 13:00 uur", location: "Tilburg" },
-                { title: "SPOEL Festival", date: "07 September", location: "Culemborg" },
+                { title: "Vort met de Geit", date: "30 augustus", location: "Lexmond" },
+                { title: "SPOEL Festival", date: "31 augustus", location: "Culemborg" },
                 { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
               ].map((gig, index) => (
                 <div 
