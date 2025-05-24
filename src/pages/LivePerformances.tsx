@@ -39,6 +39,7 @@ const LivePerformances: React.FC = () => {
               {[
                 { title: "Vort met de Geit", date: "30 augustus", location: "Lexmond" },
                 { title: "SPOEL Festival", date: "31 augustus", location: "Culemborg" },
+                { title: "Bergen Live", date: "5 september", location: "Bergen" },
                 { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
               ].map((gig, index) => (
                 <div 
