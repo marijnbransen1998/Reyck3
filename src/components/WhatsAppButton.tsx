@@ -5,24 +5,7 @@ const ContactButtons: React.FC = () => {
   const [showBubble, setShowBubble] = useState(false);
   const phoneNumber = '+31683033829';
   const email = 'reyckband@hotmail.com';
-  const whatsappMessage = 'Hoi! Ik heb een vraag over het boeken van Reyck.';
-
-  useEffect(() => {
-    // Show bubble after 7 seconds
-    const showTimer = setTimeout(() => {
-      setShowBubble(true);
-    }, 7000);
-
-    // Hide bubble after 17 seconds (7s delay + 10s show time)
-    const hideTimer = setTimeout(() => {
-      setShowBubble(false);
-    }, 17000);
-
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
-  }, []);
+  const whatsappMessage = 'Hoi! Ik heb een vraag over..';
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
