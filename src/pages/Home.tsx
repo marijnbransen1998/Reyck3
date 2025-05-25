@@ -71,15 +71,6 @@ const Home: React.FC = () => {
 
       <div className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
-          {/* Latest Release Section */}
-          <section className="mb-16">
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Nieuwste Release</h2>
-            <LatestRelease
-              title="Op de Vlucht"
-              spotifyEmbedId="7BfdCbRErgocMcpDsYVHKP"
-            />
-          </section>
-
           {/* Upcoming Shows Section */}
           <section ref={upcomingShowsRef} className="mb-16 relative">
             <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">
