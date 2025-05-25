@@ -15,16 +15,12 @@ const MusicPage: React.FC = () => {
   }, [isInView]);
 
   const songs = [
-    { title: "Doktersvoorschrift", link: "https://open.spotify.com/embed/track/1UCLCZ9tXtN0pmKnfBPe1g" },
-    { title: "Geen excuus", link: "https://open.spotify.com/embed/track/3WTd07xKWgTviECZbaedJR" },
     { title: "Toni", link: "https://open.spotify.com/embed/track/50IgShK975gNTyuPmQcxFL" },
-    { title: "Doodnormale jongen", link: "https://open.spotify.com/embed/track/2kf4yEiB7hjF4JOjCwBwyP" },
-    { title: "Als alles valt", link: "https://open.spotify.com/embed/track/6vN3ixzyhUG4Yqy8M0Xui7" },
-    { title: "Blauw licht", link: "https://open.spotify.com/embed/track/1eln29fPg2t0wg3unM4irc" },
-    { title: "Kies niet voor mij", link: "https://open.spotify.com/embed/track/4YesFKZjybsdCp2qy8Q2sb" },
     { title: "Vanavond gaat ze dansen", link: "https://open.spotify.com/embed/track/4yuahnGA6D3oJHWioT0dN8" },
+    { title: "Geen excuus", link: "https://open.spotify.com/embed/track/3WTd07xKWgTviECZbaedJR" },
+    { title: "Als alles valt", link: "https://open.spotify.com/embed/track/6vN3ixzyhUG4Yqy8M0Xui7" },
+    { title: "Kies niet voor mij", link: "https://open.spotify.com/embed/track/4YesFKZjybsdCp2qy8Q2sb" },
     { title: "Niet voor lang", link: "https://open.spotify.com/embed/track/0UEoi1eGmci5e56ijogGlz" },
-    { title: "Mistakes", link: "https://open.spotify.com/embed/track/25q5mTNr6IY9mcJJUBUXek" }
   ];
 
   return (
