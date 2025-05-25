@@ -44,13 +44,7 @@ const MusicPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                   <div className="relative transform -skew-x-6 overflow-hidden torn-edge h-[352px]">
                     <div className="glitch-effect transform skew-x-6 h-full relative">
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3M9S2ZF-fNDpUFnx4uBNv4jtg-tO_vKV5pQ&s"
-                        alt="Op de Vlucht"
-                        className="w-full h-64 object-cover object-top"
-                        style={{ objectPosition: "center 15%" }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-secondary/50 mix-blend-overlay"></div>
+                   <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-secondary/50 mix-blend-overlay"></div>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 z-50 p-6 bg-gradient-to-t from-black/90 to-transparent">
                       <h3 className="text-3xl font-bold text-white mb-2 text-center">Op de Vlucht</h3>
