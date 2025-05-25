@@ -39,17 +39,6 @@ const MusicPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Nieuwste Release</h2>
-            <div className="relative max-w-4xl mx-auto">
-              <div className="noise-bg">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                  <div className="relative transform -skew-x-6 overflow-hidden torn-edge h-[352px]">
-                    <div className="glitch-effect transform skew-x-6 h-full relative">
-                   <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-secondary/50 mix-blend-overlay"></div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 z-50 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                      <h3 className="text-3xl font-bold text-white mb-2 text-center">Op de Vlucht</h3>
-                      <p className="text-xl text-white/90 text-center">Nu te beluisteren op Spotify!</p>
-                    </div>
                   </div>
                   <div className="relative transform skew-x-6 bg-white/5 backdrop-blur-lg p-4 angular-frame">
                     <div className="transform -skew-x-6">
