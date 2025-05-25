@@ -31,7 +31,7 @@ const MusicPage: React.FC = () => {
     <div className="min-h-screen">
       <section className="bg-gradient-to-r from-primary to-secondary py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-accent">Muziek & Releases</h1>
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-accent">Muziek</h1>
         </div>
       </section>
 
