@@ -77,6 +77,9 @@ const Biography: React.FC = () => {
                       <p>
                         Reyck ademt onversneden Nederrock. Hun nummers raken precies daar waar het schuurt: aan de scherpe rand van verlangen, in de pijn die bij verliezen hoort, en in de plek waar liefde en verdriet elkaar stil omarmen. Reyck is zowel een vluchtige flirt, als een pleidooi voor hopeloze romantiek. Een sprong in het diepe, zonder vangnet.
                       </p>
+                      <p>
+                      Reyck laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken. In hun recentere werk hoor je de rauwe rand van Radiohead verweven met het gepolijste van Nothing But Thieves. Het resultaat: stevige, eerlijke en euforische Nederlandstalige rock.
+                    </p>
                     </div>
                   </div>
                 </div>
@@ -89,9 +92,6 @@ const Biography: React.FC = () => {
                 <div className="absolute inset-0 bg-white/5 transform -rotate-1"></div>
                 <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
                   <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
-                    <p>
-                      Reyck laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken. In hun recentere werk hoor je de rauwe rand van Radiohead verweven met het gepolijste van Nothing But Thieves. Het resultaat: stevige, eerlijke en euforische Nederlandstalige rock.
-                    </p>
                     <p>
                     Begin 2024 presenteerde Reyck hun EP ‘Los’ in een uitverkochte Bitterzoet. Nog geen maand later zaten ze alweer midden in het schrijfproces. Eind 2024 verscheen de single ‘Op De Vlucht’, opgepikt door 3FM en te horen in ‘Debuut in een Minuut’. Op dit moment werkt de band aan hun volgende album, dat eind 2026 het daglicht zal zien.
                     </p>
