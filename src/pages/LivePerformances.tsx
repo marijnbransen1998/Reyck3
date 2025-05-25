@@ -11,11 +11,6 @@ const LivePerformances: React.FC = () => {
       {/* Hero sectie */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-            alt="Live Performance" 
-            className="w-full h-full object-cover"
-          />
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
         </div>
         <div className="relative z-10 text-center">
