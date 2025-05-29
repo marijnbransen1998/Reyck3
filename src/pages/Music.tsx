@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Music as MusicIcon, Ticket } from 'lucide-react';
+import { Music as MusicIcon } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const MusicPage: React.FC = () => {
@@ -35,116 +35,112 @@ const MusicPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Nieuwste Release</h2>
+            <div className="relative transform skew-x-6 bg-white/5 backdrop-blur-lg p-4 angular-frame">
+              <div className="transform -skew-x-6">
+                <iframe
+                  src="https://open.spotify.com/embed/track/7BfdCbRErgocMcpDsYVHKP"
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="w-full"
+                ></iframe>
+              </div>
+            </div>
+          </section>
+
+          <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent mt-16">Recente Releases</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="relative transform transition-all duration-1000">
+              <div className="absolute inset-0 bg-white/5 transform -rotate-2"></div>
+              <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-2 hover:rotate-0 transition-all duration-500">
+                <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Middenweg</h3>
+                    <MusicIcon className="w-8 h-8 text-secondary" />
                   </div>
-                  <div className="relative transform skew-x-6 bg-white/5 backdrop-blur-lg p-4 angular-frame">
-                    <div className="transform -skew-x-6">
-                      <iframe
-                        src="https://open.spotify.com/embed/track/7BfdCbRErgocMcpDsYVHKP"
-                        width="100%"
-                        height="352"
-                        frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="w-full"
-                      ></iframe>
-                    </div>
+                  <div className="relative">
+                    <div className="absolute inset-0 border-2 border-white/10 transform -rotate-1"></div>
+                    <iframe
+                      src="https://open.spotify.com/embed/track/38hADo4nBKqV2vphQ0zowA?utm_source=generator"
+                      width="100%"
+                      height="380"
+                      frameBorder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      className="relative z-10"
+                    ></iframe>
                   </div>
                 </div>
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent mt-16">Recente Releases</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="relative transform transition-all duration-1000">
-                <div className="absolute inset-0 bg-white/5 transform -rotate-2"></div>
-                <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-2 hover:rotate-0 transition-all duration-500">
-                  <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+            <div className="relative transform transition-all duration-1000">
+              <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
+              <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
+                <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Buitenaards</h3>
+                    <MusicIcon className="w-8 h-8 text-secondary" />
+                  </div>
                   <div className="relative">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Middenweg</h3>
-                      <MusicIcon className="w-8 h-8 text-secondary" />
-                    </div>
-                    <div className="relative">
-                      <div className="absolute inset-0 border-2 border-white/10 transform -rotate-1"></div>
-                      <iframe
-                        src="https://open.spotify.com/embed/track/38hADo4nBKqV2vphQ0zowA?utm_source=generator"
-                        width="100%"
-                        height="380"
-                        frameBorder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="relative z-10"
-                      ></iframe>
-                    </div>
+                    <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
+                    <iframe
+                      src="https://open.spotify.com/embed/track/3wuI7uacc65M4Q1oRBrGji?utm_source=generator"
+                      width="100%"
+                      height="380"
+                      frameBorder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      className="relative z-10"
+                    ></iframe>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div className="relative transform transition-all duration-1000">
+          <h3 className="text-4xl font-bold mb-8 text-center text-white font-accent">Andere Populaire Nummers</h3>
+          <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {songs.map((song, index) => (
+              <div
+                key={index}
+                className={`relative transform transition-all duration-1000 ${
+                  hasAnimated ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
                 <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
                 <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
                   <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
                   <div className="relative">
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-bold text-white font-heading tracking-wider">Buitenaards</h3>
+                      <h4 className="text-2xl font-bold text-white font-heading tracking-wider">{song.title}</h4>
                       <MusicIcon className="w-8 h-8 text-secondary" />
                     </div>
                     <div className="relative">
                       <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
                       <iframe
-                        src="https://open.spotify.com/embed/track/3wuI7uacc65M4Q1oRBrGji?utm_source=generator"
+                        src={`${song.link}?utm_source=generator`}
                         width="100%"
-                        height="380"
+                        height="152"
                         frameBorder="0"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy"
-                        className="relative z-10"
+                        className="relative z-10 rounded-lg"
                       ></iframe>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
 
-            <h3 className="text-4xl font-bold mb-8 text-center text-white font-accent">Andere Populaire Nummers</h3>
-            <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {songs.map((song, index) => (
-                <div 
-                  key={index} 
-                  className={`relative transform transition-all duration-1000 ${
-                    hasAnimated ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="absolute inset-0 bg-white/5 transform rotate-2"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-2 hover:rotate-0 transition-all duration-500">
-                    <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
-                    <div className="relative">
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-2xl font-bold text-white font-heading tracking-wider">{song.title}</h4>
-                        <MusicIcon className="w-8 h-8 text-secondary" />
-                      </div>
-                      <div className="relative">
-                        <div className="absolute inset-0 border-2 border-white/10 transform rotate-1"></div>
-                        <iframe
-                          src={`${song.link}?utm_source=generator`}
-                          width="100%"
-                          height="152"
-                          frameBorder="0"
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                          loading="lazy"
-                          className="relative z-10 rounded-lg"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-          
           {/* Button: Beluister al onze muziek */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 mt-16">
             <a
               href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
               target="_blank"
@@ -160,10 +156,15 @@ const MusicPage: React.FC = () => {
           <section>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Muziekvideo's</h2>
             <div className="bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:-translate-y-1 transition-all duration-300">
-              <Link to="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                <img 
-                  src="https://i.ytimg.com/vi/v4_pJB4GSuQ/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG2CIAC0AWKAgwIABABGH8gEyghMA8=&rs=AOn4CLBGlAcCphIqdUWvgIE70MiaBxyv7w" 
-                  alt="Reyck YouTube Channel" 
+              <Link
+                to="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/v4_pJB4GSuQ/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG2CIAC0AWKAgwIABABGH8gEyghMA8=&rs=AOn4CLBGlAcCphIqdUWvgIE70MiaBxyv7w"
+                  alt="Reyck YouTube Channel"
                   className="w-32 h-auto rounded-lg mr-6 hover:opacity-80 transition-opacity duration-300"
                 />
                 <div>
@@ -181,3 +182,4 @@ const MusicPage: React.FC = () => {
 };
 
 export default MusicPage;
+
