@@ -83,8 +83,8 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
   { title: "Enno Lloyd EP Release", date: "10 juli, 20:00", location: "Zaandam, Het Motorblok" },
-  { title: "Vort met de Geit", date: "30 augustus", location: "Lexmond" },
-  { title: "SPOEL Festival", date: "31 augustus", location: "Culemborg" },
+  { title: "Vort met de Geit", date: "30 augustus", location: "Lexmond, Kom Lekdijk 38" },
+  { title: "SPOEL Festival", date: "31 augustus, 15:15", location: "Culemborg, Werk aan het Spoel" },
  { title: "Bergen Live", date: "5 september", location: "Bergen" },
 ].map((gig, index) => (
   <div 
