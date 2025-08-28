@@ -84,7 +84,9 @@ const Home: React.FC = () => {
               {[
   { title: "Vort met de Geit", date: "30 augustus, 18:30", location: "Lexmond, Kom Lekdijk 38" },
   { title: "SPOEL Festival", date: "31 augustus, 15:15", location: "Culemborg, Werk aan het Spoel" },
- { title: "Bergen Live", date: "5 september", location: "Bergen" },
+ { title: "Bergen Live", date: "5 september, 20:30", location: "Bergen" },
+      { title: "Toekomstmuziek", date: "9 oktober", location: "Amsterdam" },
+      { title: "Hofman", date: "6 november", location: "Utrecht" },
 ].map((gig, index) => (
   <div 
     key={index}
