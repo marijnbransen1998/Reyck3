@@ -29,7 +29,11 @@ const AboutSection: React.FC = () => {
           </h2>
           
           <p className="text-black text-base md:text-lg leading-relaxed font-optien mb-12">
-            Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck zorgt ervoor dat je er middenin staat...
+            Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid<br/>
+            en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden?<br/>
+            Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd<br/>
+            ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck<br/>
+            zorgt ervoor dat je er middenin staat...
           </p>
           
           <div>
