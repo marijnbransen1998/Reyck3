@@ -24,6 +24,7 @@ const AboutSection: React.FC = () => {
         <div className={`relative z-10 text-center max-w-2xl mx-auto px-8 transform transition-all duration-1000 ${
           isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
+          <h2 className="text-black text-3xl md:text-4xl font-bold font-optien mb-8">
             OVER REYCK
           </h2>
           
