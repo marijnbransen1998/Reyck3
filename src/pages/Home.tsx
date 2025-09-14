@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Music, Users, Ticket, ArrowRight } from 'lucide-react';
+import { Calendar, Music, Users, Ticket, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import DynamicSplitLogo from '../components/DynamicSplitLogo';
 import { useInView } from '../hooks/useInView';
 import LatestRelease from '../components/LatestRelease';
@@ -10,11 +10,32 @@ import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
   const [animate, setAnimate] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const upcomingShowsRef = useRef<HTMLDivElement>(null);
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
 
+  const galleryImages = [
+    { src: '/shoot-trap copy.jpg', alt: 'Reyck Band Photo 1' },
+    { src: '/shoot-witteshirts copy copy.jpg', alt: 'Reyck Band Photo 2' },
+    { src: '/shoot-snackbar copy copy.jpg', alt: 'Reyck Band Photo 3' },
+    { src: '/shoot-bank copy.jpg', alt: 'Reyck Band Photo 4' }
+  ];
+
   useEffect(() => {
     setAnimate(true);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -130,27 +151,56 @@ const Home: React.FC = () => {
           {/* Gallery Section */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="bg-white/5 p-6 relative">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative transform transition-all duration-500 hover:scale-105">
-                  <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-4 transform -rotate-2 hover:rotate-0 transition-all duration-500">
-                    <img
-                     src="/shoot-trap copy.jpg"
-                     alt="Reyck Band Photo 1"
-                      className="w-full h-80 object-cover rounded-lg shadow-xl"
-                    />
-                  </div>
+            <div className="bg-white/5 p-6 relative max-w-4xl mx-auto">
+              <div className="relative overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {galleryImages.map((image, index) => (
+                    <div key={index} className="w-full flex-shrink-0">
+                      <div className="relative transform transition-all duration-500">
+                        <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
+                        <div className="relative bg-black/40 backdrop-blur-sm p-4 transform -rotate-1 hover:rotate-0 transition-all duration-500">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-96 object-cover rounded-lg shadow-xl"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="relative transform transition-all duration-500 hover:scale-105">
-                  <div className="absolute inset-0 bg-secondary/20 transform -rotate-2"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-4 transform rotate-2 hover:rotate-0 transition-all duration-500">
-                    <img
-                      src="/shoot-witteshirts copy copy.jpg"
-                      alt="Reyck Band Photo 2"
-                      className="w-full h-80 object-cover rounded-lg shadow-xl"
+                
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  aria-label="Next image"
+                >
+                  <ChevronRight size={24} />
+                </button>
+                
+                {/* Dots Indicator */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {galleryImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        currentSlide === index ? 'bg-white' : 'bg-white/50'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
                     />
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
