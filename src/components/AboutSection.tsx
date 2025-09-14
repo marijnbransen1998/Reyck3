@@ -42,9 +42,9 @@ const AboutSection: React.FC = () => {
               to="/biografie" 
           <Link 
             to="/biografie" 
-            className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-4 px-12 text-lg transition-all duration-300 inline-block"
+            className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-3 px-8 transition-all duration-300"
           >
-            </Link>
+            Lees meer
           </div>
         </div>
     </section>
