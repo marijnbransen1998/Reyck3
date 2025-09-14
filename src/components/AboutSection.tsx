@@ -39,14 +39,15 @@ const AboutSection: React.FC = () => {
             denkt niet, maar je voelt en Reyck zorgt<br/>
             ervoor dat je er middenin staat...
           </p>
-              to="/biografie" 
+          
           <Link 
             to="/biografie" 
             className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-3 px-8 transition-all duration-300"
           >
             Lees meer
-          </div>
+          </Link>
         </div>
+      </div>
     </section>
   );
 };
