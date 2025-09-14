@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
             {/* Left side - Photo */}
             <div className="relative">
               <img
-                src="/band-photo.png"
+                src="/fotobreed copy.jpg"
                 alt="Reyck Band"
                 className="w-full h-auto object-cover grayscale"
               />
