@@ -46,9 +46,11 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center relative">
           <Link to="/" className="flex items-center space-x-2">
-            <div className={`text-white font-optien font-bold tracking-wider transition-all duration-300 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
-              REYCK
-            </div>
+            <img 
+              src="/logozwart wit-vrijstaand copy.png" 
+              alt="Reyck Logo" 
+              className={`transition-all duration-300 ${isScrolled ? 'h-8' : 'h-12'} w-auto`}
+            />
           </Link>
           
           {/* Desktop Navigation */}

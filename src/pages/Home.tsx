@@ -40,9 +40,11 @@ const Home: React.FC = () => {
     <div className="absolute inset-0 bg-black/40"></div>
   </div>
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
-          <h1 className="text-8xl md:text-9xl font-bold text-white mb-8 font-optien tracking-wider">
-            REYCK
-          </h1>
+          <img 
+            src="/logozwart wit-vrijstaand copy.png" 
+            alt="Reyck Logo" 
+            className="w-64 md:w-80 h-auto mb-8"
+          />
           <p 
             className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
