@@ -29,7 +29,7 @@ const DynamicSplitLogo: React.FC<{ animate: boolean }> = ({ animate }) => {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className={`transform-gpu transition-all duration-1000 ${animate ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
           <img 
-            src="https://patronaat.nl/app/uploads/2023/09/Reyck-logo-goed-1024x768.png" 
+            src="/logozwart wit-vrijstaand.png" 
             alt="Reyck Logo"
             className="w-full h-full object-contain"
           />
