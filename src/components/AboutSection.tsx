@@ -29,15 +29,15 @@ const AboutSection: React.FC = () => {
           </h2>
           
           <p className="text-black text-base md:text-lg leading-relaxed font-optien mb-12">
-            Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid<br/>
-            en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden?<br/>
-            Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd<br/>
-            ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck<br/>
-            zorgt ervoor dat je er middenin staat...
-          </p>
-          
-          <div>
-            <Link 
+            Scherpe gitaarriffs snijden door de lucht,<br/>
+            smerige baslicks kruipen onder je huid en<br/>
+            voor je het weet dwingen keiharde<br/>
+            drumfills je lijf in beweging. De woorden?<br/>
+            Je kent ze niet, maar iets in je wil ze<br/>
+            meteen meezingen - alsof ze al die tijd<br/>
+            ergens diep in je lagen te wachten. Je<br/>
+            denkt niet, maar je voelt en Reyck zorgt<br/>
+            ervoor dat je er middenin staat...
               to="/biografie" 
               className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-4 px-12 text-lg transition-all duration-300 inline-block"
             >
