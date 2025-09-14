@@ -60,7 +60,7 @@ const LivePerformances: React.FC = () => {
                           <Calendar className="w-12 h-12 text-secondary" />
                           <div className="ml-4">
                             <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
-                            <p className="text-white/80">{gig.date}{gig.location && ` - ${gig.location}`}</p>
+                            <p className="text-white/80 font-din text-sm">{gig.date}{gig.location && ` - ${gig.location}`}</p>
                           </div>
                         </div>
                         {gig.hasTickets && (

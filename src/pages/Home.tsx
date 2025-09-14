@@ -44,7 +44,7 @@ const Home: React.FC = () => {
             <DynamicSplitLogo animate={animate} />
           </div>
           <p 
-            className={`text-2xl md:text-3xl text-white mb-8 transition-all duration-1000 transform
+            className={`text-2xl md:text-3xl text-white mb-8 font-optien transition-all duration-1000 transform
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: '1000ms' }}
           >
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
             <Calendar className="w-12 h-12 text-secondary" />
             <div className="ml-4">
               <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
-              <p className="text-white/80">{gig.date}{gig.location && ` - ${gig.location}`}</p>
+              <p className="text-white/80 font-din text-sm">{gig.date}{gig.location && ` - ${gig.location}`}</p>
             </div>
           </div>
         </div>

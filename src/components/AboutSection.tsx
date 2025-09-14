@@ -65,7 +65,7 @@ const AboutSection: React.FC = () => {
                   <div className="absolute inset-0 bg-secondary/20 transform rotate-6 scale-105"></div>
                   <Link 
                     to="/biografie" 
-                    className="relative block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 text-center transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+                    className="relative block bg-secondary hover:bg-accent text-white font-optien font-bold py-3 px-6 text-center transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
                   >
                     <span className="flex items-center justify-center">
                       Lees meer

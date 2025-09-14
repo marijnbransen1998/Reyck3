@@ -105,7 +105,7 @@ const MoreMusicSection: React.FC = () => {
           
           <Link 
             to="/muziek" 
-            className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            className="inline-block bg-secondary hover:bg-accent text-white font-optien font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
           >
             <span className="flex items-center justify-center">
               Ontdek meer muziek
