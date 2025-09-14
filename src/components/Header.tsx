@@ -65,7 +65,7 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-optien text-lg ${location.pathname === item.path ? 'text-white' : 'text-white/80'} hover:text-white transition duration-300`}
+                className={`font-din text-lg ${location.pathname === item.path ? 'text-white' : 'text-white/80'} hover:text-white transition duration-300`}
               >
                 {item.name}
               </Link>
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
             <Link
               key={item.name}
               to={item.path}
-              className={`font-heading text-xl ${
+              className={`font-din text-xl ${
                 location.pathname === item.path ? 'text-white' : 'text-white/80'
               } hover:text-white transition duration-300`}
               onClick={() => setIsMenuOpen(false)}
