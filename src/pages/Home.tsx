@@ -127,9 +127,38 @@ const Home: React.FC = () => {
           <AboutSection />
           <MoreMusicSection />
 
+          {/* Gallery Section */}
+          <section className="mb-16">
+            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
+            <div className="bg-white/5 p-6 relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="relative transform transition-all duration-500 hover:scale-105">
+                  <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm p-4 transform -rotate-2 hover:rotate-0 transition-all duration-500">
+                    <img
+                      src="/shoot-witteshirts copy copy.jpg"
+                      alt="Reyck Band Photo 1"
+                      className="w-full h-80 object-cover rounded-lg shadow-xl"
+                    />
+                  </div>
+                </div>
+                <div className="relative transform transition-all duration-500 hover:scale-105">
+                  <div className="absolute inset-0 bg-secondary/20 transform -rotate-2"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm p-4 transform rotate-2 hover:rotate-0 transition-all duration-500">
+                    <img
+                      src="/shoot-witteshirts copy copy.jpg"
+                      alt="Reyck Band Photo 2"
+                      className="w-full h-80 object-cover rounded-lg shadow-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Instagram Feed Section */}
           <section>
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">Follow us on Instagram</h2>
             <div className="bg-white/5 p-6">
               <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
             </div>
