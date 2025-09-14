@@ -47,7 +47,6 @@ const AboutSection: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>
     </section>
   );
 };
