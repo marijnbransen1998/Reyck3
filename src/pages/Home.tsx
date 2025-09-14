@@ -136,8 +136,8 @@ const Home: React.FC = () => {
                   <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-4 transform -rotate-2 hover:rotate-0 transition-all duration-500">
                     <img
-                      src="/shoot-witteshirts copy copy.jpg"
-                      alt="Reyck Band Photo 1"
+                     src="/shoot-trap copy.jpg"
+                     alt="Reyck Band Photo 1"
                       className="w-full h-80 object-cover rounded-lg shadow-xl"
                     />
                   </div>
