@@ -20,7 +20,7 @@ const ContactButtons: React.FC = () => {
     <div className="fixed bottom-6 right-6 flex items-end z-50">
       <div 
         className={`
-          absolute right-full bottom-full mb-4 mr-4 p-4 bg-secondary text-white rounded-lg shadow-xl
+          absolute right-full bottom-full mb-4 mr-4 p-4 bg-white text-black shadow-xl
           transition-all duration-300 ease-in-out
           ${showBubble ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
         `}
@@ -31,14 +31,14 @@ const ContactButtons: React.FC = () => {
       >
         <p className="font-semibold mb-1">Reyck boeken?</p>
         <p className="text-sm">Neem contact op!</p>
-        <div className="absolute -bottom-2 right-4 w-4 h-4 bg-secondary transform rotate-45"></div>
+        <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white transform rotate-45"></div>
       </div>
       <div className="flex flex-col space-y-4">
         <button
           onClick={handleEmailClick}
           onMouseEnter={() => setShowBubble(true)}
           onMouseLeave={() => setShowBubble(false)}
-          className="bg-secondary text-white p-4 rounded-full shadow-xl hover:bg-accent transition-colors duration-300"
+          className="bg-white text-black p-4 shadow-xl hover:bg-gray-200 transition-colors duration-300"
           aria-label="Contact via Email"
         >
           <Mail size={28} />
@@ -47,7 +47,7 @@ const ContactButtons: React.FC = () => {
           onClick={handleWhatsAppClick}
           onMouseEnter={() => setShowBubble(true)}
           onMouseLeave={() => setShowBubble(false)}
-          className="bg-secondary text-white p-4 rounded-full shadow-xl hover:bg-accent transition-colors duration-300"
+          className="bg-white text-black p-4 shadow-xl hover:bg-gray-200 transition-colors duration-300"
           aria-label="Contact via WhatsApp"
         >
           <MessageCircle size={28} />

@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         primary: '#1A1A1A',    // Deep Black
-        secondary: '#D4145A',  // Vibrant Pink/Red from Reyck logo
-        accent: '#FF4081',     // Lighter Pink
+        secondary: '#F5F5F5',  // Light Gray/White
+        accent: '#CCCCCC',     // Medium Gray
         background: '#F5F5F5', // Light Gray
         text: '#2D2D2D',       // Dark Gray
       },

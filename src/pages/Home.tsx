@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       </Helmet>
 
      {/* Hero Section */}
-<section className="relative h-screen flex items-center justify-center overflow-hidden">
+<section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
   <div className="absolute inset-0 z-0">
     <video 
       autoPlay 
@@ -37,18 +37,18 @@ const Home: React.FC = () => {
     >
       <source src="/promo vid cinetol1.mp4" type="video/mp4" />
     </video>
-    <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-gray-800/60"></div>
+    <div className="absolute inset-0 bg-black/40"></div>
   </div>
-        <div className="relative z-10 text-center flex flex-col items-center">
-          <div className="mb-8">
-            <DynamicSplitLogo animate={animate} />
-          </div>
+        <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
+          <h1 className="text-8xl md:text-9xl font-bold text-white mb-8 font-optien tracking-wider">
+            REYCK
+          </h1>
           <p 
-            className={`text-2xl md:text-3xl text-white mb-8 font-optien transition-all duration-1000 transform
+            className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: '1000ms' }}
           >
-            Nederrock 'n Roll
+            nederrock 'n Roll
           </p>
           <div 
             className={`relative transition-all duration-1000 transform
@@ -59,92 +59,65 @@ const Home: React.FC = () => {
               href="https://reyckband.nl/muziek"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondary hover:bg-accent text-white font-bold py-3 px-6 rounded-full text-xl
-                transition-all duration-300 transform hover:scale-105 hover:shadow-glow relative overflow-hidden group"
+              className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-4 px-8 text-lg
+                transition-all duration-300 relative overflow-hidden group"
             >
               <span className="relative z-10">Beluister onze muziek</span>
-              <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </a>
           </div>
         </div>
       </section>
 
-      <div className="bg-gradient-to-b from-primary to-secondary py-16">
+      <div className="bg-black py-16">
         <div className="container mx-auto px-4">
           {/* Upcoming Shows Section */}
           <section ref={upcomingShowsRef} className="mb-16 relative">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">
-              <span className="relative inline-block">
-                <span className="absolute -inset-1 bg-secondary/20 transform -skew-x-12"></span>
-                <span className="relative">Aankomende Optredens</span>
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white font-optien tracking-wider">
+              AANKOMENDE OPTREDENS
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="max-w-4xl mx-auto space-y-8">
               {[
-  { title: "Vort met de Geit", date: "30 augustus, 18:30", location: "Lexmond, Kom Lekdijk 38" },
-  { title: "SPOEL Festival", date: "31 augustus, 15:15", location: "Culemborg, Werk aan het Spoel" },
- { title: "Bergen Live", date: "5 september, 20:30", location: "Bergen" },
-      { title: "Toekomstmuziek", date: "9 oktober", location: "Amsterdam" },
-      { title: "Hofman", date: "6 november", location: "Utrecht" },
+                { title: "VORT MET DE GEIT", date: "30", month: "AUG.", location: "LEXMOND, KOM LEKDIJK 38", time: "18:30" },
+                { title: "SPOEL FESTIVAL", date: "31", month: "AUG.", location: "CULEMBORG, WERK AAN HET SPOEL", time: "15:15" },
+                { title: "BERGEN LIVE", date: "5", month: "SEP.", location: "BERGEN", time: "-" },
 ].map((gig, index) => (
-  <div 
+                <div 
     key={index}
-    className={`relative transform transition-all duration-1000 ${
+                  className={`relative transform transition-all duration-1000 ${
       isUpcomingShowsInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
     }`}
-    style={{ transitionDelay: `${index * 300}ms` }}
-  >
-    <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
-    <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-      <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
-      <div className="relative">
-        <div className="flex justify-between items-start mb-4">
-          <div className="flex items-center">
-            <Calendar className="w-12 h-12 text-secondary" />
-            <div className="ml-4">
-              <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
-              <p className="text-white/80 font-din text-sm">{gig.date}{gig.location && ` - ${gig.location}`}</p>
-            </div>
-          </div>
-        </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
 
-        {/* Extra CTA voor Plugged Festival */}
-        {gig.title === "Plugged Festival" && (
-          <div className="mt-4">
-            <a
-              href="https://pluggedfestival.nl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
-            >
-              <span className="flex items-center justify-center">
-                Bekijk festivalwebsite
-                <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
-            </a>
-          </div>
-        )}
 
-      </div>
-    </div>
-  </div>
+                    style={{ transitionDelay: `${index * 200}ms` }}
+                  >
+                    <div className="flex items-center justify-between py-6 border-b border-white/20">
+                      <div className="flex items-center space-x-8">
+                        <div className="text-center">
+                          <div className="text-4xl md:text-5xl font-bold text-white font-optien">{gig.date}</div>
+                          <div className="text-sm text-white/80 font-din">{gig.month}</div>
+                        </div>
+                        <div className="w-px h-16 bg-white/20"></div>
+                        <div>
+                          <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider mb-1">{gig.title}</h3>
+                          <p className="text-white/80 font-din text-sm">{gig.location}</p>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
+                      </div>
+                    </div>
+                  </div>
 ))}
-</div>
-            <div className="mt-8 text-center relative">
-              <div className="absolute left-1/2 -translate-x-1/2 w-32 h-1 bg-secondary/30 transform -rotate-12 -translate-y-6"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 w-32 h-1 bg-secondary/30 transform rotate-12 -translate-y-6"></div>
+            </div>
+            <div className="mt-12 text-center">
               
               <Link 
                 to="/optredens" 
-                className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300"
               >
-                <span className="flex items-center justify-center">
-                  Bekijk alle optredens
-                  <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
+                Bekijk alle optredens
               </Link>
             </div>
           </section>
@@ -154,8 +127,8 @@ const Home: React.FC = () => {
 
           {/* Instagram Feed Section */}
           <section>
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Galerij</h2>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-6">
+            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
+            <div className="bg-white/5 p-6">
               <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
             </div>
           </section>

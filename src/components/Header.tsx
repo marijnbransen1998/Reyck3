@@ -39,18 +39,16 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
         isScrolled || !isHomePage || isMenuOpen
-          ? 'bg-primary bg-opacity-90 py-2 shadow-lg'
-          : 'bg-primary/50 backdrop-blur-sm md:bg-transparent py-4'
+          ? 'bg-black bg-opacity-90 py-2 shadow-lg'
+          : 'bg-black/50 backdrop-blur-sm md:bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center relative">
           <Link to="/" className="flex items-center space-x-2">
-            <img 
-              src="https://patronaat.nl/app/uploads/2023/09/Reyck-logo-goed-1024x768.png" 
-              alt="Reyck Logo" 
-              className={`transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'} w-auto`} 
-            />
+            <div className={`text-white font-optien font-bold tracking-wider transition-all duration-300 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
+              REYCK
+            </div>
           </Link>
           
           {/* Desktop Navigation */}
@@ -65,7 +63,7 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-heading text-lg ${location.pathname === item.path ? 'text-secondary' : 'text-background'} hover:text-secondary transition duration-300`}
+                className={`font-optien text-lg ${location.pathname === item.path ? 'text-white' : 'text-white/80'} hover:text-white transition duration-300`}
               >
                 {item.name}
               </Link>
@@ -74,16 +72,16 @@ const Header: React.FC = () => {
 
           {/* Desktop Social Icons */}
           <div className="hidden md:flex space-x-4">
-            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={24} />
             </a>
-            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Facebook size={24} />
             </a>
-            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={24} />
             </a>
-            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={24} />
             </a>
           </div>
@@ -92,8 +90,8 @@ const Header: React.FC = () => {
           <button 
             className={`md:hidden fixed top-4 right-4 z-50 p-2 rounded-lg transition-colors duration-300 ${
               isScrolled || !isHomePage || isMenuOpen
-                ? 'text-background hover:text-secondary bg-primary/90'
-                : 'bg-primary/90 text-background hover:text-secondary'
+                ? 'text-white hover:text-white/80 bg-black/90'
+                : 'bg-black/90 text-white hover:text-white/80'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -122,8 +120,8 @@ const Header: React.FC = () => {
               key={item.name}
               to={item.path}
               className={`font-heading text-xl ${
-                location.pathname === item.path ? 'text-secondary' : 'text-background'
-              } hover:text-secondary transition duration-300`}
+                location.pathname === item.path ? 'text-white' : 'text-white/80'
+              } hover:text-white transition duration-300`}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
@@ -132,16 +130,16 @@ const Header: React.FC = () => {
 
           {/* Mobile Social Icons */}
           <div className="flex space-x-6 mt-8">
-            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={28} />
             </a>
-            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Facebook size={28} />
             </a>
-            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={28} />
             </a>
-            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-background hover:text-secondary transition duration-300">
+            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={28} />
             </a>
           </div>
