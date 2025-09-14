@@ -24,11 +24,10 @@ const AboutSection: React.FC = () => {
         <div className={`relative z-10 text-center max-w-2xl mx-auto px-8 transform transition-all duration-1000 ${
           isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <h2 className="text-5xl md:text-6xl font-bold text-black font-optien tracking-wider mb-8">
             OVER REYCK
           </h2>
           
-          <p className="text-black text-lg md:text-xl leading-relaxed font-optien mb-12">
+          <p className="text-black text-base md:text-lg leading-relaxed font-optien mb-12">
             Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck zorgt ervoor dat je er middenin staat...
           </p>
           
