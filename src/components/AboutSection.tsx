@@ -38,6 +38,7 @@ const AboutSection: React.FC = () => {
             ergens diep in je lagen te wachten. Je<br/>
             denkt niet, maar je voelt en Reyck zorgt<br/>
             ervoor dat je er middenin staat...
+          </p>
               to="/biografie" 
               className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-4 px-12 text-lg transition-all duration-300 inline-block"
             >
