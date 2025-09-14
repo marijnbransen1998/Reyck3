@@ -33,11 +33,11 @@ const Home: React.FC = () => {
       muted 
       loop 
       playsInline
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover filter grayscale"
     >
       <source src="/promo vid cinetol1.mp4" type="video/mp4" />
     </video>
-    <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-gray-800/60"></div>
   </div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <div className="mb-8">
