@@ -153,21 +153,22 @@ const Home: React.FC = () => {
           {/* Gallery Section */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="bg-white/5 p-6 relative max-w-4xl mx-auto">
-              <div className="relative overflow-hidden">
+            <div className="bg-white/5 p-6 relative max-w-6xl mx-auto">
+              <div className="relative overflow-hidden rounded-lg">
                 <div 
                   className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  style={{ transform: `translateX(-${currentSlide * 80}% + 10%)` }}
                 >
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-                      <div className="relative transform transition-all duration-500">
-                        <div className="absolute inset-0 bg-secondary/20 transform rotate-1"></div>
-                        <div className="relative bg-black/40 backdrop-blur-sm p-4 transform -rotate-1 hover:rotate-0 transition-all duration-500">
+                    <div key={index} className="w-4/5 flex-shrink-0 px-4">
+                      <div className={`relative transform transition-all duration-500 ${
+                        index === currentSlide ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
+                      }`}>
+                        <div className="relative bg-black/20 backdrop-blur-sm p-2">
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-96 object-cover rounded-lg shadow-xl"
+                            className="w-full h-80 md:h-96 object-cover rounded-lg shadow-xl"
                           />
                         </div>
                       </div>
@@ -178,26 +179,26 @@ const Home: React.FC = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 z-10"
                   aria-label="Previous image"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 z-10"
                   aria-label="Next image"
                 >
                   <ChevronRight size={24} />
                 </button>
                 
                 {/* Dots Indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                   {galleryImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
                         currentSlide === index ? 'bg-white' : 'bg-white/50'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
