@@ -153,29 +153,28 @@ const Home: React.FC = () => {
           {/* Gallery Section */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="bg-white/5 p-6 relative max-w-6xl mx-auto">
-              <div className="relative overflow-hidden rounded-lg h-96">
+            <div className="relative max-w-7xl mx-auto px-4">
+              <div className="relative overflow-hidden h-80 flex items-center justify-center">
                 <div 
-                  className="flex transition-transform duration-500 ease-in-out h-full"
+                  className="flex transition-transform duration-500 ease-in-out items-center"
                   style={{ 
-                    transform: `translateX(calc(-${currentSlide * 60}% + 20%))`,
-                    width: `${galleryImages.length * 60}%`
+                    transform: `translateX(calc(-${currentSlide * 400}px + 50vw - 200px))`,
                   }}
                 >
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="flex-shrink-0 px-2 h-full" style={{ width: '60%' }}>
+                    <div key={index} className="flex-shrink-0 mx-4" style={{ width: '400px' }}>
                       <div className={`relative transform transition-all duration-500 ${
                         index === currentSlide 
-                          ? 'scale-100 opacity-100 z-10' 
+                          ? 'scale-100 opacity-100 z-20' 
                           : Math.abs(index - currentSlide) === 1 
-                            ? 'scale-90 opacity-70 z-5' 
-                            : 'scale-75 opacity-40 z-0'
+                            ? 'scale-75 opacity-60 z-10' 
+                            : 'scale-60 opacity-30 z-0'
                       }`}>
-                        <div className="relative bg-black/20 backdrop-blur-sm p-2 h-full">
+                        <div className="relative bg-white/10 backdrop-blur-sm p-3 rounded-lg shadow-xl">
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-full object-cover rounded-lg shadow-xl"
+                            className="w-full h-64 object-cover rounded-lg"
                           />
                         </div>
                       </div>
@@ -186,27 +185,27 @@ const Home: React.FC = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-3 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft size={28} />
+                  <ChevronLeft size={32} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-3 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
                   aria-label="Next image"
                 >
-                  <ChevronRight size={28} />
+                  <ChevronRight size={32} />
                 </button>
                 
                 {/* Dots Indicator */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
                   {galleryImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-4 h-4 rounded-full transition-all duration-300 hover:scale-125 ${
-                        currentSlide === index ? 'bg-white shadow-lg scale-125' : 'bg-white/50 hover:bg-white/70'
+                      className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                        currentSlide === index ? 'bg-white shadow-lg scale-125' : 'bg-white/60 hover:bg-white/80'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
