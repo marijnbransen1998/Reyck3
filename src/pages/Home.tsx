@@ -15,10 +15,12 @@ const Home: React.FC = () => {
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
 
   const galleryImages = [
-    { src: '/shoot-trap copy.jpg', alt: 'Reyck Band Photo 1' },
-    { src: '/shoot-witteshirts copy copy.jpg', alt: 'Reyck Band Photo 2' },
-    { src: '/shoot-snackbar copy copy.jpg', alt: 'Reyck Band Photo 3' },
-    { src: '/shoot-bank copy.jpg', alt: 'Reyck Band Photo 4' }
+    { src: '/shoot-snackbar (1) copy copy.webp', alt: 'Reyck Band Photo 1' },
+    { src: '/shoot-bank (1) copy copy.webp', alt: 'Reyck Band Photo 2' },
+    { src: '/reyckdigi-081 (1) copy.webp', alt: 'Reyck Band Photo 3' },
+    { src: '/reyckdigi-027 (1) copy.webp', alt: 'Reyck Band Photo 4' },
+    { src: '/shoot-witteshirts-_1__1 copy.webp', alt: 'Reyck Band Photo 5' },
+    { src: '/shoot-trap-_1__1.webp', alt: 'Reyck Band Photo 6' }
   ];
 
   useEffect(() => {
