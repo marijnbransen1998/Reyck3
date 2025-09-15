@@ -157,10 +157,10 @@ const Home: React.FC = () => {
               <div className="relative overflow-hidden rounded-lg">
                 <div 
                   className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 80}% + 10%)` }}
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="w-4/5 flex-shrink-0 px-4">
+                    <div key={index} className="w-full flex-shrink-0 px-4">
                       <div className={`relative transform transition-all duration-500 ${
                         index === currentSlide ? 'scale-100 opacity-100' : 'scale-90 opacity-60'
                       }`}>
@@ -168,7 +168,7 @@ const Home: React.FC = () => {
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-80 md:h-96 object-cover rounded-lg shadow-xl"
+                            className="w-full h-80 md:h-96 object-cover rounded-lg shadow-xl mx-auto"
                           />
                         </div>
                       </div>
@@ -179,27 +179,27 @@ const Home: React.FC = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 z-10"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-20 shadow-lg hover:scale-110"
                   aria-label="Previous image"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 z-10"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-20 shadow-lg hover:scale-110"
                   aria-label="Next image"
                 >
                   <ChevronRight size={24} />
                 </button>
                 
                 {/* Dots Indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
                   {galleryImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                        currentSlide === index ? 'bg-white' : 'bg-white/50'
+                      className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                        currentSlide === index ? 'bg-white shadow-lg' : 'bg-white/50 hover:bg-white/70'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
