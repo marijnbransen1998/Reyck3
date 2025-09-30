@@ -150,33 +150,26 @@ const Home: React.FC = () => {
           <AboutSection />
           <MoreMusicSection />
 
-          {/* Gallery Section */}
+          {/* Optimized Gallery Section */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="relative max-w-7xl mx-auto px-4">
-              <div className="relative overflow-hidden h-80 flex items-center justify-center">
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-lg">
                 <div 
-                  className="flex transition-transform duration-500 ease-in-out items-center"
+                  className="flex transition-transform duration-300 ease-out"
                   style={{ 
-                    transform: `translateX(calc(-${currentSlide * 400}px + 50vw - 200px))`,
+                    transform: `translateX(-${currentSlide * 100}%)`,
                   }}
                 >
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="flex-shrink-0 mx-4" style={{ width: '400px' }}>
-                      <div className={`relative transform transition-all duration-500 ${
-                        index === currentSlide 
-                          ? 'scale-100 opacity-100 z-20' 
-                          : Math.abs(index - currentSlide) === 1 
-                            ? 'scale-75 opacity-60 z-10' 
-                            : 'scale-60 opacity-30 z-0'
-                      }`}>
-                        <div className="relative bg-white/10 backdrop-blur-sm p-3 rounded-lg shadow-xl">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-64 object-cover rounded-lg"
-                          />
-                        </div>
+                    <div key={index} className="w-full flex-shrink-0">
+                      <div className="relative mx-4">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-80 object-cover rounded-lg shadow-xl"
+                          loading={Math.abs(index - currentSlide) <= 1 ? "eager" : "lazy"}
+                        />
                       </div>
                     </div>
                   ))}
@@ -185,27 +178,27 @@ const Home: React.FC = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft size={32} />
+                  <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 hover:bg-black text-white p-4 rounded-full transition-all duration-300 z-30 shadow-lg hover:scale-110"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
                   aria-label="Next image"
                 >
-                  <ChevronRight size={32} />
+                  <ChevronRight size={24} />
                 </button>
                 
                 {/* Dots Indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                   {galleryImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
-                        currentSlide === index ? 'bg-white shadow-lg scale-125' : 'bg-white/60 hover:bg-white/80'
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                        currentSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />

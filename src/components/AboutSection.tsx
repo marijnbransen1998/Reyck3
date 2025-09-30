@@ -8,27 +8,15 @@ const AboutSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className="mb-16 relative">
-      <div 
-        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center"
-        style={{
-          backgroundImage: `url('/fotobreed copy.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        
-        {/* Content centered over the background */}
-        <div className={`relative z-10 text-center max-w-2xl mx-auto px-8 transform transition-all duration-1000 ${
+      <div className="relative min-h-[500px] flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg">
+        <div className={`text-center max-w-2xl mx-auto px-8 transform transition-all duration-1000 ${
           isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <h2 className="text-black text-3xl md:text-4xl font-bold font-optien mb-8">
+          <h2 className="text-white text-3xl md:text-4xl font-bold font-optien mb-8">
             OVER REYCK
           </h2>
           
-          <p className="text-black text-base md:text-lg leading-relaxed font-optien mb-12">
+          <p className="text-white text-base md:text-lg leading-relaxed font-optien mb-12">
             Scherpe gitaarriffs snijden door de lucht,<br/>
             smerige baslicks kruipen onder je huid en<br/>
             voor je het weet dwingen keiharde<br/>
@@ -42,12 +30,11 @@ const AboutSection: React.FC = () => {
           
           <Link 
             to="/biografie" 
-            className="border-2 border-black text-black hover:bg-black hover:text-white font-optien py-3 px-8 transition-all duration-300"
+            className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300"
           >
             Lees meer
           </Link>
         </div>
-      </div>
     </section>
   );
 };
