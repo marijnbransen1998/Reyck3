@@ -47,7 +47,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center relative">
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/logozwart wit-vrijstaand copy.png" 
+              src="/logozwart wit-vrijstaand copy copy.png" 
               alt="Reyck Logo" 
               className={`transition-all duration-300 ${isScrolled ? 'h-8' : 'h-12'} w-auto`}
             />
