@@ -42,17 +42,28 @@ const Biography: React.FC = () => {
 
             {/* Bio Text Sections */}
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Introduction */}
+              <div className="space-y-8">
+                {/* Eerste alinea */}
                 <div className={`relative transform transition-all duration-1000 ${
-                  isInView ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
+                  isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                 }`} style={{ transitionDelay: '200ms' }}>
                   <div className="absolute inset-0 bg-white/5 transform -rotate-1"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
-                    <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
+                    <div className="text-white text-lg leading-relaxed font-heading">
                       <p>
                         Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt. Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten.
                       </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tweede alinea */}
+                <div className={`relative transform transition-all duration-1000 ${
+                  isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`} style={{ transitionDelay: '400ms' }}>
+                  <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
+                    <div className="text-white text-lg leading-relaxed font-heading">
                       <p>
                         Hun liveshow is als een oude leren jas: veel te warm, ruikend naar rook en de drank van gisteravond, maar hij zit als gegoten. Of je nu in een zweterige kelder bent of onder de festivaltent, Reyck grijpt je met muziek die je niet meer loslaat. En net als die jas, ooit Brits van snit maar gevormd door gure Nederlandse nachten.
                       </p>
@@ -60,31 +71,31 @@ const Biography: React.FC = () => {
                   </div>
                 </div>
 
-                {/* History */}
+                {/* Derde alinea */}
                 <div className={`relative transform transition-all duration-1000 ${
-                  isInView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
-                }`} style={{ transitionDelay: '400ms' }}>
-                  <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-                    <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
+                  isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`} style={{ transitionDelay: '600ms' }}>
+                  <div className="absolute inset-0 bg-white/5 transform -rotate-1"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
+                    <div className="text-white text-lg leading-relaxed font-heading">
                       <p>
                         De band laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken.
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Recent Developments */}
-              <div className={`relative mt-8 transform transition-all duration-1000 ${
-                isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-              }`} style={{ transitionDelay: '600ms' }}>
-                <div className="absolute inset-0 bg-white/5 transform -rotate-1"></div>
-                <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
-                  <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
-                    <p>
-                      In 2024 verscheen hun EP Los in een uitverkocht Bitterzoet en werd hun laatste single Op De Vlucht gedraaid op 3FM. Op dit moment werkt de band aan hun volgende album, dat in 2026 het daglicht zal zien.
-                    </p>
+                {/* Vierde alinea */}
+                <div className={`relative transform transition-all duration-1000 ${
+                  isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`} style={{ transitionDelay: '800ms' }}>
+                  <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
+                    <div className="text-white text-lg leading-relaxed font-heading">
+                      <p>
+                        In 2024 verscheen hun EP Los in een uitverkocht Bitterzoet en werd hun laatste single Op De Vlucht gedraaid op 3FM. Op dit moment werkt de band aan hun volgende album, dat in 2026 het daglicht zal zien.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
