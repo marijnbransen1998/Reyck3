@@ -51,6 +51,9 @@ const Header: React.FC = () => {
               alt="Reyck Logo" 
               className={`transition-all duration-300 ${isScrolled ? 'h-8' : 'h-12'} w-auto`}
             />
+            <span className="text-white font-optien text-lg md:text-xl tracking-wider">
+              REYCK | Nederrock 'n Roll
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
