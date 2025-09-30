@@ -49,13 +49,12 @@ const Biography: React.FC = () => {
                 }`} style={{ transitionDelay: '200ms' }}>
                   <div className="absolute inset-0 bg-white/5 transform -rotate-1"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
-                    <Star className="text-secondary w-8 h-8 mb-4" />
                     <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                       <p>
-                        Scherpe gitaarriffs snijden door de lucht, smerige baslicks kruipen onder je huid en voor je het weet dwingen keiharde drumfills je lijf in beweging. De woorden? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd ergens diep in je lagen te wachten. Je denkt niet, maar je voelt en Reyck zorgt ervoor dat je er middenin staat.
+                        Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt. Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten.
                       </p>
                       <p>
-                       Hun liveshow is als een oude leren jas: veel te warm, ruikend naar rook en de drank van gisteravond, maar hij zit als gegoten. Of je nu in een zweterige kelder bent of onder de festivaltent, Reyck grijpt je met muziek die je niet meer loslaat. En net als die jas, ooit Brits van snit maar gevormd door gure Nederlandse nachten.
+                        Hun liveshow is als een oude leren jas: veel te warm, ruikend naar rook en de drank van gisteravond, maar hij zit als gegoten. Of je nu in een zweterige kelder bent of onder de festivaltent, Reyck grijpt je met muziek die je niet meer loslaat. En net als die jas, ooit Brits van snit maar gevormd door gure Nederlandse nachten.
                       </p>
                     </div>
                   </div>
@@ -67,14 +66,10 @@ const Biography: React.FC = () => {
                 }`} style={{ transitionDelay: '400ms' }}>
                   <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-                    <Music className="text-secondary w-8 h-8 mb-4" />
                     <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                       <p>
-                        Reyck ademt onversneden Nederrock. Hun nummers raken precies daar waar het schuurt: aan de scherpe rand van verlangen, in de pijn die bij verliezen hoort, en in de plek waar liefde en verdriet elkaar stil omarmen. Reyck is zowel een vluchtige flirt, als een pleidooi voor hopeloze romantiek. Een sprong in het diepe, zonder vangnet.
+                        De band laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken.
                       </p>
-                      <p>
-                      Reyck laat zich muzikaal beïnvloeden door de scherpte en energie van Britse en Amerikaanse bands als Kings of Leon, Arctic Monkeys en het vroege werk van The Killers. Tegelijkertijd zijn het de teksten van iconen als Ramses Shaffy en Harry Mulisch die hen telkens opnieuw weten te raken. In hun recentere werk hoor je de rauwe rand van Radiohead verweven met het gepolijste van Nothing But Thieves. Het resultaat: stevige, eerlijke en euforische Nederlandstalige rock.
-                    </p>
                     </div>
                   </div>
                 </div>
@@ -88,7 +83,7 @@ const Biography: React.FC = () => {
                 <div className="relative bg-black/40 backdrop-blur-sm p-6 transform rotate-1 hover:rotate-0 transition-all duration-500">
                   <div className="space-y-4 text-white text-lg leading-relaxed font-heading">
                     <p>
-                    Begin 2024 presenteerde Reyck hun EP ‘Los’ in een uitverkochte Bitterzoet. Nog geen maand later zaten ze alweer midden in het schrijfproces. Eind 2024 verscheen de single ‘Op De Vlucht’, opgepikt door 3FM en te horen in ‘Debuut in een Minuut’. Op dit moment werkt de band aan hun volgende album, dat eind 2026 het daglicht zal zien.
+                      In 2024 verscheen hun EP Los in een uitverkocht Bitterzoet en werd hun laatste single Op De Vlucht gedraaid op 3FM. Op dit moment werkt de band aan hun volgende album, dat in 2026 het daglicht zal zien.
                     </p>
                   </div>
                 </div>
