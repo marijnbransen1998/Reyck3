@@ -125,7 +125,7 @@ const Biography: React.FC = () => {
                       <div className="relative overflow-hidden h-64">
                         <iframe 
                           src={member.img} 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                           allow="autoplay"
                         ></iframe>
                         <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-white/10 to-transparent"></div>
