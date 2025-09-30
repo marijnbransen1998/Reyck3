@@ -120,16 +120,13 @@ const Biography: React.FC = () => {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 bg-secondary/20 transform rotate-3"></div>
-                    <div className="relative bg-white/5 backdrop-blur-lg p-6 transform -rotate-3 hover:rotate-0 transition-all duration-500">
+                    <div className="relative bg-white/5 backdrop-blur-lg p-6">
                       <div className="relative overflow-hidden h-64">
                         <iframe 
                           src={member.img} 
                           className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                           allow="autoplay"
                         ></iframe>
-                        <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-white/10 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-white/10 to-transparent"></div>
                       </div>
                       <div className="mt-4">
                         <h3 className="text-2xl font-semibold text-white mb-2">{member.name}</h3>
