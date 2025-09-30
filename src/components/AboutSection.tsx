@@ -35,6 +35,7 @@ const AboutSection: React.FC = () => {
             Lees meer
           </Link>
         </div>
+      </div>
     </section>
   );
 };
