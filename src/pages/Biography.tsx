@@ -14,25 +14,9 @@ const Biography: React.FC = () => {
         <div className="container mx-auto px-4">
           {/* Main Bio Section */}
           <section ref={sectionRef} className="mb-24 relative">
-            {/* Featured Image */}
-            <div className={`relative max-w-4xl mx-auto mb-16 transform transition-all duration-1000 ${
-              isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-            }`}>
-              <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
-              <div className="relative bg-white/10 p-3 transform -rotate-2 hover:rotate-0 transition-all duration-500">
-                <div className="relative h-[400px] md:h-[500px] overflow-hidden">
-                  <img
-                    src="/reyck analoog-13 (1) (1).jpg"
-                    alt="Reyck Band"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Bio Text Sections */}
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-8">
+              <div className="space-y-8 mb-16">
                 {/* Eerste alinea */}
                 <div className={`relative transform transition-all duration-1000 ${
                   isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
@@ -60,7 +44,25 @@ const Biography: React.FC = () => {
                     </div>
                   </div>
                 </div>
+              </div>
 
+              {/* Featured Image */}
+              <div className={`relative max-w-3xl mx-auto mb-16 transform transition-all duration-1000 ${
+                isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              }`}>
+                <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
+                <div className="relative bg-white/10 p-3 transform -rotate-2 hover:rotate-0 transition-all duration-500">
+                  <div className="relative h-[300px] md:h-[400px] overflow-hidden">
+                    <img
+                      src="/reyck analoog-13 (1) (1).jpg"
+                      alt="Reyck Band"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-8">
                 {/* Derde alinea */}
                 <div className={`relative transform transition-all duration-1000 ${
                   isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'

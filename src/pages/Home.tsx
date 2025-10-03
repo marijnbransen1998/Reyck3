@@ -210,9 +210,7 @@ const Home: React.FC = () => {
           <section ref={instagramRef}>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">Follow us on Instagram</h2>
             <div style={{ backgroundColor: '#6D3200' }} className="p-6">
-              {isInstagramInView && (
-                <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
-              )}
+              <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
             </div>
           </section>
         </div>
