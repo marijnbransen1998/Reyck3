@@ -8,14 +8,11 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <img 
-              src="/logozwart wit-vrijstaand copy.png" 
-              alt="Reyck Logo" 
+            <img
+              src="/logozwart wit-vrijstaand copy.png"
+              alt="Reyck Logo"
               className="h-8 w-auto"
             />
-          </div>
-          <div className="mb-8 md:mb-0 text-center md:text-left">
-            <p className="text-xl">&copy; 2024 Reyck. Alle rechten voorbehouden.</p>
           </div>
           <div className="flex space-x-6">
             <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition duration-300">
