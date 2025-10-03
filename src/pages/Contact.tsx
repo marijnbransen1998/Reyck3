@@ -20,13 +20,6 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-primary to-secondary py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-accent">Contact</h1>
-          <p className="text-2xl md:text-3xl text-white">Neem contact met ons op</p>
-        </div>
-      </section>
-
       <div className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-8 transition-all duration-300 hover:shadow-2xl">

@@ -10,16 +10,6 @@ const Biography: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-70"></div>
-        </div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-accent">Over Reyck</h1>
-        </div>
-      </section>
-
       <div className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
           {/* Main Bio Section */}
