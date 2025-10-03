@@ -25,7 +25,7 @@ const MusicPage: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-gradient-to-b from-primary to-secondary/90 py-16">
+      <div className="bg-gradient-to-b from-primary to-secondary/90 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Nieuwste Release</h2>

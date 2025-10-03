@@ -8,7 +8,7 @@ const LivePerformances: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-gradient-to-b from-primary to-secondary py-16">
+      <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
         <div className="container mx-auto px-4">
           <section ref={sectionRef} className="relative">
             <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">

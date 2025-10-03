@@ -10,7 +10,7 @@ const Biography: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-gradient-to-b from-primary to-secondary py-16">
+      <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
         <div className="container mx-auto px-4">
           {/* Main Bio Section */}
           <section ref={sectionRef} className="mb-24 relative">
