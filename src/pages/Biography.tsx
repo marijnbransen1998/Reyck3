@@ -21,11 +21,11 @@ const Biography: React.FC = () => {
               <div className="absolute inset-0 bg-secondary/20 transform rotate-2"></div>
               <div className="relative bg-white/10 p-3 transform -rotate-2 hover:rotate-0 transition-all duration-500">
                 <div className="relative h-[400px] md:h-[500px] overflow-hidden">
-                  <iframe
-                    src="https://drive.google.com/file/d/1Jy6KsDocwvmAmCwUICRlEhDRT3MAgiN4/preview"
+                  <img
+                    src="/reyck analoog-13 (1) (1).jpg"
+                    alt="Reyck Band"
                     className="w-full h-full object-cover"
-                    allow="autoplay"
-                  ></iframe>
+                  />
                 </div>
               </div>
             </div>
