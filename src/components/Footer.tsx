@@ -29,9 +29,6 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="mt-8 text-center text-sm text-gray-400">
-          <p>Ontworpen door Bolt AI</p>
-        </div>
       </div>
     </footer>
   );
