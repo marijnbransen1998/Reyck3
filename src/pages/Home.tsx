@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                         <p className="text-white/80 font-din text-sm">{gig.location}</p>
                       </div>
                     </div>
-                    <div className="text-left md:text-right ml-16 md:ml-0">
+                    <div className="text-left md:text-right ml-auto md:ml-0">
                       <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
                     </div>
                   </div>
