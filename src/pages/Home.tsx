@@ -164,7 +164,7 @@ const Home: React.FC = () => {
                           src={image.src}
                           alt={image.alt}
                           className="w-full h-80 object-cover rounded-lg shadow-xl"
-                          loading={Math.abs(index - currentSlide) <= 1 ? "eager" : "lazy"}
+                          loading="eager"
                         />
                       </div>
                     </div>
