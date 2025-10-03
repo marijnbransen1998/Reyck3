@@ -109,11 +109,11 @@ const Biography: React.FC = () => {
               {[
                 { name: "Twan de Kock", role: "Zanger/Gitarist", img: "https://drive.google.com/file/d/1lWkA0I7gZ51hXJ5dLtrV62jY5qMtFdGz/preview" },
                 { name: "Wessel van Rooijen", role: "Gitarist", img: "https://drive.google.com/file/d/1sSI5G2PkwzXDf4A7I64I5IcH26ZGS-QG/preview" },
-                { name: "Max Balvers", role: "Drummer", img: "https://drive.google.com/file/d/1mEAvwhghPAV1sBmtyCayFZCEWDljEsRx/preview" },
+                { name: "Max Balvers", role: "Drummer", img: "/WhatsApp Image 2025-10-01 at 12.03.00.jpeg" },
                 { name: "Elmo Wanders", role: "Bassist", img: "https://drive.google.com/file/d/1yjxfoZZb797w6RH_op8-pyNCZbzvp1vG/preview" }
               ].map((member, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`relative transform transition-all duration-1000 ${
                     isBandMembersInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                   }`}
@@ -122,11 +122,11 @@ const Biography: React.FC = () => {
                   <div className="relative">
                     <div className="relative bg-white/5 backdrop-blur-lg p-6">
                       <div className="relative overflow-hidden h-64">
-                        <iframe 
-                          src={member.img} 
+                        <img
+                          src={member.img}
+                          alt={member.name}
                           className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                          allow="autoplay"
-                        ></iframe>
+                        />
                       </div>
                       <div className="mt-4">
                         <h3 className="text-2xl font-semibold text-white mb-2">{member.name}</h3>
