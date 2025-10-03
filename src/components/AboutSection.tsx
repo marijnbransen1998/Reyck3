@@ -12,16 +12,12 @@ const AboutSection: React.FC = () => {
     <section ref={sectionRef} className="mb-16 relative">
       {/* About Text and Photo Container */}
       <div className="relative bg-white/10 backdrop-blur-sm rounded-lg p-8 md:p-12">
-        <div className={`text-center max-w-2xl mx-auto mb-12 transform transition-all duration-1000 ${
+        <div className={`text-center transform transition-all duration-1000 ${
           isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <h2 className="text-white text-3xl md:text-4xl font-bold font-optien mb-8">
+          <h2 className="text-white text-3xl md:text-4xl font-bold font-optien mb-12">
             OVER REYCK
           </h2>
-
-          <p className="text-white text-base md:text-lg leading-relaxed font-optien mb-8">
-            Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt. Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
-          </p>
         </div>
 
         {/* Band Photo */}
@@ -38,6 +34,12 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
+        </div>
+
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="text-white text-base md:text-lg leading-relaxed font-optien mb-8">
+            Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt. Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
+          </p>
         </div>
 
         <div className="text-center">
