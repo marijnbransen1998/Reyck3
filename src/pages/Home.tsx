@@ -12,7 +12,9 @@ const Home: React.FC = () => {
   const [animate, setAnimate] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const upcomingShowsRef = useRef<HTMLDivElement>(null);
+  const instagramRef = useRef<HTMLDivElement>(null);
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
+  const isInstagramInView = useInView(instagramRef);
 
   const galleryImages = [
     { src: '/shoot-snackbar (1) copy copy.webp', alt: 'Reyck Band Photo 1' },
@@ -205,10 +207,12 @@ const Home: React.FC = () => {
           </section>
 
           {/* Instagram Feed Section */}
-          <section>
+          <section ref={instagramRef}>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">Follow us on Instagram</h2>
             <div style={{ backgroundColor: '#6D3200' }} className="p-6">
-              <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
+              {isInstagramInView && (
+                <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
+              )}
             </div>
           </section>
         </div>
