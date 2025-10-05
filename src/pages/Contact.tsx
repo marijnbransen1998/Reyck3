@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import { Send, Instagram, Facebook, Youtube } from 'lucide-react';
 import TikTokIcon from '../components/TikTokIcon';
+import { Helmet } from 'react-helmet-async';
 
 const Contact: React.FC = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto URL with just the message
+
     const mailtoUrl = `mailto:reyckband@hotmail.com?subject=Bericht via website&body=${encodeURIComponent(message)}`;
-    
-    // Open default email client
+
     window.location.href = mailtoUrl;
-    
-    // Reset form
+
     setMessage('');
   };
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>REYCK | Nederrock 'n Roll</title>
+        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+      </Helmet>
+
       <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-8 transition-all duration-300 hover:shadow-2xl">

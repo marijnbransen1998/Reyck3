@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Music as MusicIcon } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
+import { Helmet } from 'react-helmet-async';
 
 const MusicPage: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -25,6 +26,11 @@ const MusicPage: React.FC = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>REYCK | Nederrock 'n Roll</title>
+        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+      </Helmet>
+
       <div className="bg-gradient-to-b from-primary to-secondary/90 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <section className="mb-16">
@@ -133,7 +139,6 @@ const MusicPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Button: Beluister al onze muziek */}
           <div className="text-center mb-16 mt-16">
             <a
               href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
@@ -176,4 +181,3 @@ const MusicPage: React.FC = () => {
 };
 
 export default MusicPage;
-

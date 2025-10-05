@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Calendar, Ticket, Music, ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
+import { Helmet } from 'react-helmet-async';
 
 const LivePerformances: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -8,6 +9,11 @@ const LivePerformances: React.FC = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>REYCK | Nederrock 'n Roll</title>
+        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+      </Helmet>
+
       <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
         <div className="container mx-auto px-4">
           <section ref={sectionRef} className="relative">
@@ -18,28 +24,24 @@ const LivePerformances: React.FC = () => {
               </span>
             </h2>
 
-            {/* Optredens Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
               {[
                 { title: "Hofman", date: "6 november, 20:30", location: "Utrecht" },
                 { title: "Toekomstmuziek", date: "22 november, 20:00", location: "Amsterdam" },
                 { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
               ].map((gig, index) => (
-                <div 
+                <div
                   key={index}
                   className={`relative transform transition-all duration-1000 ${
                     isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  {/* Visueel Effect */}
                   <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
                   <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-                    
-                    {/* Noise Effect */}
+
                     <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
 
-                    {/* Content */}
                     <div className="relative">
                       <div className="flex justify-between items-start mb-4">
                         <div className="flex items-center">
@@ -57,16 +59,14 @@ const LivePerformances: React.FC = () => {
                         )}
                       </div>
 
-                      {/* Scheidingslijn */}
                       <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
 
-                      {/* Extra CTA-knop voor Plugged Festival */}
                       {gig.link && gig.title === "Plugged Festival" && (
                         <div className="mt-6">
-                          <a 
-                            href={gig.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                          <a
+                            href={gig.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
                           >
                             <span className="flex items-center justify-center">
@@ -78,7 +78,6 @@ const LivePerformances: React.FC = () => {
                       )}
                     </div>
 
-                    {/* Torn Paper Effect */}
                     <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-white/10 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-white/10 to-transparent"></div>
                   </div>

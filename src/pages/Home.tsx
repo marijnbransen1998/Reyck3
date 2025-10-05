@@ -45,7 +45,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Reyck - Officiële Website | Nederrock Band</title>
+        <title>REYCK | Nederrock 'n Roll</title>
         <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
         <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
       </Helmet>
