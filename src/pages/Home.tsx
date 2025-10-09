@@ -18,7 +18,9 @@ const Home: React.FC = () => {
 
   const galleryImages = [
     { src: '/reyck analoog-56 (1) copy copy.jpg', alt: 'Reyck Band Photo 1' },
-    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 2' }
+    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 2' },
+    { src: '/reyckdigi-081 (1) copy copy.jpg', alt: 'Reyck Band Photo 3' },
+    { src: '/reyck analoog-13 (1) (1) copy copy.jpg', alt: 'Reyck Band Photo 4' }
   ];
 
   useEffect(() => {
@@ -161,8 +163,9 @@ const Home: React.FC = () => {
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-80 object-cover rounded-lg shadow-xl"
+                          className="w-full h-[500px] object-cover object-center rounded-lg shadow-xl"
                           loading="eager"
+                          style={{ objectPosition: 'center 30%' }}
                         />
                       </div>
                     </div>
