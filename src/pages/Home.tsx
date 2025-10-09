@@ -17,10 +17,10 @@ const Home: React.FC = () => {
   const isInstagramInView = useInView(instagramRef);
 
   const galleryImages = [
-    { src: '/reyck analoog-56 (1) copy copy.jpg', alt: 'Reyck Band Photo 1' },
-    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 2' },
-    { src: '/reyckdigi-081 (1) copy copy.jpg', alt: 'Reyck Band Photo 3' },
-    { src: '/reyck analoog-13 (1) (1) copy copy.jpg', alt: 'Reyck Band Photo 4' }
+    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 1', position: 'center 65%' },
+    { src: '/reyck analoog-56 (1) copy copy.jpg', alt: 'Reyck Band Photo 2', position: 'center 30%' },
+    { src: '/reyck analoog-13 (1) (1) copy copy.jpg', alt: 'Reyck Band Photo 3', position: 'center 30%' },
+    { src: '/reyckdigi-081 (1) copy copy.jpg', alt: 'Reyck Band Photo 4', position: 'center 30%' }
   ];
 
   useEffect(() => {
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
                           alt={image.alt}
                           className="w-full h-[500px] object-cover object-center rounded-lg shadow-xl"
                           loading="eager"
-                          style={{ objectPosition: 'center 30%' }}
+                          style={{ objectPosition: image.position }}
                         />
                       </div>
                     </div>
