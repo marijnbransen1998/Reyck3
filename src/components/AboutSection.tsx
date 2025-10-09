@@ -12,34 +12,62 @@ const AboutSection: React.FC = () => {
         OVER REYCK
       </h2>
 
-      <div className={`relative w-full flex justify-center transform transition-all duration-1000 ${
+      <div className={`w-full transform transition-all duration-1000 ${
         isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}>
-        <div className="relative inline-block">
+        {/* Mobile: Image and text below */}
+        <div className="md:hidden flex flex-col items-center">
           <img
             src="/reyck analoog-33 (2) copy copy.jpg"
             alt="Reyck Band"
-            className="max-w-full max-h-[300px] md:max-h-[500px] h-auto w-auto object-contain"
+            className="max-w-full max-h-[300px] h-auto w-auto object-contain mb-6"
           />
+          <div className="px-4 text-white space-y-3 max-w-md">
+            <p className="text-sm leading-relaxed font-optien">
+              Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
+            </p>
+            <p className="text-sm leading-relaxed font-optien">
+              Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/biografie"
+                className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-6 text-sm transition-all duration-300"
+              >
+                Lees meer
+              </Link>
+            </div>
+          </div>
+        </div>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent md:via-black/50"></div>
+        {/* Desktop: Image with overlay text */}
+        <div className="hidden md:flex justify-center">
+          <div className="relative inline-block">
+            <img
+              src="/reyck analoog-33 (2) copy copy.jpg"
+              alt="Reyck Band"
+              className="max-w-full max-h-[500px] h-auto w-auto object-contain"
+            />
 
-          <div className="absolute inset-0 flex items-center">
-            <div className="px-4">
-              <div className="max-w-xs md:max-w-[280px] text-white space-y-2 md:space-y-3 pl-2 md:pl-8">
-                <p className="text-sm md:text-sm leading-snug font-optien">
-                  Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
-                </p>
-                <p className="text-sm md:text-sm leading-snug font-optien">
-                  Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
-                </p>
-                <div className="pt-2 md:pt-3">
-                  <Link
-                    to="/biografie"
-                    className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-6 md:py-2 md:px-6 text-sm transition-all duration-300"
-                  >
-                    Lees meer
-                  </Link>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+
+            <div className="absolute inset-0 flex items-center">
+              <div className="px-4">
+                <div className="max-w-[280px] text-white space-y-3 pl-8">
+                  <p className="text-sm leading-snug font-optien">
+                    Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
+                  </p>
+                  <p className="text-sm leading-snug font-optien">
+                    Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
+                  </p>
+                  <div className="pt-3">
+                    <Link
+                      to="/biografie"
+                      className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-6 text-sm transition-all duration-300"
+                    >
+                      Lees meer
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
