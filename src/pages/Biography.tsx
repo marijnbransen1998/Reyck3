@@ -16,7 +16,7 @@ const Biography: React.FC = () => {
         <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
       </Helmet>
 
-      <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
+      <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           {/* Main Bio Section */}
           <section ref={sectionRef} className="mb-24 relative">

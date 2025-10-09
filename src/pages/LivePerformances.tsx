@@ -14,7 +14,7 @@ const LivePerformances: React.FC = () => {
         <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
       </Helmet>
 
-      <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
+      <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           <section ref={sectionRef} className="relative">
             <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">

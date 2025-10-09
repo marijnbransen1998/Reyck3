@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
       </Helmet>
 
-      <div className="bg-gradient-to-b from-primary to-secondary pt-32 pb-16">
+      <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-8 transition-all duration-300 hover:shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">

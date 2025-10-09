@@ -12,10 +12,7 @@ import ContactButtons from './components/WhatsAppButton';
 function App() {
   return (
     <Router>
-      <div
-        className="flex flex-col min-h-screen bg-gray-100 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)' }}
-      >
+      <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
           <Routes>

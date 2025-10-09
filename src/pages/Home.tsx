@@ -95,7 +95,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <div style={{ backgroundColor: '#6D3200' }} className="py-16">
+      <div className="py-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           {/* Upcoming Shows Section */}
           <section ref={upcomingShowsRef} className="mb-16 relative">
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
           {/* Instagram Feed Section */}
           <section ref={instagramRef}>
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">Follow us on Instagram</h2>
-            <div style={{ backgroundColor: '#6D3200' }} className="p-6">
+            <div className="p-6">
               <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
             </div>
           </section>

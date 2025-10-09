@@ -31,7 +31,7 @@ const MusicPage: React.FC = () => {
         <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
       </Helmet>
 
-      <div className="bg-gradient-to-b from-primary to-secondary/90 pt-32 pb-16">
+      <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Nieuwste Release</h2>
