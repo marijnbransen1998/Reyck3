@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Music, Users, Ticket, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Music, Users, Ticket, ArrowRight } from 'lucide-react';
 import DynamicSplitLogo from '../components/DynamicSplitLogo';
 import { useInView } from '../hooks/useInView';
 import LatestRelease from '../components/LatestRelease';
@@ -10,36 +10,13 @@ import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
   const [animate, setAnimate] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const upcomingShowsRef = useRef<HTMLDivElement>(null);
   const instagramRef = useRef<HTMLDivElement>(null);
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
   const isInstagramInView = useInView(instagramRef);
 
-  const galleryImages = [
-    { src: '/shoot-snackbar (1) copy copy.webp', alt: 'Reyck Band Photo 1' },
-    { src: '/shoot-bank (1) copy copy.webp', alt: 'Reyck Band Photo 2' },
-    { src: '/reyckdigi-081 (1) copy.webp', alt: 'Reyck Band Photo 3' },
-    { src: '/reyckdigi-027 (1) copy.webp', alt: 'Reyck Band Photo 4' },
-    { src: '/shoot-witteshirts-_1__1 copy.webp', alt: 'Reyck Band Photo 5' },
-    { src: '/shoot-trap-_1__1.webp', alt: 'Reyck Band Photo 6' }
-  ];
-
   useEffect(() => {
     setAnimate(true);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -147,64 +124,6 @@ const Home: React.FC = () => {
 
           <AboutSection />
           <MoreMusicSection />
-
-          {/* Optimized Gallery Section */}
-          <section className="mb-16">
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="relative max-w-4xl mx-auto">
-              <div className="relative overflow-hidden rounded-lg">
-                <div 
-                  className="flex transition-transform duration-300 ease-out"
-                  style={{ 
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                  }}
-                >
-                  {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-                      <div className="relative mx-4">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-80 object-cover rounded-lg shadow-xl"
-                          loading="eager"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft size={24} />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
-                  aria-label="Next image"
-                >
-                  <ChevronRight size={24} />
-                </button>
-                
-                {/* Dots Indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-                  {galleryImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                        currentSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Instagram Feed Section */}
           <section ref={instagramRef}>
