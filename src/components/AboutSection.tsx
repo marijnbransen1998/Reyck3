@@ -15,28 +15,28 @@ const AboutSection: React.FC = () => {
       <div className={`relative w-full transform transition-all duration-1000 ${
         isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}>
-        <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[500px]">
+        <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[500px]">
           <img
             src="/reyck analoog-33 (2) copy copy.jpg"
             alt="Reyck Band"
-            className="max-w-full max-h-[400px] md:max-h-[500px] h-auto w-auto object-contain"
+            className="max-w-full max-h-[300px] md:max-h-[500px] h-auto w-auto object-contain mx-auto"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent md:via-black/50"></div>
 
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-4">
-              <div className="max-w-md text-white space-y-6 pl-0 md:pl-8">
-                <p className="text-base md:text-lg leading-relaxed font-optien">
-                  Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
+              <div className="max-w-xs md:max-w-sm text-white space-y-3 md:space-y-4 pl-2 md:pl-8">
+                <p className="text-sm md:text-base leading-relaxed font-optien">
+                  Reyck ademt onversneden Nederrock. Met hun rauwe sound brengen ze je lijf in beweging.
                 </p>
-                <p className="text-base md:text-lg leading-relaxed font-optien">
-                  Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
+                <p className="text-sm md:text-base leading-relaxed font-optien">
+                  De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen...
                 </p>
-                <div className="pt-4">
+                <div className="pt-2 md:pt-4">
                   <Link
                     to="/biografie"
-                    className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300"
+                    className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-6 md:py-3 md:px-8 text-sm md:text-base transition-all duration-300"
                   >
                     Lees meer
                   </Link>

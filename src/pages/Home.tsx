@@ -149,7 +149,7 @@ const Home: React.FC = () => {
           {/* Optimized Gallery Section */}
           <section className="mb-16">
             <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
-            <div className="relative max-w-4xl mx-auto">
+            <div className="relative max-w-4xl mx-auto px-4 md:px-0">
               <div className="relative overflow-hidden rounded-lg">
                 <div
                   className="flex transition-transform duration-300 ease-out"
@@ -159,11 +159,11 @@ const Home: React.FC = () => {
                 >
                   {galleryImages.map((image, index) => (
                     <div key={index} className="w-full flex-shrink-0">
-                      <div className="relative mx-4">
+                      <div className="relative px-2 md:mx-4">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-[500px] object-cover object-center rounded-lg shadow-xl"
+                          className="w-full h-[300px] md:h-[500px] object-cover object-center rounded-lg shadow-xl"
                           loading="eager"
                           style={{ objectPosition: image.position }}
                         />
@@ -175,17 +175,17 @@ const Home: React.FC = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
+                  className="absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-2 md:p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={20} className="md:w-6 md:h-6" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
+                  className="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black text-white p-2 md:p-3 rounded-full transition-all duration-200 z-10 shadow-lg"
                   aria-label="Next image"
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={20} className="md:w-6 md:h-6" />
                 </button>
 
                 {/* Dots Indicator */}
