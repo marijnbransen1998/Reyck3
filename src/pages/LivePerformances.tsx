@@ -24,7 +24,7 @@ const LivePerformances: React.FC = () => {
               {[
                 { title: "HOFMAN", date: "6", month: "NOV.", location: "UTRECHT", time: "20:30" },
                 { title: "TOEKOMSTMUZIEK", date: "22", month: "NOV.", location: "AMSTERDAM", time: "20:00" },
-                { title: "TO BE ANNOUNCED", date: "TBA", month: "", location: "", time: "" },
+                { title: "TO BE ANNOUNCED", date: "", month: "", location: "", time: "" },
               ].map((gig, index) => (
                 <div
                   key={index}
@@ -34,20 +34,28 @@ const LivePerformances: React.FC = () => {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between py-6 border-b border-white/20 gap-4">
-                    <div className="flex items-center space-x-4 md:space-x-8">
-                      <div className="text-center flex-shrink-0">
-                        <div className="text-4xl md:text-5xl font-bold text-white font-optien">{gig.date}</div>
-                        {gig.month && <div className="text-sm text-white/80 font-din">{gig.month}</div>}
-                      </div>
-                      {gig.title !== "TO BE ANNOUNCED" && <div className="w-px h-16 bg-white/20 hidden md:block"></div>}
+                    {gig.date ? (
+                      <>
+                        <div className="flex items-center space-x-4 md:space-x-8">
+                          <div className="text-center flex-shrink-0">
+                            <div className="text-4xl md:text-5xl font-bold text-white font-optien">{gig.date}</div>
+                            {gig.month && <div className="text-sm text-white/80 font-din">{gig.month}</div>}
+                          </div>
+                          <div className="w-px h-16 bg-white/20 hidden md:block"></div>
+                          <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider mb-1">{gig.title}</h3>
+                            {gig.location && <p className="text-white/80 font-din text-sm">{gig.location}</p>}
+                          </div>
+                        </div>
+                        {gig.time && (
+                          <div className="text-left md:text-right ml-auto md:ml-0">
+                            <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
+                          </div>
+                        )}
+                      </>
+                    ) : (
                       <div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider mb-1">{gig.title}</h3>
-                        {gig.location && <p className="text-white/80 font-din text-sm">{gig.location}</p>}
-                      </div>
-                    </div>
-                    {gig.time && (
-                      <div className="text-left md:text-right ml-auto md:ml-0">
-                        <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
+                        <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider">{gig.title}</h3>
                       </div>
                     )}
                   </div>
