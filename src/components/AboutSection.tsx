@@ -12,22 +12,20 @@ const AboutSection: React.FC = () => {
         OVER REYCK
       </h2>
 
-      <div className={`relative w-full transform transition-all duration-1000 ${
+      <div className={`relative w-full flex justify-center transform transition-all duration-1000 ${
         isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}>
-        <div className="relative flex items-center justify-center min-h-[300px] md:min-h-[500px]">
-          <div className="w-full flex justify-center">
-            <img
-              src="/reyck analoog-33 (2) copy copy.jpg"
-              alt="Reyck Band"
-              className="max-w-full max-h-[300px] md:max-h-[500px] h-auto w-auto object-contain"
-            />
-          </div>
+        <div className="relative inline-block">
+          <img
+            src="/reyck analoog-33 (2) copy copy.jpg"
+            alt="Reyck Band"
+            className="max-w-full max-h-[300px] md:max-h-[500px] h-auto w-auto object-contain"
+          />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent md:via-black/50"></div>
 
           <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4">
+            <div className="px-4">
               <div className="max-w-xs md:max-w-[280px] text-white space-y-2 md:space-y-3 pl-2 md:pl-8">
                 <p className="text-sm md:text-sm leading-snug font-optien">
                   Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
