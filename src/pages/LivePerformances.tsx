@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Calendar, Ticket, Music, ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import { Helmet } from 'react-helmet-async';
 
@@ -10,25 +9,22 @@ const LivePerformances: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>REYCK | Nederrock 'n Roll</title>
-        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+        <title>REYCK | Optredens</title>
+        <meta name="description" content="Bekijk alle aankomende optredens van Reyck. Mis geen show!" />
       </Helmet>
 
       <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container mx-auto px-4">
           <section ref={sectionRef} className="relative">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent relative">
-              <span className="relative inline-block">
-                <span className="absolute -inset-1 bg-secondary/20 transform -skew-x-12"></span>
-                <span className="relative">Aankomende Optredens</span>
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white font-optien tracking-wider">
+              AANKOMENDE OPTREDENS
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+            <div className="max-w-4xl mx-auto space-y-8">
               {[
-                { title: "Hofman", date: "6 november, 20:30", location: "Utrecht" },
-                { title: "Toekomstmuziek", date: "22 november, 20:00", location: "Amsterdam" },
-                { title: "TO BE ANNOUNCED", date: "", location: "", link: "", hasTickets: false }
+                { title: "HOFMAN", date: "6", month: "NOV.", location: "UTRECHT", time: "20:30" },
+                { title: "TOEKOMSTMUZIEK", date: "22", month: "NOV.", location: "AMSTERDAM", time: "20:00" },
+                { title: "TO BE ANNOUNCED", date: "TBA", month: "", location: "", time: "" },
               ].map((gig, index) => (
                 <div
                   key={index}
@@ -37,49 +33,23 @@ const LivePerformances: React.FC = () => {
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className="absolute inset-0 bg-white/5 transform rotate-1"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm p-6 transform -rotate-1 hover:rotate-0 transition-all duration-500">
-
-                    <div className="absolute inset-0 opacity-10 pointer-events-none noise-bg"></div>
-
-                    <div className="relative">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center">
-                          <Calendar className="w-12 h-12 text-secondary" />
-                          <div className="ml-4">
-                            <h3 className="text-2xl font-bold text-white font-heading tracking-wider">{gig.title}</h3>
-                            <p className="text-white/80 font-din text-sm">{gig.date}{gig.location && ` - ${gig.location}`}</p>
-                          </div>
-                        </div>
-                        {gig.hasTickets && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-sm text-xs font-medium bg-secondary/80 text-white transform rotate-2">
-                            <Ticket className="w-4 h-4 mr-1" />
-                            Tickets beschikbaar
-                          </span>
-                        )}
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between py-6 border-b border-white/20 gap-4">
+                    <div className="flex items-center space-x-4 md:space-x-8">
+                      <div className="text-center flex-shrink-0">
+                        <div className="text-4xl md:text-5xl font-bold text-white font-optien">{gig.date}</div>
+                        {gig.month && <div className="text-sm text-white/80 font-din">{gig.month}</div>}
                       </div>
-
-                      <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-4"></div>
-
-                      {gig.link && gig.title === "Plugged Festival" && (
-                        <div className="mt-6">
-                          <a
-                            href={gig.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
-                          >
-                            <span className="flex items-center justify-center">
-                              Bekijk festivalwebsite
-                              <ArrowRight className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                          </a>
-                        </div>
-                      )}
+                      {gig.title !== "TO BE ANNOUNCED" && <div className="w-px h-16 bg-white/20 hidden md:block"></div>}
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider mb-1">{gig.title}</h3>
+                        {gig.location && <p className="text-white/80 font-din text-sm">{gig.location}</p>}
+                      </div>
                     </div>
-
-                    <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-white/10 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-white/10 to-transparent"></div>
+                    {gig.time && (
+                      <div className="text-left md:text-right ml-auto md:ml-0">
+                        <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
