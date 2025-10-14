@@ -104,6 +104,7 @@ const Home: React.FC = () => {
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { title: "HOFMAN", date: "6", month: "NOV.", location: "UTRECHT", time: "20:30" },
+                { title: "'T OUDE POTHUYS", date: "21", month: "NOV.", location: "UTRECHT", time: "23:00 - 01:00" },
                 { title: "TOEKOMSTMUZIEK", date: "22", month: "NOV.", location: "AMSTERDAM", time: "20:00" },
               ].map((gig, index) => (
                 <div
@@ -120,12 +121,17 @@ const Home: React.FC = () => {
                         <div className="text-sm text-white/80 font-din">{gig.month}</div>
                       </div>
                       <div className="w-px h-16 bg-white/20 hidden md:block"></div>
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white font-optien tracking-wider mb-1">{gig.title}</h3>
-                        <p className="text-white/80 font-din text-sm">{gig.location}</p>
+                      <div className="flex-1">
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-2">
+                          <h3 className="text-lg md:text-2xl font-bold text-white font-optien tracking-wider">{gig.title}</h3>
+                          <span className="hidden md:inline text-white/60">•</span>
+                          <p className="text-white/80 font-din text-sm md:text-base">{gig.location}</p>
+                          <span className="md:hidden text-white/60">•</span>
+                          <div className="text-sm md:text-2xl font-bold text-white font-optien md:hidden">{gig.time}</div>
+                        </div>
                       </div>
                     </div>
-                    <div className="text-left md:text-right ml-auto md:ml-0">
+                    <div className="text-left md:text-right ml-auto md:ml-0 hidden md:block">
                       <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
                     </div>
                   </div>
