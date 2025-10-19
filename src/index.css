@@ -1,16 +1,3 @@
-@font-face {
-  font-family: 'Optien';
-  src: url('/Optien.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DIN Alternate';
-  src: url('/DINAlternateBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
