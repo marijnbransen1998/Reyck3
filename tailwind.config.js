@@ -14,10 +14,6 @@ export default {
         sans: ['Cabinet Grotesk', 'sans-serif'],
         heading: ['Space Grotesk', 'sans-serif'],
         accent: ['Clash Display', 'serif'],
-
-        // ✅ Jouw toegevoegde fonts:
-        optien: ['Optien', 'Space Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        din: ['DIN Alternate', 'Cabinet Grotesk', 'Arial Black', 'sans-serif'],
       },
       animation: {
         'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
