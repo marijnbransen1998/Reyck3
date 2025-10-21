@@ -151,28 +151,6 @@ const MusicPage: React.FC = () => {
               </span>
             </a>
           </div>
-
-          <section>
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-accent">Muziekvideo's</h2>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:-translate-y-1 transition-all duration-300">
-              <Link
-                to="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center"
-              >
-                <img
-                  src="https://i.ytimg.com/vi/v4_pJB4GSuQ/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG2CIAC0AWKAgwIABABGH8gEyghMA8=&rs=AOn4CLBGlAcCphIqdUWvgIE70MiaBxyv7w"
-                  alt="Reyck YouTube Channel"
-                  className="w-32 h-auto rounded-lg mr-6 hover:opacity-80 transition-opacity duration-300"
-                />
-                <div>
-                  <h3 className="text-2xl font-semibold mb-2 text-white">Reyck YouTube Kanaal</h3>
-                  <p className="text-gray-300">Bekijk al onze muziekvideo's op YouTube</p>
-                </div>
-                <MusicIcon className="ml-auto text-white/80 w-12 h-12" />
-              </Link>
-            </div>
           </section>
         </div>
       </div>
