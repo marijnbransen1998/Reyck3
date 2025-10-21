@@ -67,10 +67,10 @@ const Biography: React.FC = () => {
             <h2 className="text-4xl font-bold mb-12 text-center text-white font-accent">Bandleden</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: "Twan de Kock", role: "Zanger/Gitarist", img: "public/DSCF1053 (1) (1).jpg" },
-                { name: "Wessel van Rooijen", role: "Gitarist", img: "public/DSCF2496 (1).jpg" },
+                { name: "Twan de Kock", role: "Zanger/Gitarist", img: "/DSCF1053 (1) (1).jpg" },
+                { name: "Wessel van Rooijen", role: "Gitarist", img: "/DSCF2496 (1).jpg" },
                 { name: "Max Balvers", role: "Drummer", img: "/WhatsApp Image 2025-10-01 at 12.03.00.jpeg" },
-                { name: "Elmo Wanders", role: "Bassist", img: "public/DSCF1378 (1).jpg" }
+                { name: "Elmo Wanders", role: "Bassist", img: "/DSCF1378 (1).jpg" }
               ].map((member, index) => (
                 <div
                   key={index}
