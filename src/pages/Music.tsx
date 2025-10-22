@@ -157,5 +157,4 @@ const MusicPage: React.FC = () => {
     </div>
   );
 };
-
 export default MusicPage;
