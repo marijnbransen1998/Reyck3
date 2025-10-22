@@ -111,5 +111,4 @@ const Biography: React.FC = () => {
     </div>
   );
 };
-
 export default Biography;
