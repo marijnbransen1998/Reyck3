@@ -20,7 +20,7 @@ const MusicPage: React.FC = () => {
     { title: "Vanavond gaat ze dansen", link: "https://open.spotify.com/embed/track/4yuahnGA6D3oJHWioT0dN8" },
     { title: "Als alles valt", link: "https://open.spotify.com/embed/track/6vN3ixzyhUG4Yqy8M0Xui7" },
     { title: "Kies niet voor mij", link: "https://open.spotify.com/embed/track/4YesFKZjybsdCp2qy8Q2sb" },
-      ];
+  ];
 
   return (
     <div className="min-h-screen">
@@ -149,7 +149,6 @@ const MusicPage: React.FC = () => {
               </span>
             </a>
           </div>
-          </section>
         </div>
       </div>
     </div>
