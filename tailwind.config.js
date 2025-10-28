@@ -12,8 +12,9 @@ export default {
       },
       fontFamily: {
         sans: ['Cabinet Grotesk', 'sans-serif'],
-        heading: ['Space Grotesk', 'sans-serif'],
+        heading: ['Optien', 'sans-serif'], // ✅ Voor headings
         accent: ['Clash Display', 'serif'],
+        din: ['DIN Alternate Bold', 'sans-serif'], // ✅ Voor normale tekst
       },
       animation: {
         'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
