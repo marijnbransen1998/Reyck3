@@ -1,8 +1,37 @@
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Base styles to prevent horizontal scroll */
+/* ===========================
+   Custom Fonts
+=========================== */
+@font-face {
+  font-family: 'Optien';
+  src: url('/Optien.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Bold';
+  src: url('/DIN Alternate Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Globale font-instellingen */
+body {
+  font-family: 'DIN Alternate Bold', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Optien', sans-serif;
+}
+
+/* ===========================
+   Base styles to prevent horizontal scroll
+=========================== */
 html, body {
   overflow-x: hidden;
   position: relative;
