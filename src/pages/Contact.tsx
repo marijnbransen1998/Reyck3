@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Send, Instagram, Facebook, Youtube } from 'lucide-react';
-import TikTokIcon from '../components/TikTokIcon';
 import { Helmet } from 'react-helmet-async';
 
 const Contact: React.FC = () => {
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const mailtoUrl = `mailto:reyckband@hotmail.com?subject=Bericht via website&body=${encodeURIComponent(message)}`;
+    const subject = encodeURIComponent('Bericht via website');
+    const body = encodeURIComponent(message);
+    const mailtoUrl = `mailto:reyckband@hotmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoUrl;
     setMessage('');
   };
@@ -36,7 +36,6 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-lg shadow-xl p-8 transition-all duration-300 hover:shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Label */}
               <div>
                 <label
                   htmlFor="message"
@@ -44,7 +43,6 @@ const Contact: React.FC = () => {
                 >
                   Bericht
                 </label>
-                {/* Textarea */}
                 <textarea
                   id="message"
                   value={message}
@@ -52,9 +50,9 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-white placeholder-white/50 font-din"
                   rows={5}
                   required
-                ></textarea>
+                />
               </div>
-              {/* Submit Button */}
+
               <button
                 type="submit"
                 className="w-full bg-primary hover:bg-accent text-white font-din font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_30px_rgba(212,20,90,0.6)] hover:-translate-y-1"
@@ -71,15 +69,41 @@ const Contact: React.FC = () => {
               Volg ons op social media
             </h2>
             <div className="flex justify-center space-x-8">
-              https://www.instagram.com/reyckband/
+              <a
+                href="https://www.instagram.com/reyckband/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Volg ons op Instagram"
+                className="text-white hover:text-accent transition-all duration-300"
+              >
                 <Instagram size={40} />
               </a>
+
               <a
                 href="https://www.facebook.com/REYCKBAND/"
-                target="_blank>
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Volg ons op Facebook"
+                className="text-white hover:text-accent transition-all duration-300"
+              >
+                <Facebook size={40} />
+              </a>
+
               <a
                 href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-accent transition-all duration-300 hover:-
+                aria-label="Bekijk ons op YouTube"
+                className="text-white hover:text-accent transition-all duration-300"
+              >
+                <Youtube size={40} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Contact;
