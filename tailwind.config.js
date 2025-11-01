@@ -1,19 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+
+  // ❌ Schakel Tailwind's preflight uit zodat het geen system fonts laadt
+  corePlugins: {
+    preflight: false,
+  },
+
   theme: {
     extend: {
       colors: {
-        primary: '#1A1A1A',    // Deep Black
-        secondary: '#F5F5F5',  // Light Gray/White
-        accent: '#CCCCCC',     // Medium Gray
-        background: '#F5F5F5', // Light Gray
-        text: '#2D2D2D',       // Dark Gray
+        primary: '#1A1A1A',
+        secondary: '#F5F5F5',
+        accent: '#CCCCCC',
+        background: '#F5F5F5',
+        text: '#2D2D2D',
       },
+
+      // ✅ Alleen jouw fonts
       fontFamily: {
-        heading: ['Optien'],               // ✅ Alleen Optien voor headings
-        din: ['DIN Alternate Bold'],       // ✅ Alleen DIN Alternate Bold voor tekst
+        heading: ['Optien'],
+        din: ['DINAlternateBold'],
       },
+
       animation: {
         'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
         'slide-down': 'slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -21,6 +30,7 @@ export default {
         'slide-right': 'slideRight 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
         'fade-in': 'fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
       },
+
       keyframes: {
         slideUp: {
           '0%': { transform: 'translateY(100px) rotate(5deg)', opacity: '0' },
@@ -43,6 +53,7 @@ export default {
           '100%': { opacity: '1' },
         },
       },
+
       container: {
         center: true,
         padding: {
