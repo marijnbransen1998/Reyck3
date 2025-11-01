@@ -20,7 +20,7 @@ export default {
       // ✅ Alleen jouw fonts
       fontFamily: {
         heading: ['Optien'],
-        din: ['DINAlternateBold'],
+        din: ['DIN Alternate Bold'],
       },
 
       animation: {
