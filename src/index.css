@@ -21,17 +21,18 @@
 
 /* ===========================
    Global Font Override
+   (GEEN sans-serif meer)
 =========================== */
 * {
-  font-family: 'DIN Alternate Bold', sans-serif !important;
+  font-family: 'DIN Alternate Bold' !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Optien', sans-serif !important;
+  font-family: 'Optien' !important;
 }
 
 button, a {
-  font-family: 'DIN Alternate Bold', sans-serif !important;
+  font-family: 'DIN Alternate Bold' !important;
 }
 
 /* ===========================
@@ -218,14 +219,8 @@ html, body {
     display: none !important;
   }
 
-  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 p {
-    display: none !important;
-  }
-
-  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2 {
-    display: none !important;
-  }
-
+  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 p,
+  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2,
   .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h3 {
     display: none !important;
   }
