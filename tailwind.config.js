@@ -11,10 +11,8 @@ export default {
         text: '#2D2D2D',       // Dark Gray
       },
       fontFamily: {
-        sans: ['Cabinet Grotesk', 'sans-serif'],
-        heading: ['Optien', 'sans-serif'], // ✅ Voor headings
-        accent: ['Clash Display', 'serif'],
-        din: ['DIN Alternate Bold', 'sans-serif'], // ✅ Voor normale tekst
+        heading: ['Optien'],               // ✅ Alleen Optien voor headings
+        din: ['DIN Alternate Bold'],       // ✅ Alleen DIN Alternate Bold voor tekst
       },
       animation: {
         'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
