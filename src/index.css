@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 /* ===========================
-   Custom Fonts
+   Custom Font: Optien
 =========================== */
 @font-face {
   font-family: 'Optien';
@@ -12,27 +12,11 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'DIN Alternate Bold';
-  src: url('/DIN Alternate Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 /* ===========================
    Global Font Override
-   (GEEN sans-serif meer)
 =========================== */
 * {
-  font-family: 'DIN Alternate Bold' !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
   font-family: 'Optien' !important;
-}
-
-button, a {
-  font-family: 'DIN Alternate Bold' !important;
 }
 
 /* ===========================
@@ -235,7 +219,6 @@ html, body {
     padding-right: 1rem;
   }
 
-  /* Prevent transform effects from causing horizontal scroll */
   .transform {
     transform-style: preserve-3d;
     backface-visibility: hidden;
