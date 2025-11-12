@@ -22,9 +22,10 @@ const LivePerformances: React.FC = () => {
 
             <div className="max-w-4xl mx-auto space-y-8">
               {[
-                { title: "HOFMAN", date: "6", month: "NOV.", location: "UTRECHT", time: "21:30" },
                 { title: "'T OUDE POTHUYS", date: "21", month: "NOV.", location: "UTRECHT", time: "23:00" },
                 { title: "TOEKOMSTMUZIEK", date: "22", month: "NOV.", location: "AMSTERDAM", time: "20:00" },
+                { title: "PENGUIN RADIO SHOWCASES 2025", date: "TBA", month: "JAN.", location: "GRONINGEN", time: "TBA" },
+                { title: "ROCK CAFE SNEEK", date: "11", month: "JUL.", location: "SNEEK", time: "20:00" },
                 { title: "TO BE ANNOUNCED", date: "", month: "", location: "", time: "" },
               ].map((gig, index) => (
                 <div
