@@ -191,26 +191,35 @@ html, body {
   transform: perspective(1000px) rotateY(0deg);
 }
 
-/* Instagram Widget Styles */
+/* ==========================================
+   Instagram Widget Styles & Cleanup
+========================================== */
 .instagram-widget-container {
   position: relative;
   z-index: 10;
 }
 
-/* Hide Elfsight branding and extra text on mobile */
-@media (max-width: 768px) {
-  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 [style*="color"] {
-    display: none !important;
-  }
+/* ✅ Verberg standaard Elfsight-tekst en branding (ook zwarte titel) */
+.elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 [style*="color: rgb(0, 0, 0)"],
+.elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2,
+.elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h3,
+.elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 p {
+  display: none !important;
+}
 
-  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 p,
+/* ✅ Mobiel: ook eventuele restanten en logo’s verbergen */
+@media (max-width: 768px) {
+  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 [style*="color"],
   .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2,
-  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h3 {
+  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h3,
+  .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 p {
     display: none !important;
   }
 }
 
-/* Mobile-specific styles */
+/* ==========================================
+   Mobile-specific styles
+========================================== */
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -219,6 +228,7 @@ html, body {
     padding-right: 1rem;
   }
 
+  /* Prevent transform effects from causing horizontal scroll */
   .transform {
     transform-style: preserve-3d;
     backface-visibility: hidden;
