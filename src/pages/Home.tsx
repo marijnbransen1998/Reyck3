@@ -71,14 +71,14 @@ const Home: React.FC = () => {
       className="w-64 md:w-80 h-auto mb-8"
     />
 
-    {/* ✅ "Nederrock ’n Roll" als kop met font Optien */}
-    <h2
-      className={`text-3xl md:text-3xl text-white mb-8 font-optien tracking-widest transition-all duration-1000 transform
+    {/* 🔙 Terug naar originele setup: Nederrock ’n Roll als normale tekst */}
+    <p 
+      className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
         ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       style={{ transitionDelay: '1000ms' }}
     >
-      NEDERROCK ’N ROLL
-    </h2>
+      Nederrock ’n Roll
+    </p>
 
     <div 
       className={`relative transition-all duration-1000 transform
