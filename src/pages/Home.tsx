@@ -73,11 +73,11 @@ const Home: React.FC = () => {
 
     {/* ✅ "Nederrock ’n Roll" als kop met font Optien */}
     <h2
-      className={`text-3xl md:text-4xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
+      className={`text-3xl md:text-3xl text-white mb-8 font-optien tracking-widest transition-all duration-1000 transform
         ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       style={{ transitionDelay: '1000ms' }}
     >
-      Nederrock ’n Roll
+      NEDERROCK ’N ROLL
     </h2>
 
     <div 
