@@ -223,7 +223,7 @@ const Home: React.FC = () => {
 
           {/* Instagram Feed */}
           <section ref={instagramRef} className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white font-optien tracking-wider">
+            <h2 className="text-4xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               FOLLOW US ON INSTAGRAM
             </h2>
             <div className="p-6 block instagram-widget-container">
