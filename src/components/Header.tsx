@@ -9,21 +9,26 @@ const Header: React.FC = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Over Reyck', path: '/biografie' },
+    { name: 'Muziek', path: '/muziek' },
+    { name: 'Optredens', path: '/optredens' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -34,14 +39,6 @@ const Header: React.FC = () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
-
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Over Reyck', path: '/biografie' },
-    { name: 'Muziek', path: '/muziek' },
-    { name: 'Optredens', path: '/optredens' },
-    { name: 'Contact', path: '/contact' },
-  ];
 
   return (
     <header
@@ -64,7 +61,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <h2 key={item.name} className="font-optien text-lg tracking-wider">
+              <h2 key={item.name} className="text-lg tracking-wider">
                 <Link
                   to={item.path}
                   className={`${
@@ -137,7 +134,7 @@ const Header: React.FC = () => {
       >
         <nav className="flex flex-col items-center py-8 space-y-6 px-4 overflow-y-auto max-h-[calc(100vh-64px)]">
           {navItems.map((item) => (
-            <h2 key={item.name} className="font-optien text-xl tracking-wider">
+            <h2 key={item.name} className="text-xl tracking-wider">
               <Link
                 to={item.path}
                 className={`${
