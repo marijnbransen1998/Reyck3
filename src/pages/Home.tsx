@@ -74,7 +74,7 @@ const Home: React.FC = () => {
           <p 
             className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: '1000ms' }}
+            style={{ transitionDelay: '1000ms', fontFamily: 'Optien', }}
           >
             Nederrock 'n Roll
           </p>
