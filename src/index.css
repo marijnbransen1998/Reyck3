@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 /* ===========================
-   Custom Font: Optien
+   Custom Fonts
 =========================== */
 @font-face {
   font-family: 'Optien';
@@ -12,11 +12,25 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DIN Alternate Bold';
+  src: url('/DIN Alternate Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* ===========================
-   Global Font Override
+   Global Font Rules
 =========================== */
-* {
-  font-family: 'Optien' !important;
+
+/* Normale tekst */
+body, p, span, a, li, div {
+  font-family: 'DIN Alternate Bold', sans-serif !important;
+}
+
+/* Kopjes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Optien', sans-serif !important;
 }
 
 /* ===========================
