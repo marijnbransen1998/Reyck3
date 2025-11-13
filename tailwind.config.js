@@ -4,16 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1A1A1A',    // Deep Black
-        secondary: '#F5F5F5',  // Light Gray/White
-        accent: '#CCCCCC',     // Medium Gray
-        background: '#F5F5F5', // Light Gray
-        text: '#2D2D2D',       // Dark Gray
+        primary: '#1A1A1A',
+        secondary: '#F5F5F5',
+        accent: '#CCCCCC',
+        background: '#F5F5F5',
+        text: '#2D2D2D',
       },
+
+      /* ✅ Custom fonts zonder sans-serif fallback */
       fontFamily: {
-        heading: ['Optien'],               // ✅ Alleen Optien voor headings
-        din: ['DIN Alternate Bold'],       // ✅ Alleen DIN Alternate Bold voor tekst
+        heading: ['Optien'],              // voor koppen
+        body: ['DIN Alternate Bold'],     // voor normale tekst
+        optien: ['Optien'],               // optioneel handmatig gebruik
+        din: ['DIN Alternate Bold'],      // optioneel handmatig gebruik
       },
+
       animation: {
         'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
         'slide-down': 'slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -55,5 +60,18 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase, theme }) {
+      addBase({
+        /* ✅ DIN voor normale tekst */
+        'body, p, span, a, li, div': {
+          fontFamily: theme('fontFamily.body'),
+        },
+        /* ✅ Optien voor headings */
+        'h1, h2, h3, h4, h5, h6': {
+          fontFamily: theme('fontFamily.heading'),
+        },
+      });
+    },
+  ],
 };
