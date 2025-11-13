@@ -50,68 +50,52 @@ const Home: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className="w-full h-full object-cover filter grayscale"
-          >
-            <source src="/promo vid cinetol1.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+<section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+  <div className="absolute inset-0 z-0">
+    <video 
+      autoPlay 
+      muted 
+      loop 
+      playsInline
+      className="w-full h-full object-cover filter grayscale"
+    >
+      <source src="/promo vid cinetol1.mp4" type="video/mp4" />
+    </video>
+    <div className="absolute inset-0 bg-black/40"></div>
+  </div>
 
-        <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
-          <img 
-            src="/logozwart wit-vrijstaand copy.png" 
-            alt="Reyck Logo" 
-            className="w-64 md:w-80 h-auto mb-8"
-          />
+  <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
+    <img 
+      src="/logozwart wit-vrijstaand copy.png" 
+      alt="Reyck Logo" 
+      className="w-64 md:w-80 h-auto mb-8"
+    />
 
-          {/* ✅ Titel met Optien */}
-          <h2
-            className={`text-3xl md:text-4xl text-white mb-6 font-optien tracking-widest transition-all duration-1000 transform
-              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: '1000ms' }}
-          >
-            Nederrock ’n Roll
-          </h2>
+    {/* ✅ "Nederrock ’n Roll" als kop met font Optien */}
+    <h2
+      className={`text-3xl md:text-4xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
+        ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      style={{ transitionDelay: '1000ms' }}
+    >
+      Nederrock ’n Roll
+    </h2>
 
-          {/* ✅ Subteksten met DIN Alternate Bold */}
-          <p
-            className={`text-lg md:text-xl text-white mb-2 font-din transition-all duration-1000 transform
-              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: '1200ms' }}
-          >
-            Middenweg
-          </p>
-          <p
-            className={`text-lg md:text-xl text-white mb-12 font-din transition-all duration-1000 transform
-              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: '1300ms' }}
-          >
-            Buitenaards
-          </p>
-
-          <div 
-            className={`relative transition-all duration-1000 transform
-              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: '1500ms' }}
-          >
-            <a 
-              href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=irPhwZSJQVuFAUnn64deWA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-4 px-8 text-lg transition-all duration-300 relative overflow-hidden group"
-            >
-              <span className="relative z-10">Beluister onze muziek</span>
-            </a>
-          </div>
-        </div>
-      </section>
+    <div 
+      className={`relative transition-all duration-1000 transform
+        ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      style={{ transitionDelay: '1500ms' }}
+    >
+      <a 
+        href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=irPhwZSJQVuFAUnn64deWA"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-4 px-8 text-lg transition-all duration-300 relative overflow-hidden group"
+      >
+        <span className="relative z-10">Beluister onze muziek</span>
+      </a>
+    </div>
+  </div>
+</section>
 
       <div
         className="py-16"
