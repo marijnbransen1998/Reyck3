@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-accent text-white font-din font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_30px_rgba(212,20,90,0.6)] hover:-translate-y-1"
+                className="w-full bg-primary hover:bg-white/20 text-white font-din font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_30px_rgba(212,20,90,0.6)] hover:-translate-y-1"
               >
                 <Send className="mr-2" size={20} />
                 Verstuur Bericht
