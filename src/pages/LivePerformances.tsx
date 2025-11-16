@@ -10,7 +10,7 @@ const LivePerformances: React.FC = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>REYCK | Optredens</title>
-        <meta name="description" content="Bekijk alle aankomende optredens van Reyck. Mis geen show!" />
+        <meta name="description" content="Bekijk alle aankomende optredens van Reyck." />
       </Helmet>
 
       <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
