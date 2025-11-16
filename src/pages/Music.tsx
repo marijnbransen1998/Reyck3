@@ -142,7 +142,7 @@ const MusicPage: React.FC = () => {
               href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-secondary hover:bg-accent text-white font-bold py-3 px-6 transform hover:-rotate-2 transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+              className="w-full bg-primary hover:bg-accent text-white font-din font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center justify-center hover:shadow-[0_0_30px_rgba(212,20,90,0.6)] hover:-translate-y-1"
             >
               <span className="flex items-center justify-center">
                 Beluister al onze muziek
