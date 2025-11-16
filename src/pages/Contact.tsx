@@ -66,14 +66,14 @@ const Contact: React.FC = () => {
           {/* Social Media Section */}
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-heading mb-6 text-white">
-              Volg ons op social media
+              Volg Reyck op social media
             </h2>
             <div className="flex justify-center space-x-8">
               <a
                 href="https://www.instagram.com/reyckband/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Volg ons op Instagram"
+                aria-label="Volg Reyck op Instagram"
                 className="text-white hover:text-accent transition-all duration-300"
               >
                 <Instagram size={40} />
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                 href="https://www.facebook.com/REYCKBAND/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Volg ons op Facebook"
+                aria-label="Volg Reyck op Facebook"
                 className="text-white hover:text-accent transition-all duration-300"
               >
                 <Facebook size={40} />
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                 href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Bekijk ons op YouTube"
+                aria-label="Bekijk Reyck op YouTube"
                 className="text-white hover:text-accent transition-all duration-300"
               >
                 <Youtube size={40} />
