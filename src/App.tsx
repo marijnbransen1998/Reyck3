@@ -8,12 +8,14 @@ import MusicPage from './pages/Music';
 import LivePerformances from './pages/LivePerformances';
 import Contact from './pages/Contact';
 import ContactButtons from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop'; // ✅ import
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
+        <ScrollToTop /> {/* ✅ scroll naar boven bij routewissel */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
