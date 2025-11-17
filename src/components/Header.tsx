@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <h2 key={item.name} className="text-lg tracking-wider">
+              <h2 key={item.name} className="text-lg tracking-wider font-optien">
                 <Link
                   to={item.path}
                   className={`${
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
       >
         <nav className="flex flex-col items-center py-8 space-y-6 px-4 overflow-y-auto max-h-[calc(100vh-64px)]">
           {navItems.map((item) => (
-            <h2 key={item.name} className="text-xl tracking-wider">
+            <h2 key={item.name} className="text-xl tracking-wider font-optien">
               <Link
                 to={item.path}
                 className={`${
