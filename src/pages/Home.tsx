@@ -109,7 +109,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           {/* ✅ Upcoming Shows Section */}
           <section ref={upcomingShowsRef} className="mb-16 relative">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white font-optien tracking-wider">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               AANKOMENDE OPTREDENS
             </h2>
             <div className="max-w-4xl mx-auto space-y-8">
