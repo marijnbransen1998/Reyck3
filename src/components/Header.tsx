@@ -76,36 +76,16 @@ const Header: React.FC = () => {
 
           {/* Desktop Social Icons */}
           <div className="hidden md:flex space-x-4">
-            <a
-              href="https://www.instagram.com/reyckband/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={24} />
             </a>
-            <a
-              href="https://www.facebook.com/REYCKBAND/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Facebook size={24} />
             </a>
-            <a
-              href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={24} />
             </a>
-            <a
-              href="https://www.tiktok.com/@reyckband"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={24} />
             </a>
           </div>
@@ -149,36 +129,16 @@ const Header: React.FC = () => {
 
           {/* Mobile Social Icons */}
           <div className="flex space-x-6 mt-8">
-            <a
-              href="https://www.instagram.com/reyckband/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={28} />
             </a>
-            <a
-              href="https://www.facebook.com/REYCKBAND/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Facebook size={28} />
             </a>
-            <a
-              href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={28} />
             </a>
-            <a
-              href="https://www.tiktok.com/@reyckband"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-white/80 transition duration-300"
-            >
+            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={28} />
             </a>
           </div>
