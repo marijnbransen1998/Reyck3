@@ -13,7 +13,7 @@ const Biography: React.FC = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>REYCK | Nederrock 'n Roll</title>
-        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens." />
+        <meta name="description" content="Ontdek de Nederrock band Reyck. Beluister nieuwste releases en bekijk aankomende optredens." />
       </Helmet>
 
       <div className="pt-32 pb-16" style={{ backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
