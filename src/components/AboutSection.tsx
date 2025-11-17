@@ -21,28 +21,31 @@ const AboutSection: React.FC = () => {
         {/* ✔ MOBILE VERSION (UPDATED)   */}
         {/* ----------------------------- */}
         <div className="md:hidden relative w-full flex justify-center">
-          <img
-            src="/reyck analoog-33 (2) copy copy.jpg"
-            alt="Reyck Band"
-            className="w-full max-h-[350px] object-cover"
-          />
+          <div className="relative w-[90%]"> 
+            {/* ✔ Foto iets kleiner zodat achtergrond zichtbaar blijft */}
+            <img
+              src="/reyck analoog-33 (2) copy copy.jpg"
+              alt="Reyck Band"
+              className="w-full max-h-[330px] object-cover rounded"
+            />
 
-          {/* dark gradient overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+            {/* dark gradient overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent rounded"></div>
 
-          {/* text overlay */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="px-4 max-w-[220px] text-white space-y-3">
-              <p className="text-base leading-snug font-optien">
-                Reyck ademt onversneden Nederrock.
-              </p>
+            {/* text overlay (left 25%) */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="px-3 max-w-[160px] text-white space-y-2">
+                <p className="text-xs leading-snug font-optien">
+                  Reyck ademt onversneden Nederrock.
+                </p>
 
-              <Link
-                to="/biografie"
-                className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-5 text-sm transition-all duration-300"
-              >
-                Lees bio
-              </Link>
+                <Link
+                  to="/biografie"
+                  className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-1.5 px-3 text-xs transition-all duration-300"
+                >
+                  Lees bio
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -82,6 +85,7 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
