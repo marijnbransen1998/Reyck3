@@ -112,7 +112,6 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white font-optien tracking-wider">
               AANKOMENDE OPTREDENS
             </h2>
-
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { title: "'T OUDE POTHUYS", date: "21", month: "NOV.", location: "UTRECHT", time: "23:00" },
