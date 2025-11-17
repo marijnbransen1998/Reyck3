@@ -36,7 +36,9 @@ const AboutSection: React.FC = () => {
             <div className="absolute inset-0 flex items-center">
               <div className="px-3 max-w-[160px] text-white space-y-2">
                 <p className="text-xs leading-snug font-optien">
-                  Reyck ademt onversneden Nederrock.
+                  Reyck ademt<br />
+                  onversneden<br />
+                  Nederrock.
                 </p>
 
                 <Link
