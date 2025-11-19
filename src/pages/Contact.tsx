@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const Contact: React.FC = () => {
@@ -63,43 +63,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* Social Media Section */}
-          <div className="mt-16 text-center">
-            <h2 className="text-3xl font-heading mb-6 text-white">
-              Volg Reyck op social media
-            </h2>
-            <div className="flex justify-center space-x-8">
-              <a
-                href="https://www.instagram.com/reyckband/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Volg Reyck op Instagram"
-                className="text-white hover:text-accent transition-all duration-300"
-              >
-                <Instagram size={40} />
-              </a>
-
-              <a
-                href="https://www.facebook.com/REYCKBAND/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Volg Reyck op Facebook"
-                className="text-white hover:text-accent transition-all duration-300"
-              >
-                <Facebook size={40} />
-              </a>
-
-              <a
-                href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Bekijk Reyck op YouTube"
-                className="text-white hover:text-accent transition-all duration-300"
-              >
-                <Youtube size={40} />
-              </a>
-            </div>
-          </div>
+          {/* Social media sectie volledig verwijderd */}
         </div>
       </div>
     </div>
