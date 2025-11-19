@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MessageCircle, Mail } from 'lucide-react';
 
 const ContactButtons: React.FC = () => {
   const [showBubble, setShowBubble] = useState(false);
-  const phoneNumber = '+31683033829';
-  const email = 'reyckband@hotmail.com';
-  const whatsappMessage = 'Hoi! Ik heb een vraag over..';
-
-  const handleWhatsAppClick = () => {
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(url, '_blank');
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
-  };
 
   return (
-    <div className="fixed bottom-6 right-6 flex items-end z-50">
-      <div 
+    <div 
+      className="fixed bottom-6 right-6 flex items-end z-50"
+      style={{ display: 'none' }}  // 👈 volledige component onzichtbaar
+    >
+      <div
         className={`
           absolute right-full bottom-full mb-4 mr-4 p-4 bg-white text-black shadow-xl
           transition-all duration-300 ease-in-out
@@ -33,23 +24,12 @@ const ContactButtons: React.FC = () => {
         <p className="text-sm">Neem contact op!</p>
         <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white transform rotate-45"></div>
       </div>
+
       <div className="flex flex-col space-y-4">
-        <button
-          onClick={handleEmailClick}
-          onMouseEnter={() => setShowBubble(true)}
-          onMouseLeave={() => setShowBubble(false)}
-          className="bg-white text-black p-4 shadow-xl hover:bg-gray-200 transition-colors duration-300"
-          aria-label="Contact via Email"
-        >
+        <button className="bg-white text-black p-4 shadow-xl hover:bg-gray-200">
           <Mail size={28} />
         </button>
-        <button
-          onClick={handleWhatsAppClick}
-          onMouseEnter={() => setShowBubble(true)}
-          onMouseLeave={() => setShowBubble(false)}
-          className="bg-white text-black p-4 shadow-xl hover:bg-gray-200 transition-colors duration-300"
-          aria-label="Contact via WhatsApp"
-        >
+        <button className="bg-white text-black p-4 shadow-xl hover:bg-gray-200">
           <MessageCircle size={28} />
         </button>
       </div>
@@ -58,4 +38,3 @@ const ContactButtons: React.FC = () => {
 };
 
 export default ContactButtons;
-
