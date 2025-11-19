@@ -20,12 +20,12 @@ const Contact: React.FC = () => {
         <title>REYCK | Nederrock 'n Roll</title>
         <meta
           name="description"
-          content="Ontdek de Nederrock band Reyck. Beluister onze nieuwste releases en bekijk aankomende optredens."
+          content="REYCK | Nederrock 'n Roll"
         />
       </Helmet>
 
       <div
-        className="pt-32 pb-16"
+        className="pt-32 pb-16 min-h-screen"   // achtergrond vult altijd volledig
         style={{
           backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)',
           backgroundSize: 'cover',
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* Social media sectie volledig verwijderd */}
+          {/* Social media sectie is volledig verwijderd */}
         </div>
       </div>
     </div>
