@@ -22,9 +22,7 @@ const LivePerformances: React.FC = () => {
 
             <div className="max-w-4xl mx-auto space-y-8">
               {[
-                { title: "PENGUIN RADIO SHOWCASES", date: "16", month: "JAN.", location: "GRONINGEN", time: "02:15" },
-                { title: "AMSTELHAVEN", date: "7", month: "FEB.", location: "AMSTERDAM", time: "20:00" },
-                { title: "SKEK", date: "12", month: "FEB.", location: "AMSTERDAM", time: "20:00" },
+                { title: "SKEK", date: "12", month: "FEB.", location: "AMSTERDAM", time: "22:00" },
                 { title: "CLUB 3VOOR12 DBS", date: "26", month: "MRT.", location: "UTRECHT", time: "20:30" },
                 { title: "ROCK CAFE SNEEK", date: "11", month: "JUL.", location: "SNEEK", time: "20:00" },
                 { title: "TO BE ANNOUNCED", date: "", month: "", location: "", time: "" },
