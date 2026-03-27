@@ -71,9 +71,6 @@ const AboutSection: React.FC = () => {
                   <p className="text-sm leading-snug font-optien">
                     Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
                   </p>
-                  <p className="text-sm leading-snug font-optien">
-                    Met hun rauwe sound brengen ze je lijf in beweging. De teksten? Je kent ze niet, maar iets in je wil ze meteen meezingen - alsof ze al die tijd al ergens op je lagen te wachten...
-                  </p>
                   <div className="pt-3">
                     <Link
                       to="/biografie"
