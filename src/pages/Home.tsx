@@ -89,7 +89,7 @@ const Home: React.FC = () => {
               rel="noopener noreferrer"
               className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-4 px-8 text-lg transition-all duration-300 relative overflow-hidden group"
             >
-              <span className="relative z-10">Beluister muziek</span>
+              <span className="relative z-10">Spotify</span>
             </a>
           </div>
         </div>
