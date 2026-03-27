@@ -51,7 +51,7 @@ const Biography: React.FC = () => {
                       Hun liveshow is als een oude leren jas: veel te warm en ruikend naar de rook en drank van gisteravond, maar hij zit als gegoten. Of je nu in een zweterige kelder bent of onder de festivaltent, Reyck grijpt je met muziek die je niet meer loslaat. En net als die jas, ooit Brits van snit maar gevormd door gure Nederlandse nachten.
                     </p>
                     <p>
-                      Op dit moment werkt de band aan hun debuut album, dat in 2027 het daglicht zal zien.
+                      Op dit moment werkt de band aan hun debuutalbum, dat in 2027 het daglicht zal zien.
                     </p>
                   </div>
                 </div>
