@@ -112,7 +112,7 @@ const Home: React.FC = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-8">
               {[
-                { title: "CLUB 3VOOR12 DBS", date: "26", month: "MRT.", location: "UTRECHT", time: "20:30" },
+                { title: "Koningsnacht", date: "26", month: "APR.", location: "UTRECHT", time: "TBD" },
               ].map((gig, index) => (
                 <div
                   key={index}
