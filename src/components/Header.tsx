@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Instagram, Facebook, Youtube, Menu, X } from 'lucide-react';
+import { Instagram, Youtube, Menu, X } from 'lucide-react';
 import TikTokIcon from './TikTokIcon';
 
 const Header: React.FC = () => {
@@ -78,9 +78,6 @@ const Header: React.FC = () => {
             <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={24} />
             </a>
-            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
-              <Facebook size={24} />
-            </a>
             <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={24} />
             </a>
@@ -130,9 +127,6 @@ const Header: React.FC = () => {
           <div className="flex space-x-6 mt-8">
             <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={28} />
-            </a>
-            <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
-              <Facebook size={28} />
             </a>
             <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={28} />
