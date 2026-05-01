@@ -128,7 +128,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Social Icons */}
           <div className="flex space-x-6 mt-8">
-            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
+            <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={28} />
             </a>
             <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
