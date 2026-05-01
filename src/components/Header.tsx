@@ -75,7 +75,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Social Icons */}
           <div className="hidden md:flex space-x-4">
-            <a href="https://www.instagram.com/reyckband/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
+            <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={24} />
             </a>
             <a href="https://www.facebook.com/REYCKBAND/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={24} />
             </a>
-            <a href="https://www.tiktok.com/@reyckband" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
+            <a href="https://www.tiktok.com/@reyck.band" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={24} />
             </a>
           </div>
