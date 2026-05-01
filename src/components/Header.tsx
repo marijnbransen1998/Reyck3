@@ -78,9 +78,17 @@ const Header: React.FC = () => {
             <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={24} />
             </a>
+
+            <a href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=vLVuJOQETAGu4eRnmOrMXA" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.52 17.34a.75.75 0 0 1-1.03.25c-2.83-1.73-6.4-2.12-10.62-1.16a.75.75 0 1 1-.33-1.46c4.6-1.04 8.57-.58 11.74 1.33.36.22.48.69.24 1.04zm1.47-3.27a.94.94 0 0 1-1.3.3c-3.24-1.99-8.18-2.57-12.01-1.4a.94.94 0 1 1-.55-1.8c4.37-1.34 9.86-.7 13.56 1.57.44.27.58.85.3 1.33zm.13-3.41C15.4 8.37 8.89 8.2 5.3 9.27a1.13 1.13 0 1 1-.65-2.17c4.13-1.25 11.1-1.01 15.46 1.5a1.13 1.13 0 0 1-1.13 1.96z"/>
+              </svg>
+            </a>
+
             <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={24} />
             </a>
+
             <a href="https://www.tiktok.com/@reyck.band" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={24} />
             </a>
@@ -128,9 +136,17 @@ const Header: React.FC = () => {
             <a href="https://www.instagram.com/reyck.band/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Instagram size={28} />
             </a>
+
+            <a href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=vLVuJOQETAGu4eRnmOrMXA" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.52 17.34a.75.75 0 0 1-1.03.25c-2.83-1.73-6.4-2.12-10.62-1.16a.75.75 0 1 1-.33-1.46c4.6-1.04 8.57-.58 11.74 1.33.36.22.48.69.24 1.04zm1.47-3.27a.94.94 0 0 1-1.3.3c-3.24-1.99-8.18-2.57-12.01-1.4a.94.94 0 1 1-.55-1.8c4.37-1.34 9.86-.7 13.56 1.57.44.27.58.85.3 1.33zm.13-3.41C15.4 8.37 8.89 8.2 5.3 9.27a1.13 1.13 0 1 1-.65-2.17c4.13-1.25 11.1-1.01 15.46 1.5a1.13 1.13 0 0 1-1.13 1.96z"/>
+              </svg>
+            </a>
+
             <a href="https://www.youtube.com/channel/UCRv53lUbgxdyuLYZibXAxxw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <Youtube size={28} />
             </a>
+
             <a href="https://www.tiktok.com/@reyck.band" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition duration-300">
               <TikTokIcon size={28} />
             </a>
