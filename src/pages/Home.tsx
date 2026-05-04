@@ -10,9 +10,7 @@ const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
   const upcomingShowsRef = useRef<HTMLDivElement>(null);
-  const instagramRef = useRef<HTMLDivElement>(null);
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
-  const isInstagramInView = useInView(instagramRef);
 
   const galleryImages = [
     { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 1', position: 'center 65%' },
@@ -77,7 +75,6 @@ const Home: React.FC = () => {
           >
             Nederrock ’n Roll
           </p>
-
         </div>
       </section>
 
@@ -199,15 +196,6 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          {/* Instagram */}
-          <section ref={instagramRef} className="relative z-10">
-            <h2 className="text-4xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              VOLG REYCK OP INSTAGRAM
-            </h2>
-            <div className="p-6 block instagram-widget-container">
-              <div className="elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22" data-elfsight-app-lazy></div>
-            </div>
-          </section>
         </div>
       </div>
     </div>
