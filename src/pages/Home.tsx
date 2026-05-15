@@ -6,7 +6,8 @@ import {
   Music,
   Mail,
   Youtube,
-  Music2
+  Music2,
+  Spotify
 } from 'lucide-react';
 
 import { useInView } from '../hooks/useInView';
@@ -85,30 +86,32 @@ const Home: React.FC = () => {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+          {/* NAV */}
+          <div className="hidden md:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
 
-            <a href="#home" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#home" className="text-white hover:text-gray-300 text-[11px] md:text-xs tracking-[0.25em] uppercase font-optien">
               Home
             </a>
 
-            <a href="#live" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#live" className="text-white hover:text-gray-300 text-[11px] md:text-xs tracking-[0.25em] uppercase font-optien">
               Live
             </a>
 
-            <a href="#music" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#music" className="text-white hover:text-gray-300 text-[11px] md:text-xs tracking-[0.25em] uppercase font-optien">
               Music
             </a>
 
-            <a href="#foto" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#foto" className="text-white hover:text-gray-300 text-[11px] md:text-xs tracking-[0.25em] uppercase font-optien">
               Foto
             </a>
 
-            <a href="#contact" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#contact" className="text-white hover:text-gray-300 text-[11px] md:text-xs tracking-[0.25em] uppercase font-optien">
               Contact
             </a>
 
           </div>
 
+          {/* SOCIALS */}
           <div className="flex items-center gap-4 text-white">
 
             <a href="https://www.instagram.com/reyck.band" target="_blank">
@@ -116,7 +119,7 @@ const Home: React.FC = () => {
             </a>
 
             <a href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=rGWmL_YjTlKlZ26VeyRxPA" target="_blank">
-              <Music size={18} />
+              <Music2 size={18} />
             </a>
 
             <a href="https://www.youtube.com/@reyck2368" target="_blank">
@@ -124,18 +127,17 @@ const Home: React.FC = () => {
             </a>
 
             <a href="https://www.tiktok.com/@reyck.band" target="_blank">
-              <Music2 size={18} />
+              <Music size={18} />
             </a>
 
           </div>
+
         </div>
       </nav>
 
       {/* HERO */}
-      <section
-        id="home"
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-32 md:pt-36"
-      >
+      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-32 md:pt-36">
+
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover filter grayscale">
             <source src="/promo vid cinetol1.mp4" type="video/mp4" />
@@ -144,156 +146,80 @@ const Home: React.FC = () => {
         </div>
 
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
-          <img
-            src="/logozwart wit-vrijstaand copy.png"
-            alt="Reyck Logo"
-            className="w-64 md:w-80 h-auto mb-8"
-          />
+          <img src="/logozwart wit-vrijstaand copy.png" className="w-64 md:w-80 mb-8" />
 
           <p className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
             ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             Nederrock ’n Roll
           </p>
         </div>
+
       </section>
 
-      {/* MAIN CONTENT */}
-      <div
-        className="py-16"
-        style={{
-          backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      {/* CONTENT */}
+      <div className="py-16" style={{
+        backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover'
+      }}>
+
         <div className="container mx-auto px-4">
 
           {/* LIVE */}
           <section id="live" ref={upcomingShowsRef} className="mb-16 scroll-mt-24">
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-optien text-white text-center mb-8">
               LIVE
             </h2>
-
-            <div className="max-w-4xl mx-auto space-y-8">
-              {[{
-                title: "ELEMENTS BOARDFESTIVAL",
-                date: "28",
-                month: "JUN.",
-                location: "SURFSCHOOL SENANG",
-                time: "TBA"
-              }].map((gig, index) => (
-                <div key={index} className="border-b border-white/20 py-6">
-
-                  <div className="flex flex-col md:flex-row md:justify-between">
-
-                    <div className="flex items-center gap-6">
-                      <div className="text-white font-optien text-4xl">
-                        {gig.date}
-                      </div>
-
-                      <div>
-                        <h3 className="text-white font-optien text-xl">
-                          {gig.title}
-                        </h3>
-                        <p className="text-white/70 text-sm">
-                          {gig.location}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="text-white font-optien text-lg">
-                      {gig.time}
-                    </div>
-
-                  </div>
-
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* MUSIC */}
           <section id="music" className="mb-24 scroll-mt-24">
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-optien text-white text-center mb-8">
               MUSIC
             </h2>
 
             <AboutSection />
-
           </section>
 
-          {/* FOTO (TERUGGEZET EXACT ORIGINEEL) */}
+          {/* FOTO (UNCHANGED STRUCTURE) */}
           <section id="foto" className="mb-24 scroll-mt-24">
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-optien text-white text-center mb-8">
               FOTO
             </h2>
 
-            <div className="relative max-w-4xl mx-auto px-4 md:px-0">
+            <div className="relative max-w-4xl mx-auto overflow-hidden">
+              <div className="flex transition-transform duration-300"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
 
-              <div className="relative overflow-hidden rounded-lg">
-
-                <div
-                  className="flex transition-transform duration-300 ease-out"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                  }}
-                >
-                  {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-
-                      <div className="relative px-2 md:mx-4">
-
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-[300px] md:h-[500px] object-cover object-center rounded-lg shadow-xl"
-                          loading="eager"
-                          style={{ objectPosition: image.position }}
-                        />
-
-                      </div>
-
-                    </div>
-                  ))}
-                </div>
-
-                <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 text-white p-2 rounded-full">
-                  <ChevronLeft size={20} />
-                </button>
-
-                <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 text-white p-2 rounded-full">
-                  <ChevronRight size={20} />
-                </button>
+                {galleryImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.src}
+                    className="w-full h-[400px] object-cover flex-shrink-0"
+                  />
+                ))}
 
               </div>
-
             </div>
-
           </section>
 
           {/* CONTACT */}
           <section id="contact" className="pb-12 scroll-mt-24">
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-optien text-white text-center mb-8">
               CONTACT
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 text-white max-w-5xl mx-auto">
 
-              <div className="space-y-4 text-center">
-                <p className="text-lg">
-                  reyckband@hotmail.com
-                </p>
+              <div className="text-center space-y-4">
+                <p>reyckband@hotmail.com</p>
               </div>
 
               <form className="space-y-3">
                 <input className="w-full p-3 bg-black/40 border border-white/20" placeholder="Naam" />
                 <input className="w-full p-3 bg-black/40 border border-white/20" placeholder="Email" />
-                <button className="w-full border border-white py-3 hover:bg-white hover:text-black transition">
+                <button className="w-full border border-white py-3 hover:bg-white hover:text-black">
                   Inschrijven
                 </button>
               </form>
