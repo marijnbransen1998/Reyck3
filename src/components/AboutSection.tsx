@@ -9,8 +9,6 @@ const AboutSection: React.FC = () => {
   return (
     <section ref={sectionRef} className="mb-16 relative -mx-4 md:-mx-0">
       <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white font-optien tracking-wider px-4 md:px-0">
-        OVER REYCK
-      </h2>
 
       <div
         className={`w-full transform transition-all duration-1000 ${
@@ -71,14 +69,7 @@ const AboutSection: React.FC = () => {
                   <p className="text-sm leading-snug font-optien">
                     Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
                   </p>
-                  <div className="pt-3">
-                    <Link
-                      to="/biografie"
-                      className="inline-block border-2 border-white text-white hover:bg-white hover:text-black font-optien py-2 px-6 text-sm transition-all duration-300"
-                    >
-                      Lees meer
-                    </Link>
-                  </div>
+                  <div className="pt-3">     
                 </div>
               </div>
             </div>
