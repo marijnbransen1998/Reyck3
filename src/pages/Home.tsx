@@ -3,15 +3,25 @@ import {
   ChevronLeft,
   ChevronRight,
   Instagram,
-  Music,
-  Mail,
-  Youtube,
-  Music2
+  Youtube
 } from 'lucide-react';
+
+import TikTokIcon from '../components/TikTokIcon';
 
 import { useInView } from '../hooks/useInView';
 import AboutSection from '../components/AboutSection';
 import { Helmet } from 'react-helmet-async';
+
+const SpotifyIcon = ({ size = 18 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12C24 5.373 18.627 0 12 0zm5.292 17.292a.75.75 0 01-1.03.256c-2.82-1.72-6.364-2.11-10.53-1.16a.75.75 0 11-.334-1.462c4.55-1.04 8.49-.6 11.66 1.33a.75.75 0 01.234 1.036zm1.47-3.27a.94.94 0 01-1.29.32c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 01-.54-1.8c4.32-1.31 9.72-.67 13.51 1.62.44.27.58.85.29 1.26zm.13-3.41C15.03 8.5 8.98 8.2 5.35 9.32a1.13 1.13 0 01-.66-2.16c4.17-1.28 11.11-1.03 15.46 1.6a1.13 1.13 0 11-1.23 1.85z"/>
+  </svg>
+);
 
 const Home: React.FC = () => {
   const [animate, setAnimate] = useState(false);
@@ -107,31 +117,39 @@ const Home: React.FC = () => {
 
           </div>
 
-          {/* SOCIAL ICONS */}
+          {/* SOCIAL ICONS (NOW EXACT MATCH FOOTER) */}
           <div className="flex items-center gap-4 text-white">
 
-            <a href="https://www.instagram.com/reyck.band" target="_blank">
+            <a href="https://www.instagram.com/reyck.band" target="_blank" rel="noopener noreferrer">
               <Instagram size={18} />
             </a>
 
-            {/* Spotify */}
             <a
               href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=rGWmL_YjTlKlZ26VeyRxPA"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <Music2 size={18} />
+              <SpotifyIcon size={18} />
             </a>
 
-            <a href="https://www.youtube.com/@reyck2368" target="_blank">
+            <a
+              href="https://www.youtube.com/@reyck2368"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Youtube size={18} />
             </a>
 
-            {/* TikTok FIX (Lucide heeft geen TikTok icon → blijft fallback maar correct gelinkt) */}
-            <a href="https://www.tiktok.com/@reyck.band" target="_blank">
-              <Music size={18} />
+            <a
+              href="https://www.tiktok.com/@reyck.band"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TikTokIcon size={18} />
             </a>
 
           </div>
+
         </div>
       </nav>
 
@@ -173,10 +191,8 @@ const Home: React.FC = () => {
       >
         <div className="container mx-auto px-4">
 
-          {/* LIVE */}
           <section id="live" ref={upcomingShowsRef} className="mb-16 scroll-mt-24">
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               LIVE
             </h2>
 
@@ -189,7 +205,6 @@ const Home: React.FC = () => {
                 time: "TBA"
               }].map((gig, index) => (
                 <div key={index} className="border-b border-white/20 py-6">
-
                   <div className="flex flex-col md:flex-row md:justify-between">
 
                     <div className="flex items-center gap-6">
@@ -212,32 +227,24 @@ const Home: React.FC = () => {
                     </div>
 
                   </div>
-
                 </div>
               ))}
             </div>
           </section>
 
-          {/* MUSIC */}
           <section id="music" className="mb-24 scroll-mt-24">
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               MUSIC
             </h2>
-
             <AboutSection />
-
           </section>
 
-          {/* FOTO */}
           <section id="foto" className="mb-24 scroll-mt-24">
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               FOTO
             </h2>
 
             <div className="relative max-w-4xl mx-auto px-4 md:px-0">
-
               <div className="relative overflow-hidden rounded-lg">
 
                 <div
@@ -248,9 +255,7 @@ const Home: React.FC = () => {
                 >
                   {galleryImages.map((image, index) => (
                     <div key={index} className="w-full flex-shrink-0">
-
                       <div className="relative px-2 md:mx-4">
-
                         <img
                           src={image.src}
                           alt={image.alt}
@@ -258,9 +263,7 @@ const Home: React.FC = () => {
                           loading="eager"
                           style={{ objectPosition: image.position }}
                         />
-
                       </div>
-
                     </div>
                   ))}
                 </div>
@@ -274,41 +277,11 @@ const Home: React.FC = () => {
                 </button>
 
               </div>
-
             </div>
-
-          </section>
-
-          {/* CONTACT */}
-          <section id="contact" className="pb-12 scroll-mt-24">
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              CONTACT
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 text-white max-w-5xl mx-auto">
-
-              <div className="space-y-4 text-center">
-                <p className="text-lg">
-                  reyckband@hotmail.com
-                </p>
-              </div>
-
-              <form className="space-y-3">
-                <input className="w-full p-3 bg-black/40 border border-white/20" placeholder="Naam" />
-                <input className="w-full p-3 bg-black/40 border border-white/20" placeholder="Email" />
-                <button className="w-full border border-white py-3 hover:bg-white hover:text-black transition">
-                  Inschrijven
-                </button>
-              </form>
-
-            </div>
-
           </section>
 
         </div>
       </div>
-
     </div>
   );
 };
