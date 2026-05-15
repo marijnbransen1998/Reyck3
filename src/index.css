@@ -3,6 +3,13 @@
 @import 'tailwindcss/utilities';
 
 /* ===========================
+   Smooth Scrolling
+=========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
    Custom Fonts
 =========================== */
 @font-face {
@@ -190,7 +197,13 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 49.5%, rgba(255, 255, 255, 0.1) 49.5%, rgba(255, 255, 255, 0.1) 50.5%, transparent 50.5%);
+  background: linear-gradient(
+    45deg,
+    transparent 49.5%,
+    rgba(255, 255, 255, 0.1) 49.5%,
+    rgba(255, 255, 255, 0.1) 50.5%,
+    transparent 50.5%
+  );
   background-size: 20px 20px;
   pointer-events: none;
 }
@@ -213,7 +226,7 @@ html, body {
   z-index: 10;
 }
 
-/* ✅ Verberg standaard Elfsight-tekst en branding (ook zwarte titel) */
+/* ✅ Verberg standaard Elfsight-tekst en branding */
 .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 [style*="color: rgb(0, 0, 0)"],
 .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2,
 .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h3,
@@ -221,7 +234,7 @@ html, body {
   display: none !important;
 }
 
-/* ✅ Mobiel: ook eventuele restanten en logo’s verbergen */
+/* ✅ Mobiel cleanup */
 @media (max-width: 768px) {
   .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 [style*="color"],
   .elfsight-app-971ba9a9-b75b-4ca1-95d1-b752ac7d0b22 h2,
