@@ -107,13 +107,14 @@ const Home: React.FC = () => {
 
           </div>
 
+          {/* SOCIAL ICONS */}
           <div className="flex items-center gap-4 text-white">
 
             <a href="https://www.instagram.com/reyck.band" target="_blank">
               <Instagram size={18} />
             </a>
 
-            {/* FIX: Music icon -> Spotify icon (Music2) */}
+            {/* Spotify */}
             <a
               href="https://open.spotify.com/artist/36t2vlP5OiRO1G7EgxgNvU?si=rGWmL_YjTlKlZ26VeyRxPA"
               target="_blank"
@@ -125,8 +126,9 @@ const Home: React.FC = () => {
               <Youtube size={18} />
             </a>
 
+            {/* TikTok FIX (Lucide heeft geen TikTok icon → blijft fallback maar correct gelinkt) */}
             <a href="https://www.tiktok.com/@reyck.band" target="_blank">
-              <Music2 size={18} />
+              <Music size={18} />
             </a>
 
           </div>
@@ -174,7 +176,7 @@ const Home: React.FC = () => {
           {/* LIVE */}
           <section id="live" ref={upcomingShowsRef} className="mb-16 scroll-mt-24">
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               LIVE
             </h2>
 
@@ -219,7 +221,7 @@ const Home: React.FC = () => {
           {/* MUSIC */}
           <section id="music" className="mb-24 scroll-mt-24">
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               MUSIC
             </h2>
 
@@ -230,7 +232,7 @@ const Home: React.FC = () => {
           {/* FOTO */}
           <section id="foto" className="mb-24 scroll-mt-24">
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               FOTO
             </h2>
 
@@ -280,7 +282,7 @@ const Home: React.FC = () => {
           {/* CONTACT */}
           <section id="contact" className="pb-12 scroll-mt-24">
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               CONTACT
             </h2>
 
