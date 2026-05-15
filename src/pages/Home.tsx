@@ -1,5 +1,13 @@
+```tsx id="j9x2km"
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Instagram,
+  Music2,
+  Mail
+} from 'lucide-react';
+
 import { useInView } from '../hooks/useInView';
 import AboutSection from '../components/AboutSection';
 import { Helmet } from 'react-helmet-async';
@@ -13,10 +21,26 @@ const Home: React.FC = () => {
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
 
   const galleryImages = [
-    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 1', position: 'center 65%' },
-    { src: '/reyck analoog-56 (1) copy copy.jpg', alt: 'Reyck Band Photo 2', position: 'center 30%' },
-    { src: '/reyck analoog-13 (1) (1) copy copy.jpg', alt: 'Reyck Band Photo 3', position: 'center 30%' },
-    { src: '/reyckdigi-081 (1) copy copy.jpg', alt: 'Reyck Band Photo 4', position: 'center 30%' }
+    {
+      src: '/reyck analoog-28 (1) copy copy.jpg',
+      alt: 'Reyck Band Photo 1',
+      position: 'center 65%'
+    },
+    {
+      src: '/reyck analoog-56 (1) copy copy.jpg',
+      alt: 'Reyck Band Photo 2',
+      position: 'center 30%'
+    },
+    {
+      src: '/reyck analoog-13 (1) (1) copy copy.jpg',
+      alt: 'Reyck Band Photo 3',
+      position: 'center 30%'
+    },
+    {
+      src: '/reyckdigi-081 (1) copy copy.jpg',
+      alt: 'Reyck Band Photo 4',
+      position: 'center 30%'
+    }
   ];
 
   useEffect(() => {
@@ -28,7 +52,9 @@ const Home: React.FC = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    setCurrentSlide((prev) => (
+      prev - 1 + galleryImages.length
+    ) % galleryImages.length);
   };
 
   useEffect(() => {
@@ -45,47 +71,103 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>REYCK | Nederrock 'n Roll</title>
-        <meta name="description" content="REYCK | Nederrock 'n Roll" />
-        <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
+
+        <meta
+          name="description"
+          content="REYCK | Nederrock 'n Roll"
+        />
+
+        <link
+          rel="canonical"
+          href="https://legendary-longma-12de88.netlify.app/"
+        />
       </Helmet>
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-center gap-8">
-          <a
-            href="#home"
-            className="text-white hover:text-gray-300 font-optien tracking-wider"
-          >
-            HOME
+      {/* HEADER */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-white/10">
+        <div className="w-full px-4 md:px-8 py-4 flex items-center justify-between">
+
+          {/* LEFT LOGO */}
+          <a href="#home" className="flex-shrink-0">
+            <img
+              src="/logozwart wit-vrijstaand copy.png"
+              alt="REYCK"
+              className="w-24 md:w-32 h-auto"
+            />
           </a>
 
-          <a
-            href="#about"
-            className="text-white hover:text-gray-300 font-optien tracking-wider"
-          >
-            OVER ONS
-          </a>
+          {/* CENTER NAVIGATION */}
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+            <a
+              href="#home"
+              className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien transition-all duration-300"
+            >
+              Home
+            </a>
 
-          <a
-            href="#optredens"
-            className="text-white hover:text-gray-300 font-optien tracking-wider"
-          >
-            OPTREDENS
-          </a>
+            <a
+              href="#live"
+              className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien transition-all duration-300"
+            >
+              Live
+            </a>
 
-          <a
-            href="#galerij"
-            className="text-white hover:text-gray-300 font-optien tracking-wider"
-          >
-            GALERIJ
-          </a>
+            <a
+              href="#music"
+              className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien transition-all duration-300"
+            >
+              Music
+            </a>
+
+            <a
+              href="#foto"
+              className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien transition-all duration-300"
+            >
+              Foto
+            </a>
+
+            <a
+              href="#contact"
+              className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien transition-all duration-300"
+            >
+              Contact
+            </a>
+          </div>
+
+          {/* RIGHT SOCIALS */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-300 transition-all duration-300"
+            >
+              <Instagram size={20} />
+            </a>
+
+            <a
+              href="https://spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-300 transition-all duration-300"
+            >
+              <Music2 size={20} />
+            </a>
+
+            <a
+              href="mailto:info@reyck.nl"
+              className="text-white hover:text-gray-300 transition-all duration-300"
+            >
+              <Mail size={20} />
+            </a>
+          </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* HERO */}
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-24 md:pt-28"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-32 md:pt-36"
       >
         <div className="absolute inset-0 z-0">
           <video
@@ -95,7 +177,10 @@ const Home: React.FC = () => {
             playsInline
             className="w-full h-full object-cover filter grayscale"
           >
-            <source src="/promo vid cinetol1.mp4" type="video/mp4" />
+            <source
+              src="/promo vid cinetol1.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <div className="absolute inset-0 bg-black/40"></div>
@@ -110,7 +195,11 @@ const Home: React.FC = () => {
 
           <p
             className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
-              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            ${
+              animate
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-10'
+            }`}
             style={{ transitionDelay: '1000ms' }}
           >
             Nederrock ’n Roll
@@ -118,10 +207,12 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* MAIN CONTENT */}
       <div
         className="py-16"
         style={{
-          backgroundImage: 'url(/achtergrond-sfeerfoto-groenoranje.jpg)',
+          backgroundImage:
+            'url(/achtergrond-sfeerfoto-groenoranje.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -129,14 +220,14 @@ const Home: React.FC = () => {
       >
         <div className="container mx-auto px-4">
 
-          {/* Upcoming Shows */}
+          {/* LIVE */}
           <section
-            id="optredens"
+            id="live"
             ref={upcomingShowsRef}
             className="mb-16 relative scroll-mt-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              AANKOMENDE OPTREDENS
+              LIVE
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
@@ -159,6 +250,7 @@ const Home: React.FC = () => {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between py-6 border-b border-white/20 gap-4">
+
                     <div className="flex items-center space-x-4 md:space-x-8">
                       <div className="text-center flex-shrink-0">
                         <div className="text-4xl md:text-5xl font-bold text-white font-optien">
@@ -174,64 +266,59 @@ const Home: React.FC = () => {
 
                       <div className="flex-1">
                         <div className="flex flex-col md:flex-row md:items-center md:gap-2">
+
                           <h3 className="text-lg md:text-2xl font-bold text-white font-optien tracking-wider">
                             {gig.title}
                           </h3>
 
-                          <span className="hidden md:inline text-white/60">•</span>
+                          <span className="hidden md:inline text-white/60">
+                            •
+                          </span>
 
                           <p className="text-white/80 text-sm md:text-base">
                             {gig.location}
                           </p>
 
-                          <span className="md:hidden text-white/60">•</span>
-
-                          <div className="text-sm md:text-2xl font-bold text-white font-optien md:hidden">
-                            {gig.time}
-                          </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="text-left md:text-right ml-auto md:ml-0 hidden md:block">
+                    <div className="text-left md:text-right ml-auto md:ml-0">
                       <div className="text-2xl font-bold text-white font-optien">
                         {gig.time}
                       </div>
                     </div>
+
                   </div>
                 </div>
               ))}
             </div>
-
-            <div className="mt-12 text-center">
-              <a
-                href="#optredens"
-                className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300 inline-block"
-              >
-                Bekijk alle optredens
-              </a>
-            </div>
           </section>
 
-          {/* About Section */}
+          {/* MUSIC */}
           <section
-            id="about"
-            className="scroll-mt-24"
+            id="music"
+            className="mb-24 scroll-mt-24"
           >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+              MUSIC
+            </h2>
+
             <AboutSection />
           </section>
 
-          {/* Gallery */}
+          {/* FOTO */}
           <section
-            id="galerij"
-            className="mb-16 scroll-mt-24"
+            id="foto"
+            className="mb-24 scroll-mt-24"
           >
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">
-              GALERIJ
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+              FOTO
             </h2>
 
             <div className="relative max-w-4xl mx-auto px-4 md:px-0">
               <div className="relative overflow-hidden rounded-lg">
+
                 <div
                   className="flex transition-transform duration-300 ease-out"
                   style={{
@@ -249,7 +336,9 @@ const Home: React.FC = () => {
                           alt={image.alt}
                           className="w-full h-[300px] md:h-[500px] object-cover object-center rounded-lg shadow-xl"
                           loading="eager"
-                          style={{ objectPosition: image.position }}
+                          style={{
+                            objectPosition: image.position
+                          }}
                         />
                       </div>
                     </div>
@@ -283,7 +372,28 @@ const Home: React.FC = () => {
                     />
                   ))}
                 </div>
+
               </div>
+            </div>
+          </section>
+
+          {/* CONTACT */}
+          <section
+            id="contact"
+            className="pb-12 scroll-mt-24"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+              CONTACT
+            </h2>
+
+            <div className="text-center text-white space-y-4">
+              <p className="text-lg tracking-wider">
+                info@reyck.nl
+              </p>
+
+              <p className="text-lg tracking-wider">
+                Instagram: @reyckmusic
+              </p>
             </div>
           </section>
 
@@ -294,3 +404,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+```
