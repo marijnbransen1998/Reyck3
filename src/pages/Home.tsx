@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import AboutSection from '../components/AboutSection';
@@ -46,13 +45,49 @@ const Home: React.FC = () => {
         <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
       </Helmet>
 
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm">
+        <div className="container mx-auto px-6 py-4 flex justify-center gap-8">
+          <a
+            href="#home"
+            className="text-white hover:text-gray-300 font-optien tracking-wider"
+          >
+            HOME
+          </a>
+
+          <a
+            href="#about"
+            className="text-white hover:text-gray-300 font-optien tracking-wider"
+          >
+            OVER ONS
+          </a>
+
+          <a
+            href="#optredens"
+            className="text-white hover:text-gray-300 font-optien tracking-wider"
+          >
+            OPTREDENS
+          </a>
+
+          <a
+            href="#galerij"
+            className="text-white hover:text-gray-300 font-optien tracking-wider"
+          >
+            GALERIJ
+          </a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section
+        id="home"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24"
+      >
         <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            muted 
-            loop 
+          <video
+            autoPlay
+            muted
+            loop
             playsInline
             className="w-full h-full object-cover filter grayscale"
           >
@@ -62,13 +97,13 @@ const Home: React.FC = () => {
         </div>
 
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
-          <img 
-            src="/logozwart wit-vrijstaand copy.png" 
-            alt="Reyck Logo" 
+          <img
+            src="/logozwart wit-vrijstaand copy.png"
+            alt="Reyck Logo"
             className="w-64 md:w-80 h-auto mb-8"
           />
 
-          <p 
+          <p
             className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
               ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: '1000ms' }}
@@ -88,11 +123,17 @@ const Home: React.FC = () => {
         }}
       >
         <div className="container mx-auto px-4">
+
           {/* Upcoming Shows Section */}
-          <section ref={upcomingShowsRef} className="mb-16 relative">
+          <section
+            id="optredens"
+            ref={upcomingShowsRef}
+            className="mb-16 relative scroll-mt-24"
+          >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               AANKOMENDE OPTREDENS
             </h2>
+
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { title: "ELEMENTS BOARDFESTIVAL", date: "28", month: "JUN.", location: "SURFSCHOOL SENANG", time: "TBA" },
@@ -107,22 +148,41 @@ const Home: React.FC = () => {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between py-6 border-b border-white/20 gap-4">
                     <div className="flex items-center space-x-4 md:space-x-8">
                       <div className="text-center flex-shrink-0">
-                        <div className="text-4xl md:text-5xl font-bold text-white font-optien">{gig.date}</div>
-                        <div className="text-sm text-white/80">{gig.month}</div>
+                        <div className="text-4xl md:text-5xl font-bold text-white font-optien">
+                          {gig.date}
+                        </div>
+                        <div className="text-sm text-white/80">
+                          {gig.month}
+                        </div>
                       </div>
+
                       <div className="w-px h-16 bg-white/20 hidden md:block"></div>
+
                       <div className="flex-1">
                         <div className="flex flex-col md:flex-row md:items-center md:gap-2">
-                          <h3 className="text-lg md:text-2xl font-bold text-white font-optien tracking-wider">{gig.title}</h3>
+                          <h3 className="text-lg md:text-2xl font-bold text-white font-optien tracking-wider">
+                            {gig.title}
+                          </h3>
+
                           <span className="hidden md:inline text-white/60">•</span>
-                          <p className="text-white/80 text-sm md:text-base">{gig.location}</p>
+
+                          <p className="text-white/80 text-sm md:text-base">
+                            {gig.location}
+                          </p>
+
                           <span className="md:hidden text-white/60">•</span>
-                          <div className="text-sm md:text-2xl font-bold text-white font-optien md:hidden">{gig.time}</div>
+
+                          <div className="text-sm md:text-2xl font-bold text-white font-optien md:hidden">
+                            {gig.time}
+                          </div>
                         </div>
                       </div>
                     </div>
+
                     <div className="text-left md:text-right ml-auto md:ml-0 hidden md:block">
-                      <div className="text-2xl font-bold text-white font-optien">{gig.time}</div>
+                      <div className="text-2xl font-bold text-white font-optien">
+                        {gig.time}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -130,20 +190,32 @@ const Home: React.FC = () => {
             </div>
 
             <div className="mt-12 text-center">
-              <Link 
-                to="/optredens" 
-                className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300"
+              <a
+                href="#optredens"
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-optien py-3 px-8 transition-all duration-300 inline-block"
               >
                 Bekijk alle optredens
-              </Link>
+              </a>
             </div>
           </section>
 
-          <AboutSection />
+          {/* About Section */}
+          <section
+            id="about"
+            className="scroll-mt-24"
+          >
+            <AboutSection />
+          </section>
 
           {/* Galerij */}
-          <section className="mb-16">
-            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">GALERIJ</h2>
+          <section
+            id="galerij"
+            className="mb-16 scroll-mt-24"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-center text-white font-optien">
+              GALERIJ
+            </h2>
+
             <div className="relative max-w-4xl mx-auto px-4 md:px-0">
               <div className="relative overflow-hidden rounded-lg">
                 <div
