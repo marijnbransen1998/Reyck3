@@ -8,6 +8,7 @@ const Home: React.FC = () => {
   const [animate, setAnimate] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+
   const upcomingShowsRef = useRef<HTMLDivElement>(null);
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
 
@@ -32,8 +33,11 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     if (intervalId) clearInterval(intervalId);
+
     const newInterval = setInterval(nextSlide, 6000);
+
     setIntervalId(newInterval);
+
     return () => clearInterval(newInterval);
   }, [currentSlide]);
 
@@ -81,7 +85,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-24 md:pt-28"
       >
         <div className="absolute inset-0 z-0">
           <video
@@ -93,6 +97,7 @@ const Home: React.FC = () => {
           >
             <source src="/promo vid cinetol1.mp4" type="video/mp4" />
           </video>
+
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
@@ -124,7 +129,7 @@ const Home: React.FC = () => {
       >
         <div className="container mx-auto px-4">
 
-          {/* Upcoming Shows Section */}
+          {/* Upcoming Shows */}
           <section
             id="optredens"
             ref={upcomingShowsRef}
@@ -136,12 +141,20 @@ const Home: React.FC = () => {
 
             <div className="max-w-4xl mx-auto space-y-8">
               {[
-                { title: "ELEMENTS BOARDFESTIVAL", date: "28", month: "JUN.", location: "SURFSCHOOL SENANG", time: "TBA" },
+                {
+                  title: "ELEMENTS BOARDFESTIVAL",
+                  date: "28",
+                  month: "JUN.",
+                  location: "SURFSCHOOL SENANG",
+                  time: "TBA"
+                },
               ].map((gig, index) => (
                 <div
                   key={index}
                   className={`relative transform transition-all duration-1000 ${
-                    isUpcomingShowsInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    isUpcomingShowsInView
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-20 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
@@ -151,6 +164,7 @@ const Home: React.FC = () => {
                         <div className="text-4xl md:text-5xl font-bold text-white font-optien">
                           {gig.date}
                         </div>
+
                         <div className="text-sm text-white/80">
                           {gig.month}
                         </div>
@@ -207,7 +221,7 @@ const Home: React.FC = () => {
             <AboutSection />
           </section>
 
-          {/* Galerij */}
+          {/* Gallery */}
           <section
             id="galerij"
             className="mb-16 scroll-mt-24"
@@ -225,7 +239,10 @@ const Home: React.FC = () => {
                   }}
                 >
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
+                    <div
+                      key={index}
+                      className="w-full flex-shrink-0"
+                    >
                       <div className="relative px-2 md:mx-4">
                         <img
                           src={image.src}
@@ -259,7 +276,9 @@ const Home: React.FC = () => {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`w-2 h-2 rounded-full ${
-                        currentSlide === index ? 'bg-white scale-125' : 'bg-white/50'
+                        currentSlide === index
+                          ? 'bg-white scale-125'
+                          : 'bg-white/50'
                       }`}
                     />
                   ))}
