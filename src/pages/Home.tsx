@@ -180,51 +180,51 @@ const Home: React.FC = () => {
               LIVE
             </h2>
 
-            <div className="max-w-4xl mx-auto space-y-8">
-              {[
-                {
-                  title: "ELEMENTS BOARDFESTIVAL",
-                  date: "28",
-                  month: "JUN.",
-                  location: "SURFSCHOOL SENANG",
-                  time: "TBA"
-                },
-                {
-                  title: "ORCA OPEN AIR",
-                  date: "11",
-                  month: "AUG.",
-                  location: "",
-                  time: "17:30"
-                }
-              ].map((gig, index) => (
-                <div key={index} className="border-b border-white/20 py-6">
+           <div className="max-w-4xl mx-auto space-y-8">
+  {[
+    {
+      title: "ELEMENTS BOARDFESTIVAL",
+      date: "28",
+      month: "JUN.",
+      location: "SURFSCHOOL SENANG",
+      time: "TBA"
+    },
+    {
+      title: "ORCA OPEN AIR",
+      date: "11",
+      month: "AUG.",
+      location: "TBA",
+      time: "17:30"
+    }
+  ].map((gig, index) => (
+    <div key={index} className="border-b border-white/20 py-6">
 
-                  <div className="flex flex-col md:flex-row md:justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between">
 
-                    <div className="flex items-center gap-6">
-                      <div className="text-white font-optien text-4xl">
-                        {gig.date}
-                      </div>
+        <div className="flex items-center gap-6">
+          <div className="text-white font-optien text-4xl">
+            {gig.date}
+          </div>
 
-                      <div>
-                        <h3 className="text-white font-optien text-xl">
-                          {gig.title}
-                        </h3>
-                        <p className="text-white/70 text-sm">
-                          {gig.location}
-                        </p>
-                      </div>
-                    </div>
+          <div>
+            <h3 className="text-white font-optien text-xl">
+              {gig.title}
+            </h3>
+            <p className="text-white/70 text-sm">
+              {gig.location}
+            </p>
+          </div>
+        </div>
 
-                    <div className="text-white font-optien text-lg">
-                      {gig.time}
-                    </div>
+        <div className="text-white font-optien text-lg">
+          {gig.time}
+        </div>
 
-                  </div>
+      </div>
 
-                </div>
-              ))}
-            </div>
+    </div>
+  ))}
+</div>
           </section>
 
           {/* MUSIC */}
