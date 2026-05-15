@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {
-  ChevronLeft,
-  ChevronRight,
-  Instagram,
-  Music,
-  Mail
-} from 'lucide-react';
-
+import { ChevronLeft, ChevronRight, Instagram, Music, Mail } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import AboutSection from '../components/AboutSection';
 import { Helmet } from 'react-helmet-async';
@@ -20,26 +13,10 @@ const Home: React.FC = () => {
   const isUpcomingShowsInView = useInView(upcomingShowsRef);
 
   const galleryImages = [
-    {
-      src: '/reyck analoog-28 (1) copy copy.jpg',
-      alt: 'Reyck Band Photo 1',
-      position: 'center 65%'
-    },
-    {
-      src: '/reyck analoog-56 (1) copy copy.jpg',
-      alt: 'Reyck Band Photo 2',
-      position: 'center 30%'
-    },
-    {
-      src: '/reyck analoog-13 (1) (1) copy copy.jpg',
-      alt: 'Reyck Band Photo 3',
-      position: 'center 30%'
-    },
-    {
-      src: '/reyckdigi-081 (1) copy copy.jpg',
-      alt: 'Reyck Band Photo 4',
-      position: 'center 30%'
-    }
+    { src: '/reyck analoog-28 (1) copy copy.jpg', alt: 'Reyck Band Photo 1', position: 'center 65%' },
+    { src: '/reyck analoog-56 (1) copy copy.jpg', alt: 'Reyck Band Photo 2', position: 'center 30%' },
+    { src: '/reyck analoog-13 (1) (1) copy copy.jpg', alt: 'Reyck Band Photo 3', position: 'center 30%' },
+    { src: '/reyckdigi-081 (1) copy copy.jpg', alt: 'Reyck Band Photo 4', position: 'center 30%' }
   ];
 
   useEffect(() => {
@@ -56,11 +33,8 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     if (intervalId) clearInterval(intervalId);
-
     const newInterval = setInterval(nextSlide, 6000);
-
     setIntervalId(newInterval);
-
     return () => clearInterval(newInterval);
   }, [currentSlide]);
 
@@ -72,7 +46,7 @@ const Home: React.FC = () => {
         <link rel="canonical" href="https://legendary-longma-12de88.netlify.app/" />
       </Helmet>
 
-      {/* HEADER */}
+      {/* HEADER (FIXED) */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-white/10">
         <div className="w-full px-4 md:px-8 py-4 flex items-center justify-between">
 
@@ -85,39 +59,33 @@ const Home: React.FC = () => {
             />
           </a>
 
-          {/* CENTER NAVIGATION */}
+          {/* CENTER NAV (JUISTE VOLGORDE) */}
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
-            <a href="#home" className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#home" className="text-white hover:text-gray-300 font-optien tracking-wider">
               Home
             </a>
-
-            <a href="#live" className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#live" className="text-white hover:text-gray-300 font-optien tracking-wider">
               Live
             </a>
-
-            <a href="#music" className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#music" className="text-white hover:text-gray-300 font-optien tracking-wider">
               Music
             </a>
-
-            <a href="#foto" className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#foto" className="text-white hover:text-gray-300 font-optien tracking-wider">
               Foto
             </a>
-
-            <a href="#contact" className="text-white hover:text-gray-300 text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#contact" className="text-white hover:text-gray-300 font-optien tracking-wider">
               Contact
             </a>
           </div>
 
-          {/* RIGHT SOCIALS */}
+          {/* RIGHT SOCIALS (BEHOUDEN) */}
           <div className="flex items-center gap-4">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <Instagram size={20} className="text-white hover:text-gray-300" />
             </a>
-
             <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
               <Music size={20} className="text-white hover:text-gray-300" />
             </a>
-
             <a href="mailto:info@reyck.nl">
               <Mail size={20} className="text-white hover:text-gray-300" />
             </a>
@@ -126,7 +94,7 @@ const Home: React.FC = () => {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* HERO (ONGEWIJZIGD) */}
       <section
         id="home"
         className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-32 md:pt-36"
@@ -141,7 +109,7 @@ const Home: React.FC = () => {
           >
             <source src="/promo vid cinetol1.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto px-4">
@@ -153,16 +121,14 @@ const Home: React.FC = () => {
 
           <p
             className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
-            ${
-              animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+              ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: '1000ms' }}
           >
             Nederrock ’n Roll
           </p>
         </div>
       </section>
 
-      {/* CONTENT */}
       <div
         className="py-16"
         style={{
@@ -175,28 +141,21 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
 
           {/* LIVE */}
-          <section id="live" className="mb-16 scroll-mt-24" ref={upcomingShowsRef}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien">
+          <section id="live" ref={upcomingShowsRef} className="mb-16 relative scroll-mt-24">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               LIVE
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
               {[
-                {
-                  title: "ELEMENTS BOARDFESTIVAL",
-                  date: "28",
-                  month: "JUN.",
-                  location: "SURFSCHOOL SENANG",
-                  time: "TBA"
-                }
+                { title: "ELEMENTS BOARDFESTIVAL", date: "28", month: "JUN.", location: "SURFSCHOOL SENANG", time: "TBA" },
               ].map((gig, index) => (
                 <div
                   key={index}
                   className={`transition-all duration-1000 ${
-                    isUpcomingShowsInView
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-10'
+                    isUpcomingShowsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
+                  style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="flex justify-between border-b border-white/20 py-6 text-white">
                     <div>
@@ -237,9 +196,7 @@ const Home: React.FC = () => {
               <div className="overflow-hidden rounded-lg">
                 <div
                   className="flex transition-transform duration-300"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`
-                  }}
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {galleryImages.map((img, i) => (
                     <img
@@ -257,7 +214,6 @@ const Home: React.FC = () => {
                 <button onClick={prevSlide} className="text-white">
                   <ChevronLeft />
                 </button>
-
                 <button onClick={nextSlide} className="text-white">
                   <ChevronRight />
                 </button>
@@ -265,13 +221,14 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          {/* CONTACT */}
-          <section id="contact" className="scroll-mt-24 text-center text-white">
+          {/* CONTACT (NIEUW TOEGEVOEGD) */}
+          <section id="contact" className="scroll-mt-24 text-center text-white pb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 font-optien">
               CONTACT
             </h2>
 
-            <p>info@reyck.nl</p>
+            <p className="text-lg">info@reyck.nl</p>
+            <p className="text-lg">Instagram: @reyckmusic</p>
           </section>
 
         </div>
