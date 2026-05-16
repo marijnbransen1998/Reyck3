@@ -121,7 +121,6 @@ const Home: React.FC = () => {
 
           </div>
 
-          {/* ✔ ONLY CHANGE HERE: correct icons */}
           <div className="flex items-center gap-4 text-white">
 
             <a href="https://www.instagram.com/reyck.band" target="_blank">
@@ -219,7 +218,16 @@ const Home: React.FC = () => {
                           {gig.date}
                         </div>
 
-                        <div className="text-white/70 font-optien text-sm tracking-widest mt-1">
+                        <div
+                          className="font-optien tracking-widest mt-1"
+                          style={{
+                            color: '#ffffff',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            opacity: 1,
+                            display: 'block'
+                          }}
+                        >
                           {gig.month}
                         </div>
 
