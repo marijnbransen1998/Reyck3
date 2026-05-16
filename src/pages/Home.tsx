@@ -211,18 +211,33 @@ const Home: React.FC = () => {
                   <div className="flex flex-col md:flex-row md:justify-between">
 
                     <div className="flex items-center gap-6">
-                      <div className="text-white font-optien text-4xl">
-                        {gig.date}
+
+                      {/* DATE + MONTH */}
+                      <div className="flex flex-col items-center min-w-[70px]">
+
+                        <div className="text-white font-optien text-4xl leading-none">
+                          {gig.date}
+                        </div>
+
+                        <div className="text-white/70 font-optien text-sm tracking-widest mt-1">
+                          {gig.month}
+                        </div>
+
                       </div>
 
+                      {/* INFO */}
                       <div>
+
                         <h3 className="text-white font-optien text-xl">
                           {gig.title}
                         </h3>
+
                         <p className="text-white/70 text-sm">
                           {gig.location}
                         </p>
+
                       </div>
+
                     </div>
 
                     <div className="text-white font-optien text-lg">
