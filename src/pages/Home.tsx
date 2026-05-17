@@ -1,3 +1,4 @@
+```tsx
 import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronLeft,
@@ -87,35 +88,35 @@ const Home: React.FC = () => {
 
       {/* HEADER */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-white/10">
-        <div className="w-full px-4 md:px-8 py-4 flex items-center justify-between">
+        <div className="w-full px-4 md:px-8 py-2 flex items-center justify-between">
 
           <a href="#home" className="flex-shrink-0">
             <img
               src="/logozwart wit-vrijstaand copy.png"
               alt="REYCK"
-              className="w-24 md:w-32 h-auto"
+              className="w-16 md:w-24 h-auto"
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2 font-optien">
 
-            <a href="#home" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#home" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
               Home
             </a>
 
-            <a href="#live" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#live" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
               Live
             </a>
 
-            <a href="#music" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#music" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
               Music
             </a>
 
-            <a href="#foto" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#foto" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
               Foto
             </a>
 
-            <a href="#contact" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase font-optien">
+            <a href="#contact" className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
               Contact
             </a>
 
@@ -146,7 +147,7 @@ const Home: React.FC = () => {
       {/* HERO */}
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24 pt-32 md:pt-36"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black scroll-mt-24"
       >
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover filter grayscale">
@@ -159,13 +160,8 @@ const Home: React.FC = () => {
           <img
             src="/logozwart wit-vrijstaand copy.png"
             alt="Reyck Logo"
-            className="w-64 md:w-80 h-auto mb-8"
+            className="w-64 md:w-80 h-auto"
           />
-
-          <p className={`text-xl md:text-2xl text-white mb-12 font-optien tracking-widest transition-all duration-1000 transform
-            ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Nederrock ’n Roll
-          </p>
         </div>
       </section>
 
@@ -200,7 +196,7 @@ const Home: React.FC = () => {
               ].map((gig, index) => (
                 <div key={index} className="border-b border-white/20 py-6">
 
-                  <div className="flex flex-col md:flex-row md:justify-between">
+                  <div className="flex items-center justify-between">
 
                     <div className="flex items-center gap-6">
 
@@ -241,7 +237,7 @@ const Home: React.FC = () => {
 
                     </div>
 
-                    <div className="text-white font-optien text-lg">
+                    <div className="text-white font-optien text-lg flex items-center self-center">
                       {gig.time}
                     </div>
 
@@ -348,3 +344,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+```
