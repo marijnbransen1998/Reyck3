@@ -1,4 +1,3 @@
-```tsx
 import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronLeft,
@@ -29,7 +28,6 @@ const SpotifyIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const Home: React.FC = () => {
-  const [animate, setAnimate] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
 
@@ -58,10 +56,6 @@ const Home: React.FC = () => {
       position: 'center 30%'
     }
   ];
-
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
@@ -344,4 +338,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-```
