@@ -31,8 +31,18 @@ html {
 =========================== */
 
 /* Normale tekst */
-body, p, span, a, li, div {
+body, p, span, li, div {
   font-family: 'DIN Alternate Bold', sans-serif !important;
+}
+
+/* Links apart houden */
+a {
+  font-family: 'DIN Alternate Bold', sans-serif !important;
+}
+
+/* Nav links altijd Optien */
+nav a {
+  font-family: 'Optien', sans-serif !important;
 }
 
 /* Kopjes */
