@@ -96,7 +96,10 @@ const Home: React.FC = () => {
 
             <a href="#home" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Home</a>
             <a href="#live" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Live</a>
+
+            {/* MUSIC = Spotify single cover */}
             <a href="#music" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Music</a>
+
             <a href="#about" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">About</a>
             <a href="#contact" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Contact</a>
 
@@ -201,25 +204,36 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          {/* MUSIC */}
+          {/* MUSIC (ONLY CHANGE HERE) */}
           <section id="music" className="mb-24 scroll-mt-24">
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               MUSIC
             </h2>
 
-            <AboutSection />
+            <div className="flex justify-center">
+              <a
+                href="https://open.spotify.com/album/38teewL2Jjv1ffc8EfvZBQ?si=kv6T62wPRpijO6Q3tyoMyg"
+                target="_blank"
+                className="block w-[260px] md:w-[320px]"
+              >
+                <img
+                  src="/spotify-cover.jpg"
+                  alt="Latest Release"
+                  className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
+                />
+              </a>
+            </div>
 
           </section>
 
-          {/* ABOUT (was FOTO + MUSIC CONTENT MOVED HERE) */}
+          {/* ABOUT */}
           <section id="about" className="mb-24 scroll-mt-24">
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               ABOUT
             </h2>
 
-            {/* FOTO + TEKST (was eerder onder MUSIC) */}
             <AboutSection />
 
           </section>
@@ -235,7 +249,10 @@ const Home: React.FC = () => {
 
               <div className="space-y-4 text-center">
                 <p className="text-lg">
-                  <a href="mailto:reyckband@hotmail.com" className="underline hover:opacity-80">
+                  <a
+                    href="mailto:reyckband@hotmail.com"
+                    className="underline hover:opacity-80"
+                  >
                     reyckband@hotmail.com
                   </a>
                 </p>
