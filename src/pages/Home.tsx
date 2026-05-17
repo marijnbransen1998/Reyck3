@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
-  Instagram,
+ Instagram,
   Music,
   Mail,
   Youtube,
@@ -94,23 +94,43 @@ const Home: React.FC = () => {
 
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
 
-            <a href="#home" className="font-optien text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
+            <a
+              href="#home"
+              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
+              style={{ fontFamily: 'Optien' }}
+            >
               Home
             </a>
 
-            <a href="#live" className="font-optien text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
+            <a
+              href="#live"
+              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
+              style={{ fontFamily: 'Optien' }}
+            >
               Live
             </a>
 
-            <a href="#music" className="font-optien text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
+            <a
+              href="#music"
+              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
+              style={{ fontFamily: 'Optien' }}
+            >
               Music
             </a>
 
-            <a href="#foto" className="font-optien text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
+            <a
+              href="#foto"
+              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
+              style={{ fontFamily: 'Optien' }}
+            >
               Foto
             </a>
 
-            <a href="#contact" className="font-optien text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">
+            <a
+              href="#contact"
+              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
+              style={{ fontFamily: 'Optien' }}
+            >
               Contact
             </a>
 
