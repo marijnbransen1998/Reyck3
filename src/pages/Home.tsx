@@ -208,52 +208,19 @@ const Home: React.FC = () => {
               MUSIC
             </h2>
 
-            {/* Spotify cover */}
-            <div className="flex justify-center">
-              <a
-                href="https://open.spotify.com/album/38teewL2Jjv1ffc8EfvZBQ?si=kv6T62wPRpijO6Q3tyoMyg"
-                target="_blank"
-                className="block w-64 md:w-80"
-              >
-                <img
-                  src="/spotify-cover.jpg"
-                  alt="Latest release"
-                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform"
-                />
-              </a>
-            </div>
+            <AboutSection />
 
           </section>
 
-          {/* ABOUT */}
+          {/* ABOUT (was FOTO + MUSIC CONTENT MOVED HERE) */}
           <section id="about" className="mb-24 scroll-mt-24">
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
               ABOUT
             </h2>
 
-            <div className="relative max-w-4xl mx-auto px-4 md:px-0">
-
-              <div className="relative overflow-hidden rounded-lg">
-
-                <div className="flex">
-                  {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0 px-2">
-
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-[300px] md:h-[500px] object-cover rounded-lg shadow-xl"
-                        style={{ objectPosition: image.position }}
-                      />
-
-                    </div>
-                  ))}
-                </div>
-
-              </div>
-
-            </div>
+            {/* FOTO + TEKST (was eerder onder MUSIC) */}
+            <AboutSection />
 
           </section>
 
@@ -267,7 +234,11 @@ const Home: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 text-white max-w-5xl mx-auto">
 
               <div className="space-y-4 text-center">
-                <p className="text-lg">reyckband@hotmail.com</p>
+                <p className="text-lg">
+                  <a href="mailto:reyckband@hotmail.com" className="underline hover:opacity-80">
+                    reyckband@hotmail.com
+                  </a>
+                </p>
               </div>
 
               <form className="space-y-3">
