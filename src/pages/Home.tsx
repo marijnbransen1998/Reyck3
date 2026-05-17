@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
- Instagram,
+  Instagram,
   Music,
   Mail,
   Youtube,
@@ -94,45 +94,11 @@ const Home: React.FC = () => {
 
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
 
-            <a
-              href="#home"
-              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
-              style={{ fontFamily: 'Optien' }}
-            >
-              Home
-            </a>
-
-            <a
-              href="#live"
-              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
-              style={{ fontFamily: 'Optien' }}
-            >
-              Live
-            </a>
-
-            <a
-              href="#music"
-              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
-              style={{ fontFamily: 'Optien' }}
-            >
-              Music
-            </a>
-
-            <a
-              href="#foto"
-              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
-              style={{ fontFamily: 'Optien' }}
-            >
-              Foto
-            </a>
-
-            <a
-              href="#contact"
-              className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
-              style={{ fontFamily: 'Optien' }}
-            >
-              Contact
-            </a>
+            <a href="#home" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Home</a>
+            <a href="#live" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Live</a>
+            <a href="#music" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Music</a>
+            <a href="#about" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">About</a>
+            <a href="#contact" style={{ fontFamily: 'Optien' }} className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase">Contact</a>
 
           </div>
 
@@ -199,54 +165,27 @@ const Home: React.FC = () => {
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
-              {[
-                {
-                  title: "ORCA OPEN AIR",
-                  date: "11",
-                  month: "AUG.",
-                  location: "UTRECHT",
-                  time: "17:30"
-                }
-              ].map((gig, index) => (
+              {[{
+                title: "ORCA OPEN AIR",
+                date: "11",
+                month: "AUG.",
+                location: "UTRECHT",
+                time: "17:30"
+              }].map((gig, index) => (
                 <div key={index} className="border-b border-white/20 py-6">
 
                   <div className="flex items-center justify-between">
 
                     <div className="flex items-center gap-6">
 
-                      {/* DATE + MONTH */}
                       <div className="flex flex-col items-center min-w-[70px]">
-
-                        <div className="text-white font-optien text-4xl leading-none">
-                          {gig.date}
-                        </div>
-
-                        <div
-                          className="font-optien tracking-widest mt-1"
-                          style={{
-                            color: '#ffffff',
-                            fontSize: '16px',
-                            lineHeight: '16px',
-                            opacity: 1,
-                            display: 'block'
-                          }}
-                        >
-                          {gig.month}
-                        </div>
-
+                        <div className="text-white font-optien text-4xl leading-none">{gig.date}</div>
+                        <div className="font-optien tracking-widest mt-1 text-white text-[16px]">{gig.month}</div>
                       </div>
 
-                      {/* INFO */}
                       <div>
-
-                        <h3 className="text-white font-optien text-xl">
-                          {gig.title}
-                        </h3>
-
-                        <p className="text-white/70 text-sm">
-                          {gig.location}
-                        </p>
-
+                        <h3 className="text-white font-optien text-xl">{gig.title}</h3>
+                        <p className="text-white/70 text-sm">{gig.location}</p>
                       </div>
 
                     </div>
@@ -269,53 +208,48 @@ const Home: React.FC = () => {
               MUSIC
             </h2>
 
-            <AboutSection />
+            {/* Spotify cover */}
+            <div className="flex justify-center">
+              <a
+                href="https://open.spotify.com/album/38teewL2Jjv1ffc8EfvZBQ?si=kv6T62wPRpijO6Q3tyoMyg"
+                target="_blank"
+                className="block w-64 md:w-80"
+              >
+                <img
+                  src="/spotify-cover.jpg"
+                  alt="Latest release"
+                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform"
+                />
+              </a>
+            </div>
 
           </section>
 
-          {/* FOTO */}
-          <section id="foto" className="mb-24 scroll-mt-24">
+          {/* ABOUT */}
+          <section id="about" className="mb-24 scroll-mt-24">
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              FOTO
+              ABOUT
             </h2>
 
             <div className="relative max-w-4xl mx-auto px-4 md:px-0">
 
               <div className="relative overflow-hidden rounded-lg">
 
-                <div
-                  className="flex transition-transform duration-300 ease-out"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                  }}
-                >
+                <div className="flex">
                   {galleryImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
+                    <div key={index} className="w-full flex-shrink-0 px-2">
 
-                      <div className="relative px-2 md:mx-4">
-
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-[300px] md:h-[500px] object-cover object-center rounded-lg shadow-xl"
-                          loading="eager"
-                          style={{ objectPosition: image.position }}
-                        />
-
-                      </div>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-[300px] md:h-[500px] object-cover rounded-lg shadow-xl"
+                        style={{ objectPosition: image.position }}
+                      />
 
                     </div>
                   ))}
                 </div>
-
-                <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 text-white p-2 rounded-full">
-                  <ChevronLeft size={20} />
-                </button>
-
-                <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 text-white p-2 rounded-full">
-                  <ChevronRight size={20} />
-                </button>
 
               </div>
 
@@ -333,9 +267,7 @@ const Home: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 text-white max-w-5xl mx-auto">
 
               <div className="space-y-4 text-center">
-                <p className="text-lg">
-                  reyckband@hotmail.com
-                </p>
+                <p className="text-lg">reyckband@hotmail.com</p>
               </div>
 
               <form className="space-y-3">
