@@ -76,8 +76,8 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
 
       <Helmet>
-        <title>REYCK | Nederrock 'n Roll</title>
-        <meta name="description" content="REYCK | Nederrock 'n Roll" />
+        <title>REYCK | Onversneden Nederrock</title>
+        <meta name="description" content="REYCK | Onversneden Nederrock" />
       </Helmet>
 
       {/* HEADER */}
