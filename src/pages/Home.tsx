@@ -168,14 +168,23 @@ const Home: React.FC = () => {
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-8">
-              {[{
-                title: "ORCA OPEN AIR",
-                date: "11",
-                month: "AUG.",
-                location: "UTRECHT",
-                time: "17:30"
-              }].map((gig, index) => (
-                <div key={index} className="border-b border-white/20 py-6">
+  {[
+    {
+      title: "ORCA OPEN AIR",
+      date: "11",
+      month: "AUG.",
+      location: "UTRECHT",
+      time: "17:30"
+    },
+    {
+      title: "WILHELMINA PARK VIERT DE ZOMER",
+      date: "20",
+      month: "AUG.",
+      location: "TILBURG",
+      time: "TBD"
+    }
+  ].map((gig, index) => (
+    <div key={index} className="border-b border-white/20 py-6">
 
                   <div className="flex items-center justify-between">
 
