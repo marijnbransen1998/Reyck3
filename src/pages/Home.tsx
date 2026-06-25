@@ -266,10 +266,10 @@ const Home: React.FC = () => {
               <div className="space-y-4 text-center">
                 <p className="text-lg">
                   <a
-                    href="mailto:reyckband@hotmail.com"
+                    href="mailto:info@reyckband.nl"
                     className="underline hover:opacity-80"
                   >
-                    reyckband@hotmail.com
+                    info@reyckband.nl
                   </a>
                 </p>
               </div>
