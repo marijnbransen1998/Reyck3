@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
               <div className="px-4">
                 <div className="max-w-[280px] text-white space-y-3 pl-8">
                   <p className="text-sm leading-snug font-optien">
-                    Reyck ademt onversneden Nederrock. De band durft de Nederlandse taal te omhullen in een dikke boterham van rock 'n roll en serveert een gloednieuw, eigen gerecht, dat vertrouwd smaakt.
+                    Utrechtse indierockband Reyck haalt inspiratie uit Engelstalige indie pop/rock als Kings Of Leon, Nothing But Thieves en Kensington, maar vertelt een eigen verhaal in hun moedertaal. Dit brengt een oprechtheid mee die centraal staat in de muziek. Zonder omwegen leggen ze het hart op hun Nederlandse tong.
                   </p>
                 </div>
               </div>
