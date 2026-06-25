@@ -58,8 +58,21 @@ const AboutSection: React.FC = () => {
               <div className="px-4">
                 <div className="max-w-[280px] text-white space-y-3 pl-8">
                   <p className="text-sm leading-snug font-optien">
-                    Utrechtse indierockband Reyck haalt inspiratie uit Engelstalige indie pop/rock als Kings Of Leon, Nothing But Thieves en Kensington, maar vertelt een eigen verhaal in hun moedertaal. Dit brengt een oprechtheid mee die centraal staat in de muziek. Zonder omwegen leggen ze het hart op hun Nederlandse tong.
-                  </p>
+  Utrechtse indierockband Reyck haalt inspiratie uit Engelstalige indie pop/rock als Kings Of Leon, Nothing But Thieves en Kensington, maar vertelt een eigen verhaal in hun moedertaal. Dit brengt een oprechtheid mee die centraal staat in de muziek. Zonder omwegen leggen ze het hart op hun Nederlandse tong.
+</p>
+
+<p className="text-sm leading-snug font-optien mt-4">
+  Eerder werd Reyck gedraaid op 3FM, KINK en NPO Radio 2, en verkocht de band in 2024 een eigen show in Bitterzoet uit. Live straalt de band een bepaald charisma uit, waardoor hun performance door{" "}
+  <a
+    href="https://3voor12lokaal.vpro.nl/artikelen/club-3voor12-utrecht-maart-van-rustige-pop-naar-op-hol-geslagen-neo-jazz"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:opacity-80"
+  >
+    3voor12 Utrecht
+  </a>{" "}
+  omschreven wordt als ‘Ziggo Dome-ready’. Reyck is niet vies van stevig gitaarwerk, maar ook zeker niet bang voor een catchy popsong. In 2027 verschijnt het debuutalbum dat volledig is gewijd aan de verzwegen kanten van de liefde.
+</p>
                 </div>
               </div>
             </div>
