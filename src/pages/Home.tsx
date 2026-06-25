@@ -76,8 +76,8 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
 
       <Helmet>
-        <title>REYCK | Onversneden Nederrock</title>
-        <meta name="description" content="REYCK | Onversneden Nederrock" />
+        <title>REYCK</title>
+        <meta name="description" content="REYCK" />
       </Helmet>
 
       {/* HEADER */}
@@ -169,6 +169,13 @@ const Home: React.FC = () => {
 
             <div className="max-w-4xl mx-auto space-y-8">
   {[
+         {
+      title: "COWLANDS",
+      date: "18",
+      month: "JUL.",
+      location: "KOEDIJK",
+      time: "TBD"
+    },
     {
       title: "ORCA OPEN AIR",
       date: "11",
