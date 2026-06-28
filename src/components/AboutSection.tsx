@@ -13,72 +13,45 @@ const AboutSection: React.FC = () => {
         }`}
       >
         {/* ----------------------------- */}
-        {/* ✔ MOBILE VERSION (UPDATED) */}
-        {/* ----------------------------- */}
-        <div className="md:hidden relative w-full flex flex-col items-center">
-          <div className="relative w-[90%]">
-            <img
-              src="/reyck analoog-33 (2) copy copy.jpg"
-              alt="Reyck Band"
-              className="w-full max-h-[330px] object-cover rounded"
-            />
+{/* ✔ MOBILE VERSION */}
+{/* ----------------------------- */}
+<div className="md:hidden w-full flex flex-col items-center">
+  <div className="relative w-[90%]">
+    <img
+      src="/reyck analoog-33 (2) copy copy.jpg"
+      alt="Reyck Band"
+      className="w-full max-h-[330px] object-cover rounded"
+    />
+  </div>
 
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent rounded"></div>
+  <div className="w-[90%] mt-5 text-white font-optien space-y-4">
+    <p className="text-sm leading-relaxed">
+      Utrechtse indierockband Reyck haalt inspiratie uit Engelstalige indie
+      pop/rock als Kings Of Leon, Nothing But Thieves en Kensington, maar
+      vertelt een eigen verhaal in hun moedertaal. Dit brengt een
+      oprechtheid mee die centraal staat in de muziek. Zonder omwegen leggen
+      ze het hart op hun Nederlandse tong.
+    </p>
 
-            <div className="absolute inset-0 flex items-center">
-              <div className="px-3 max-w-[160px] text-white space-y-2">
-                <p className="text-xs leading-snug font-optien">
-                  Reyck ademt
-                  <br />
-                  onversneden
-                  <br />
-                  Nederrock.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-[90%] mt-4 text-white font-optien">
-            <details className="group">
-              <summary className="cursor-pointer text-sm font-medium list-none flex items-center gap-2">
-                Meer over de band
-                <span className="transition-transform group-open:rotate-180">
-                  ▼
-                </span>
-              </summary>
-
-              <div className="mt-3 space-y-3 text-sm leading-relaxed text-white/90">
-                <p>
-                  Utrechtse indierockband Reyck haalt inspiratie uit
-                  Engelstalige indie pop/rock als Kings Of Leon, Nothing But
-                  Thieves en Kensington, maar vertelt een eigen verhaal in hun
-                  moedertaal. Dit brengt een oprechtheid mee die centraal staat
-                  in de muziek. Zonder omwegen leggen ze het hart op hun
-                  Nederlandse tong.
-                </p>
-
-                <p>
-                  Eerder werd Reyck gedraaid op 3FM, KINK en NPO Radio 2, en
-                  verkocht de band in 2024 een eigen show in Bitterzoet uit.
-                  Live straalt de band een bepaald charisma uit, waardoor hun
-                  performance door{" "}
-                  <a
-                    href="https://3voor12lokaal.vpro.nl/artikelen/club-3voor12-utrecht-maart-van-rustige-pop-naar-op-hol-geslagen-neo-jazz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:opacity-80"
-                  >
-                    3voor12 Utrecht
-                  </a>{" "}
-                  omschreven wordt als ‘Ziggo Dome-ready’. Reyck is niet vies van
-                  stevig gitaarwerk, maar ook zeker niet bang voor een catchy
-                  popsong. In 2027 verschijnt het debuutalbum dat volledig is
-                  gewijd aan de verzwegen kanten van de liefde.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
+    <p className="text-sm leading-relaxed">
+      Eerder werd Reyck gedraaid op 3FM, KINK en NPO Radio 2, en verkocht de
+      band in 2024 een eigen show in Bitterzoet uit. Live straalt de band een
+      bepaald charisma uit, waardoor hun performance door{" "}
+      <a
+        href="https://3voor12lokaal.vpro.nl/artikelen/club-3voor12-utrecht-maart-van-rustige-pop-naar-op-hol-geslagen-neo-jazz"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:opacity-80"
+      >
+        3voor12 Utrecht
+      </a>{" "}
+      omschreven wordt als ‘Ziggo Dome-ready’. Reyck is niet vies van stevig
+      gitaarwerk, maar ook zeker niet bang voor een catchy popsong. In 2027
+      verschijnt het debuutalbum dat volledig is gewijd aan de verzwegen kanten
+      van de liefde.
+    </p>
+  </div>
+</div>
 
         {/* ----------------------------- */}
         {/* ✔ DESKTOP VERSION (UNCHANGED) */}
