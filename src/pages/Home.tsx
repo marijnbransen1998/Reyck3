@@ -328,24 +328,17 @@ const Home: React.FC = () => {
 
               {[
                 {
-                  title: "COWLANDS",
-                  date: "18",
-                  month: "JUL.",
-                  location: "KOEDIJK",
-                  time: "TBD"
-                },
-                {
-                  title: "ORCA OPEN AIR",
-                  date: "11",
-                  month: "AUG.",
-                  location: "UTRECHT",
-                  time: "17:30"
-                },
-                {
                   title: "WILHELMINA PARK VIERT DE ZOMER",
                   date: "20",
                   month: "AUG.",
                   location: "TILBURG",
+                  time: "19:00"
+                },
+                {
+                  title: "INDISCHE BUURT FESTIVAL",
+                  date: "29",
+                  month: "AUG.",
+                  location: "AMSTERDAM",
                   time: "TBD"
                 }
               ].map((gig, index) => (
@@ -459,7 +452,7 @@ const Home: React.FC = () => {
               {/* EMAIL */}
               <div className="text-center mb-10">
 
-                <p className="text-lg">
+                <p className="text-xl md:text-2xl">
 
                   <a
                     href="mailto:info@reyckband.nl"
