@@ -475,6 +475,63 @@ const Home: React.FC = () => {
               {/* BREVO NIEUWSBRIEF FORMULIER */}
               <div className="max-w-[540px] mx-auto">
 
+                <style>{`
+                  @font-face {
+                    font-display: block;
+                    font-family: Roboto;
+                    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+                         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+                  }
+
+                  @font-face {
+                    font-display: fallback;
+                    font-family: Roboto;
+                    font-weight: 600;
+                    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+                         url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+                  }
+
+                  @font-face {
+                    font-display: fallback;
+                    font-family: Roboto;
+                    font-weight: 700;
+                    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+                         url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+                  }
+
+                  :where(.sib-form-message-panel) {
+                    display: none;
+                  }
+
+                  :where(.sib-form-message-panel .sib-notification__icon) {
+                    width: 20px;
+                    height: 20px;
+                  }
+
+                  #sib-container input:-ms-input-placeholder {
+                    font-family: Helvetica, sans-serif;
+                    text-align: left;
+                    color: #0a0a0a;
+                  }
+
+                  #sib-container input::placeholder {
+                    font-family: Helvetica, sans-serif;
+                    text-align: left;
+                    color: #0a0a0a;
+                  }
+
+                  #sib-container textarea::placeholder {
+                    font-family: Helvetica, sans-serif;
+                    text-align: left;
+                    color: #0a0a0a;
+                  }
+
+                  #sib-container a {
+                    text-decoration: underline;
+                    color: #2BB2FC;
+                  }
+                `}</style>
+
                 <div
                   className="sib-form"
                   style={{
@@ -492,7 +549,6 @@ const Home: React.FC = () => {
                     className="sib-form-container"
                   >
 
-                    {/* ERROR MESSAGE */}
                     <div
                       id="error-message"
                       className="sib-form-message-panel"
@@ -527,7 +583,8 @@ const Home: React.FC = () => {
 
                     </div>
 
-                    {/* SUCCESS MESSAGE */}
+                    <div></div>
+
                     <div
                       id="success-message"
                       className="sib-form-message-panel"
@@ -562,7 +619,8 @@ const Home: React.FC = () => {
 
                     </div>
 
-                    {/* FORM CONTAINER */}
+                    <div></div>
+
                     <div
                       id="sib-container"
                       className="sib-container--large sib-container--vertical"
@@ -624,10 +682,78 @@ const Home: React.FC = () => {
                                     name="EMAIL"
                                     autoComplete="off"
                                     defaultValue=""
-                                    placeholder="Email"
+                                    placeholder="EMAIL"
                                     data-required="true"
                                     required
                                   />
+
+                                </div>
+
+                              </div>
+
+                              <label
+                                className="entry__error entry__error--primary"
+                                style={{
+                                  fontFamily: 'Helvetica, sans-serif',
+                                  fontSize: '16px',
+                                  textAlign: 'left',
+                                  color: '#661d1d',
+                                  backgroundColor: '#ffeded',
+                                  borderColor: '#ff4949',
+                                  borderRadius: '3px'
+                                }}
+                              />
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        {/* OPT-IN */}
+                        <div style={{ padding: '8px 0' }}>
+
+                          <div className="sib-optin sib-form-block">
+
+                            <div className="form__entry entry_mcq">
+
+                              <div className="form__label-row">
+
+                                <div
+                                  className="entry__choice"
+                                  style={{}}
+                                >
+
+                                  <label>
+
+                                    <input
+                                      type="checkbox"
+                                      className="input_replaced"
+                                      value="1"
+                                      id="OPT_IN"
+                                      name="OPT_IN"
+                                    />
+
+                                    <span
+                                      className="checkbox checkbox_tick_positive"
+                                      style={{ marginLeft: '' }}
+                                    />
+
+                                    <span
+                                      style={{
+                                        fontFamily: 'Helvetica, sans-serif',
+                                        fontSize: '14px',
+                                        textAlign: 'left',
+                                        color: '#3C4858',
+                                        backgroundColor: 'transparent'
+                                      }}
+                                    >
+                                      <p>
+                                        I agree to receive your newsletters and accept the data privacy statement.
+                                      </p>
+                                    </span>
+
+                                  </label>
 
                                 </div>
 
@@ -688,71 +814,6 @@ const Home: React.FC = () => {
                               ABONNEER
 
                             </button>
-
-                          </div>
-
-                        </div>
-
-                        {/* OPT-IN */}
-                        <div style={{ padding: '8px 0' }}>
-
-                          <div className="sib-optin sib-form-block">
-
-                            <div className="form__entry entry_mcq">
-
-                              <div className="form__label-row">
-
-                                <div className="entry__choice">
-
-                                  <label>
-
-                                    <input
-                                      type="checkbox"
-                                      className="input_replaced"
-                                      value="1"
-                                      id="OPT_IN"
-                                      name="OPT_IN"
-                                    />
-
-                                    <span
-                                      className="checkbox checkbox_tick_positive"
-                                      style={{ marginLeft: '' }}
-                                    />
-
-                                    <span
-                                      style={{
-                                        fontFamily: 'Helvetica, sans-serif',
-                                        fontSize: '14px',
-                                        textAlign: 'left',
-                                        color: '#3C4858',
-                                        backgroundColor: 'transparent'
-                                      }}
-                                    >
-                                      <p>
-                                        I agree to receive your newsletters and accept the data privacy statement.
-                                      </p>
-                                    </span>
-
-                                  </label>
-
-                                </div>
-
-                              </div>
-
-                              <label
-                                className="entry__error entry__error--primary"
-                                style={{
-                                  fontFamily: 'Helvetica, sans-serif',
-                                  fontSize: '16px',
-                                  textAlign: 'left',
-                                  color: '#661d1d',
-                                  backgroundColor: '#ffeded',
-                                  borderColor: '#ff4949',
-                                  borderRadius: '3px'
-                                }}
-                              />
-
-                            </div>
 
                           </div>
 
