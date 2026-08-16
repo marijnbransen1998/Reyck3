@@ -508,17 +508,22 @@ const Home: React.FC = () => {
                     height: 20px;
                   }
 
-                  #sib-container input:-ms-input-placeholder {
-                    font-family: Helvetica, sans-serif;
-                    text-align: left;
-                    color: #0a0a0a;
-                  }
+                  #sib-container input {
+  color: #0a0a0a !important;
+}
 
-                  #sib-container input::placeholder {
-                    font-family: Helvetica, sans-serif;
-                    text-align: left;
-                    color: #0a0a0a;
-                  }
+#sib-container input:-ms-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  color: #0a0a0a;
+}
+
+#sib-container input::placeholder {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  color: #0a0a0a !important;
+  opacity: 1;
+}
 
                   #sib-container textarea::placeholder {
                     font-family: Helvetica, sans-serif;
