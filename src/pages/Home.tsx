@@ -412,7 +412,7 @@ const Home: React.FC = () => {
               >
 
                 <img
-                  src="/spotify-cover.jpg"
+                  src="/spotify-cover2.jpg"
                   alt="Als Ik Haar Mis - Pre-save"
                   className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
                 />
