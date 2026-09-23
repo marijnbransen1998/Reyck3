@@ -205,7 +205,7 @@ const Home: React.FC = () => {
               style={{ fontFamily: 'Optien' }}
               className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
             >
-              Music
+              Muziek
             </a>
 
             <a
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
               style={{ fontFamily: 'Optien' }}
               className="text-white hover:text-gray-300 text-xs md:text-sm tracking-[0.25em] uppercase"
             >
-              About
+              Over
             </a>
 
             <a
@@ -399,13 +399,13 @@ const Home: React.FC = () => {
           >
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              MUSIC
+              MUZIEK
             </h2>
 
             <div className="flex justify-center">
 
               <a
-                href="https://open.spotify.com/album/38teewL2Jjv1ffc8EfvZBQ?si=kv6T62wPRpijO6Q3tyoMyg"
+                href="https://Reyck.lnk.to/AlsIkHaarMis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-[260px] md:w-[320px]"
@@ -413,7 +413,7 @@ const Home: React.FC = () => {
 
                 <img
                   src="/spotify-cover.jpg"
-                  alt="Latest Release"
+                  alt="Als Ik Haar Mis - Pre-save"
                   className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
                 />
 
@@ -430,7 +430,7 @@ const Home: React.FC = () => {
           >
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              ABOUT
+              OVER
             </h2>
 
             <AboutSection />
