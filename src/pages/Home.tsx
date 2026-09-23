@@ -328,17 +328,10 @@ const Home: React.FC = () => {
 
               {[
                 {
-                  title: "WILHELMINA PARK VIERT DE ZOMER",
-                  date: "20",
-                  month: "AUG.",
-                  location: "TILBURG",
-                  time: "19:00"
-                },
-                {
-                  title: "INDISCHE BUURT FESTIVAL",
-                  date: "29",
-                  month: "AUG.",
-                  location: "AMSTERDAM",
+                  title: "TBD",
+                  date: "TBD",
+                  month: "TBD",
+                  location: "TBD",
                   time: "TBD"
                 }
               ].map((gig, index) => (
