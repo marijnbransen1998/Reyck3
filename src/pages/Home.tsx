@@ -328,10 +328,10 @@ const Home: React.FC = () => {
 
               {[
                 {
-                  title: "TBD",
-                  date: "TBD",
-                  month: "TBD",
-                  location: "TBD",
+                  title: "ALBUM RELEASE",
+                  date: "4",
+                  month: "JUN",
+                  location: "DE HELLING, UTRECHT",
                   time: "TBD"
                 }
               ].map((gig, index) => (
@@ -385,36 +385,53 @@ const Home: React.FC = () => {
 
           </section>
 
-          {/* MUSIC */}
-          <section
-            id="music"
-            className="mb-24 scroll-mt-24"
-          >
+        {/* MUSIC */}
+        <section
+          id="music"
+          className="mb-24 scroll-mt-24"
+        >
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-              MUZIEK
-            </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+            MUZIEK
+          </h2>
 
-            <div className="flex justify-center">
+          <div className="flex flex-col items-center gap-8">
 
-              <a
-                href="https://Reyck.lnk.to/AlsIkHaarMis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-[260px] md:w-[320px]"
-              >
+            {/* BLIJF JE BIJ ME */}
+            <a
+              href="https://Reyck.lnk.to/BlijfJeBijMe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[260px] md:w-[320px]"
+            >
 
-                <img
-                  src="/spotify-cover2.jpg"
-                  alt="Als Ik Haar Mis - Pre-save"
-                  className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
-                />
+              <img
+                src="/Blijf Je Bij Me Cover.jpg"
+                alt="Blijf Je Bij Me - Cover"
+                className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
+              />
 
-              </a>
+            </a>
 
-            </div>
+            {/* ALS IK HAAR MIS */}
+            <a
+              href="https://open.spotify.com/track/4wCiLwVN1iSiK11PlpmF4X?si=a88a5a4925d04540"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[260px] md:w-[320px]"
+            >
 
-          </section>
+              <img
+                src="/spotify-cover2.jpg"
+                alt="Als Ik Haar Mis - Cover"
+                className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
+              />
+
+            </a>
+
+          </div>
+
+        </section>
 
           {/* ABOUT */}
           <section
