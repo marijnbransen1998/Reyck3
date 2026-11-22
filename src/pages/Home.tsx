@@ -397,6 +397,21 @@ const Home: React.FC = () => {
 
   <div className="flex flex-col items-center gap-8">
 
+    {/* SPOTIFY SESSIE - BOVENAAN */}
+    <div className="w-full max-w-[600px]">
+      <iframe
+        src="https://open.spotify.com/embed/episode/2HsyEdl0xOQe5a3JQayl8U?utm_source=generator"
+        width="100%"
+        height="232"
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        className="rounded-xl shadow-lg"
+        title="Spotify Sessie"
+      />
+    </div>
+
     {/* BLIJF JE BIJ ME */}
     <a
       href="https://Reyck.lnk.to/BlijfJeBijMe"
@@ -424,21 +439,6 @@ const Home: React.FC = () => {
         className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
       />
     </a>
-
-    {/* SPOTIFY SESSIE */}
-    <div className="w-full max-w-[600px]">
-      <iframe
-        src="https://open.spotify.com/embed/episode/2HsyEdl0xOQe5a3JQayl8U?utm_source=generator"
-        width="100%"
-        height="232"
-        frameBorder="0"
-        allowFullScreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        className="rounded-xl shadow-lg"
-        title="Spotify Sessie"
-      />
-    </div>
 
   </div>
 
