@@ -383,55 +383,66 @@ const Home: React.FC = () => {
 
             </div>
 
-          </section>
+</section>
 
-        {/* MUSIC */}
-        <section
-          id="music"
-          className="mb-24 scroll-mt-24"
-        >
+{/* MUSIC */}
+<section
+  id="music"
+  className="mb-24 scroll-mt-24"
+>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
-            MUZIEK
-          </h2>
+  <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white font-optien tracking-wider">
+    MUZIEK
+  </h2>
 
-          <div className="flex flex-col items-center gap-8">
+  <div className="flex flex-col items-center gap-8">
 
-            {/* BLIJF JE BIJ ME */}
-            <a
-              href="https://Reyck.lnk.to/BlijfJeBijMe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-[260px] md:w-[320px]"
-            >
+    {/* BLIJF JE BIJ ME */}
+    <a
+      href="https://Reyck.lnk.to/BlijfJeBijMe"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-[260px] md:w-[320px]"
+    >
+      <img
+        src="/Blijf Je Bij Me Cover.jpg"
+        alt="Blijf Je Bij Me - Cover"
+        className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
+      />
+    </a>
 
-              <img
-                src="/Blijf Je Bij Me Cover.jpg"
-                alt="Blijf Je Bij Me - Cover"
-                className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
-              />
+    {/* ALS IK HAAR MIS */}
+    <a
+      href="https://open.spotify.com/track/4wCiLwVN1iSiK11PlpmF4X?si=a88a5a4925d04540"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-[260px] md:w-[320px]"
+    >
+      <img
+        src="/spotify-cover2.jpg"
+        alt="Als Ik Haar Mis - Cover"
+        className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
+      />
+    </a>
 
-            </a>
+    {/* SPOTIFY SESSIE */}
+    <div className="w-full max-w-[600px]">
+      <iframe
+        src="https://open.spotify.com/embed/episode/2HsyEdl0xOQe5a3JQayl8U?utm_source=generator"
+        width="100%"
+        height="232"
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        className="rounded-xl shadow-lg"
+        title="Spotify Sessie"
+      />
+    </div>
 
-            {/* ALS IK HAAR MIS */}
-            <a
-              href="https://open.spotify.com/track/4wCiLwVN1iSiK11PlpmF4X?si=a88a5a4925d04540"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-[260px] md:w-[320px]"
-            >
+  </div>
 
-              <img
-                src="/spotify-cover2.jpg"
-                alt="Als Ik Haar Mis - Cover"
-                className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition"
-              />
-
-            </a>
-
-          </div>
-
-        </section>
+</section>
 
           {/* ABOUT */}
           <section
